@@ -1,0 +1,88 @@
+\documentclass[twoside,bibliography=totocnumbered,version=first,DIV14,BCOR=5mm]{scrbook}
+
+% Paketdefinitionen
+\input{../einstellungen/pakete}
+
+% Allgemeine Definitionen
+\input{../einstellungen/definitionen}
+
+% Biblatex custom styles
+\input{../einstellungen/biblatex_custom_styles}
+
+% Definition der Titelseite
+\title{Datenbankadministration\linebreak Microsoft SQL Server 2014}
+\author{Florian Weidinger}
+\date{Erstellung: 21.01.2014\\
+\"Anderung: \today{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Biblatex definitionen
+\addbibresource{../bibliographie/bibliography.bib}
+
+\defbibheading{tsqlreference}{\section*{Transact SQL Reference}}
+\defbibheading{sqlserveradmin}{\section*{SQL Server Administration}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+  \input{../einstellungen/tikzlibrary}
+  % Minitocs fuer einzelne Kapitel einschalten
+  \mtcselectlanguage{german}
+  \makeatletter
+    \renewcommand{\@pnumwidth}{1cm}
+    \renewcommand{\@tocrmarg}{2cm}
+  \makeatother
+  \dominitoc
+
+% Seitenlayout festlegen
+  \headheight1cm
+
+  \pagenumbering{bychapter}
+
+  \setheadsepline{.4pt}
+  \setfootsepline{.4pt}
+  % Kopf- und Fusszeile definieren
+  \clearscrheadfoot
+  \lofoot{%
+    \vspace{-2em}
+    SQL Server 2014 Datenbankadministration
+  }
+  \rofoot{%
+    \vspace{-2em}
+    \pagemark
+  }
+  \lefoot{%
+    \vspace{-2em}
+    \pagemark\hspace{1cm}
+  }
+  \chead{\leftmark}
+
+  \pagestyle{scrheadings}
+ % Kopf- und Fusszeilen auch im Inhaltsverzeichnis benutzen
+  \tocloftpagestyle{scrheadings}
+
+% Zeilenabstand temporaer auf einzeilig zurueckschalten
+\begin{spacing}{1.1}
+  % Titelseite erzeugen
+    \maketitle
+
+  % Formatierung der Seitenzahlen im Inhaltsverzeichnis
+  \addtocontents{toc}{\cftpagenumbersoff{part}}
+  \renewcommand{\cftchappagefont}{\bfseries\small}
+  \renewcommand{\cftsecpagefont}{\small}
+  \renewcommand{\cftsubsecpagefont}{\small}
+  \renewcommand{\cftchapfont}{\bfseries\small}
+  \renewcommand{\cftsecfont}{\small}
+  \renewcommand{\cftsubsecfont}{\small}
+ 
+	% Inhaltsverzeichnis anzeigen
+	\tableofcontents
+\end{spacing}
+  \input{../modellierung/datenmodellierung}
+	\input{../sql/sql}
+	\input{admin/dbadmin}
+	\clearpage
+	\appendix
+	\part{Appendix}
+\printbibliography[heading=tsqlreference,keyword=TSQLReference]
+\printbibliography[heading=sqlserveradmin,keyword=SQLServerAdmin]
+\end{document}

@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Mon Mar 02 17:35:58 CET 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=hauptdokument.tex
+outputFile=it-sysadminfw_db_sk_oracle.pdf
+langSpell=en
+markDer=true
+srcDir=

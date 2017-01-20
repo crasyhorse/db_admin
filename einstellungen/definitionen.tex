@@ -1,0 +1,118 @@
+\graphicspath{{../grafiken/}}
+\DeclareGraphicsExtensions{.png,.pdf}
+\KOMAoptions{fontsize=11pt,paper=a4,pagesize=pdftex}
+\raggedbottom
+
+\clubpenalty = 10000
+\widowpenalty = 10000 \displaywidowpenalty = 10000
+
+% Silbentrennung
+\hyphenation{Ab-fra-ge An-wei-sung-en Arbeits-speicher Be-in-hal-ten Be-in-hal-tet Be-zieh-ungs-typ-rich-tung-en Da-ten Da-ten-bank Da-ten-bank-archi-tek-tur Feh-ler Hin-ter-grund PL/SQL Pro-zess Ser-ver Nut-zer State-ment State-ments Spei-cher-struk-tur-en SQL-State-ments Zu-griffs-rech-te}
+
+\makeatletter
+  \renewcommand{\@pnumwidth}{3.5em}
+  \renewcommand{\@tocrmarg}{1em}
+\makeatother
+
+\onehalfspacing
+
+\renewcommand{\headfont}{%
+  \normalfont\sffamily\bfseries
+}
+\renewcommand{\pnumfont}{%
+  \Large\bfseries\normalfont\rmfamily\slshape
+}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+\parskip1.5ex
+\parindent0pt
+\newcounter{lstcounter}
+\setcounter{lstcounter}{1}
+
+\newcounter{tabcounter}
+\setcounter{tabcounter}{\value{table}}
+
+\newcounter{figcounter}
+\setcounter{figcounter}{\value{figure}}
+
+% Definitionen fuer graphicx
+\definecolor{lightblue}{rgb}{0,0.7,0.7}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\definecolor{lightgreen}{rgb}{0,0.5,0.25}
+\definecolor{darkgreen}{rgb}{0,0.75,0.5}
+\definecolor{lightyellow}{rgb}{1,1,0.4}
+\definecolor{darkmagenta}{rgb}{0.611,0.223,0.611}
+\definecolor{mediumblue}{rgb}{0.243,0.447,0.764}
+\definecolor{mediumred}{rgb}{0.6156,0.1529,0.1529}
+
+% Definitionen fuer hyperref
+\hypersetup{colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue}
+
+\input{../einstellungen/plsql_sprachdefinition}
+\input{../einstellungen/oracle_sql_sprachdefinition}
+\input{../einstellungen/ms_sql_sprachdefinition}
+\input{../einstellungen/sqlplus_sprachdefinition}
+\input{../einstellungen/rman_sprachdefinition}
+\input{../einstellungen/configfile_sprachdefinition}
+\input{../einstellungen/expdp_impdp_sprachdefinition}
+\input{../einstellungen/powershell_sprachdefinition}
+\input{../einstellungen/terminal_sprachdefinition}
+\input{../einstellungen/ebnf_sprachdefinition}
+
+\lstset {
+        tabsize=2,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        extendedchars=true,
+        formfeed=\newpage,
+        frame=single,
+        escapechar=\&,
+        literate=%
+        {ß}{{\ss}}1
+        {Ä}{{\"A}}1
+        {ä}{{\"a}}1
+        {Ö}{{O}}1
+        {ö}{{\"o}}1
+        {Ü}{{\"U}}1
+        {ü}{{\"u}}1
+        }
+% Definitionen fuer listings
+% \lstset{
+%         keywordstyle=\color{black},
+%         commentstyle=\color{black},
+%         identifierstyle=\color{black},
+%         stringstyle=\color{black},
+%         basicstyle=\color{black}\bfseries\ttfamily\footnotesize,
+%         resetmargins=true
+%         classoffset=0,
+%           language=oracle_sql,
+%         classoffset=1,
+%           alsolanguage=sqlplus,
+%         classoffset=2,
+%           alsolanguage=ms_sql,
+%         classoffset=3,
+%           alsolanguage=plsql,
+%         classoffset=4,
+%           alsolanguage=rman,
+%         classoffset=5,
+%           alsolanguage=configfile,
+%         classoffset=6,
+%           alsolanguage=expdp_impdp,
+%           emph={[8]TRUE,FALSE}, emphstyle={[8]\color{lightgreen}},
+%           emph={[8]SQL}, emphstyle={[8]\color{black}},
+%         classoffset=7,
+%           alsolanguage=powershell}
+
+% Schriftgroesse fuer Beschriftungen definieren
+\setkomafont{caption}{\raggedright\scriptsize}
+\renewcommand*{\figureformat}{Abb.~\thefigure\autodot}
+
+
+
+% Neue Laengen definieren
+\newlength{\bildhoehe}
+\newlength{\vertspace}
+
+% Definitionen neuer Kommandos
+\input{../einstellungen/kommandos}

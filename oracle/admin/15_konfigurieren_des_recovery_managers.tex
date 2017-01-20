@@ -1,0 +1,677 @@
+  \chapter{Konfigurieren des Recovery Manager}
+    \setcounter{page}{1}\kapitelnummer{chapter}
+    \minitoc
+\newpage
+    \section{Die Architektur des Recovery Managers}
+        \begin{center}
+          \tablecaption{Die Komponenten der RMAN-Umgebung}
+          \tablefirsthead{%
+            \hline
+            \multicolumn{1}{|c|}{\textbf{Komponente}} &
+            \multicolumn{1}{|c|}{\textbf{Beschreibung}} &
+            \multicolumn{1}{|c|}{\textbf{Ben\"otigt?}}
+            \\
+            \hline
+          }
+          \tabletail{%
+            \hline
+          }
+          \begin{small}
+            \begin{supertabular}[h]{|p{3cm}|p{10cm}|c|}
+              Zieldatenbank & Hierbei handelt es sich um die Datenbank
+              (Kontrolldateien, Datendateien und optional auch Archive Log
+              Dateien), die durch RMAN gesichert werden soll. RMAN verwendet die
+              Kontrolldateien der Zieldatenbank, um Informationen \"uber diese
+              zu gewinnen und um eigene Informationen zu dieser Datenbank zu
+              speichern. Die Backup- bzw. Recoveryjobs werden durch
+              Serverprozesse der Zieldatenbank durchgef\"uhrt. & Ja \\
+              \hline
+              RMAN Client & Dies ist die Clientanwendung, die die Backup and Recovery Operationen ausf\"uhrt. Da der RMAN Oracle Net-f\"ahig ist, kann er sich von jedem beliebigen Rechner aus zur Zieldatenbank verbinden. & Ja \\
+              \hline
+              \raggedright Recovery Katalog Datenbank & Als Recovery Catalog wird eine Datenbank bezeichnet, welche die von RMAN ben\"otigten Metainformationen speichert. & Nein \\
+              \hline
+              \raggedright Recovery Katalog Schema & Dieses Schema wird in der Recovery Katalog Datenbank angelegt und enth\"alt die Metainformationen des RMAN. Es wird regelm\"a\ss{}ig durch RMAN mit der Kontrolldatei der Zieldatenbank synchronisiert. & Nein \\
+              \hline
+              Media Management Anwendung & Dies sind herstellerspezifische Anwendungen, die es dem RMAN erlauben, Backup Sets auf Streamertapes zu kopieren. & Nein \\
+              \hline
+              Media Management Katalog & Der Media Management Katalog wird in Zusammenhang mit einer Media Management Anwendung verwendet und speichert Angaben, die RMAN ben\"otigt, um auf ein Tapelaufwerk zugreifen zu k\"onnen. & Nein \\
+            \end{supertabular}
+          \end{small}
+        \end{center}
+      \subsection{Der Kommandozeilen Client}
+        \subsubsection{Globalization Support Variablen f\"ur RMAN setzen}
+          Vor dem Aufruf des Recovery Managers ist es notwendig, dass die beiden Umgebungsvariablen \identifier{nls\_date\_format} und \identifier{nls\_lang} gesetzt werden. Sie beeinflussen die Formatierung von Datums- und Zeitangaben im RMAN. Das folgende Beispiel zeigt m\"ogliche Einstellungen f\"ur beide:
+          \begin{lstlisting}[caption={Beispiel f\"ur \identifier{nls\_date\_format} und \identifier{nls\_lang}},label=admin1000,language=terminal]
+-- Ohne Zeichensatz
+[oracle@FEA11-119SRV ~]$ export NLS_LANG=german_germany
+
+-- Mit Zeichensatz
+[oracle@FEA11-119SRV ~]$ export NLS_LANG=german_germany.UTF8
+
+[oracle@FEA11-119SRV ~]$ export NLS_DATE_FORMAT='DD.MM.YYYY HH24:MI:SS'
+          \end{lstlisting}
+\clearpage
+          \begin{merke}
+            Bei der Angabe eines Zeichensatzes in der Variablen \identifier{nls\_lang} ist immer der Zeichensatz zu verwenden, den das Betriebssystem aktuell in Nutzung hat. Unter Linux wird standardm\"assig der WE8ISO8859P1 Zeichensatz genutzt, unter Windows der WE8MSWIN1252.
+          \end{merke}
+          Der folgende Literaturhinweis liefert weiterf\"uhrende Informationen zur Konfiguration der National Language Support Umgebung!
+          \begin{literaturinternet}
+            \item \cite{NLSPG189}
+          \end{literaturinternet}
+        \subsubsection{Starten von RMAN}
+          RMAN wird auf der Kommandozeile durch die Eingabe von \oscommand{rman} gestartet.
+          \begin{lstlisting}[caption={Starten des RMAN},label=admin1001,language=terminal]
+[oracle@FEA11-119SRV ~]$ rman target /
+[oracle@FEA11-119SRV ~]$ rman target sys/oracle@ORCL NOCATALOG
+[oracle@FEA11-119SRV ~]$ rman target / catalog rman/cat@CATDB
+[oracle@FEA11-119SRV ~]$ rman target / catalog rman/cat@CATDB \
+> auxiliary sys/oracle@AUXDB as sysdba
+          \end{lstlisting}
+          \begin{merke}
+            Das Schl\"usselwort \oscommand{target} gibt an, dass sich RMAN mit der Zieldatenbank verbinden soll. Um sinnvoll arbeiten zu k\"onnen, muss sich RMAN mit einer Zieldatenbank verbunden haben.
+          \end{merke}
+
+          In den beiden ersten Zeilen wird darauf verzichtet, sich mit einem Recovery Katalog zu verbinden. Das Schl\"usselwort \oscommand{NOCATALOG} dr\"uckt dies explizit aus, es kann jedoch auch weggelassen werden. Zeile Nummer drei verbindet RMAN mit einer Zieldatenbank und zus\"atzlich mit einem Recovery Katalog.
+
+          F\"ur spezielle Arbeiten, wie z. B. das Duplizieren einer Datenbank oder das Aufbauen einer Standby Datenbank, kann es erforderlich sein, sich zus\"atzlich mit einer Hilfsdatenbank\footnote{Auxiliary Database = engl. Hilfsdatenbank} zu verbinden. Die meisten T\"atigkeiten erfordern jedoch nur, dass RMAN sich mit einer Zieldatenbank verbindet. Die Verbindung zu einem Recovery Katalog ist grunds\"atzlich optional.
+
+          Um den RMAN zu verlassen wird das Kommando \languagerman{exit} verwendet.
+\clearpage
+        \subsubsection{Verbindungen und Authentifizierung}
+          \begin{merke}
+            Um sich im RMAN mit einer Zieldatenbank oder einer Hilfsdatenbank verbinden zu k\"onnen, be\-n\"o\-tigt der Nutzer das \privileg{SYSDBA}-Privileg. Die Authentifizierung kann dabei \"uber eine Passwortdatei oder das Betriebssystem erfolgen.
+          \end{merke}
+          Da das Verbinden mit einer Ziel- oder Hilfsdatenbank immer das \privileg{SYSDBA}-Privileg voraussetzt, ist es im RMAN, anders als bei SQL*Plus, nicht notwendig die Klausel \languagesqlplus{as sysdba} mit anzugeben.
+
+          Verwendet die Zieldatenbank eine Passwortdatei, kann zur Authentifizierung im RMAN ein Passwort verwendet werden. Soll die Be\-triebs\-sys\-tem\-authen\-ti\-fi\-zie\-rung in\-ner\-halb von RMAN genutzt werden, kann die Umgebungsvariable \identifier{oracle\_sid} gesetzt werden. Sie muss den Instanznamen der Zieldatenbank enthalten.
+        \subsubsection{Eingeben von Kommandos}
+          Wenn der RMAN gestartet wurde, wird folgendes Commandprompt angezeigt:
+          \begin{lstlisting}[caption={Das RMAN-Commandprompt},label=admin1002,language=rman]
+RMAN>
+          \end{lstlisting}
+          Ab diesem Zeitpunkt k\"onnen beliebige RMAN-Kommandos eingegeben werden:
+          \begin{lstlisting}[caption={Beispiel f\"ur einige RMAN-Kommandos},label=admin1003,language=rman]
+RMAN> CONNECT target /
+RMAN> CONNECT catalog rman/cat@CATDB
+
+RMAN> BACKUP database;
+          \end{lstlisting}
+          Fast alle RMAN-Kommandos akzeptieren einen oder mehrere Parameter und m\"ussen mit einem Semikolon ';' abgeschlossen werden. Wenige Ausnahmen, wie z. B. \languagesqlplus{startup}, \languagesqlplus{shutdown} oder \languagesqlplus{connect} k\"onnen ohne Semikolon benutzt werden.
+
+          Ein RMAN-Kommando kann auf mehrere Zeilen verteilt werden.
+          \begin{lstlisting}[caption={Ein mehrzeiliges RMAN-Kommando},label=admin1004,language=rman]
+RMAN> BACKUP database
+2>    INCLUDE current controlfile;
+          \end{lstlisting}
+        \subsubsection{RMAN zum Starten und Herunterfahren der Datenbank benutzen}
+          Wenn ein Vorgang es erfordert, dass die Zieldatenbank gestartet, heruntergefahren, in den MOUNT- oder NOMOUNT-Status versetzt wird, kann der RMAN die entsprechende \"Anderung an der Datenbank herbeif\"uhren. Im folgenden Beispiel werden ein Shutdown, ein Startup und einige andere SQL-Statements durchgef\"uhrt:
+          \begin{lstlisting}[caption={Startup und Shutdown im RMAN},label=admin1005,language=rman,alsolanguage=sqlplus]
+[oracle@FEA11-119SRV ~]$ rman target /
+
+RMAN> shutdown immediate
+RMAN> startup nomount
+RMAN> SQL 'ALTER DATABASE NOMOUNT';
+RMAN> SQL 'ALTER DATABASE MOUNT';
+RMAN> SQL 'ALTER DATABASE OPEN';
+        \end{lstlisting}
+      \subsection{Das RMAN Repository}
+        Als RMAN Repository wird eine Sammlung von Metadaten bezeichnet, die der RMAN f\"ur Backup, Recovery und Wartungsarbeiten ben\"otigt. RMAN speichert dieses Repository immer in der Kontrolldatei der Zieldatenbank. Von der Korrektheit der Kontrolldatei h\"angt es ab, welchen Stand der Datenbank der RMAN kennt und welche Backups er wiederherstellen kann. Dies ist einer der Gr\"unde, warum die Kontrolldatei eine besondere Rolle bei der Erstellung einer Backupstrategie spielt. RMAN kann, allein mit Hilfe der Kontrolldatei alle notwendigen Backup und Recovery Operationen ausf\"uhren.
+
+        Optional kann ein Recovery Katalog erstellt werden. Dies ist ein Schema in einer Oracle-Datenbank, welches die gleichen Informationen speichert wie die Kontrolldatei. Im Unterschied zu einer Kontrolldatei, deren Eintr\"age im RMAN Repository nur eine begrenzte Lebensdauer haben, ehe sie \"uberschrieben werden, kann der Recovery Katalog diese Informationen unbegrenzt speichern. Die erh\"ohte Komplexit\"at die durch die Verwaltung eines Recovery Katalogs entsteht, kann schnell durch die Bequemlichkeit ersetzt werden, die er bietet.
+
+        Einige Features des RMAN funktionieren nur mit Hilfe eines Recovery Katalogs, z. B. \enquote{RMAN Stored Scripts} und alle Kommandos, die mit solchen Skripten in Verbindung stehen. Andere RMAN Kommandos sind speziell f\"ur die Verwaltung eines Recovery Katalogs und werden nicht ben\"otigt, wenn keiner verwendet wird.
+
+        Der Recovery Katalog wird durch den RMAN selbst verwaltet. Die Zieldatenbank greift niemals in ihn ein. RMAN gibt automatisch alle notwendigen Informationen, aus der Kontrolldatei der Zieldatenbank an den Recovery Katalog weiter, falls eine \"Anderung eintritt.
+        \subsubsection{Das RMAN Repository in der Kontrolldatei}
+          Das RMAN Repository kennt zwei Eintragsarten: Circular Reuse Records und Noncircular Reuse Records.
+
+          Circular Reuse Records enthalten Daten, die einer hohen \"Anderungsh\"aufigkeit unterliegen und bei Bedarf \"uberschrieben werden k\"onnen. Sie sind als \enquote{logischer Ring organisiert}, was bedeutet, dass sobald alle Speicherpl\"atze belegt sind, entweder neuer Platz durch eine Erweiterung der Kontrolldatei geschaffen wird oder das bestehende Speicherpl\"atze \"uberschrieben werden. \parameter{control\_file\_record\_keep\_time} ist der Initialisierungsparameter, der vorgibt, nach wie vielen Tagen ein Eintrag \"uberschrieben werden kann.
+
+          Non Circular Records enthalten Informationen, die f\"ur den Betrieb der Datenbank wichtig sind. Deshalb k\"onnen diese nicht durch den RMAN \"uberschrieben werden. Dazu z\"ahlt beispielsweise, welche Daten- und Redo Log Dateien eine Datenbank enth\"alt.
+        \subsubsection{Das RMAN Repository im Recovery Katalog}
+         Wird ein RMAN Katalog benutzt, sollte er sich nicht in der Zieldatenbank befinden. Wird er  dennoch dort gespeichert, ist er verloren, wenn die Zieldatenbank verloren geht, was das Recovery der Zieldatenbank deutlich erschwert.
+
+          Um den Recovery Katalog mit einer Zieldatenbank zu verkn\"upfen, muss diese bei ihm registriert werden. Es k\"onnen beliebig viele Datenbanken registriert werden. RMAN unterscheidet die einzelnen Datenbanken anhand einer DBID.
+
+          \begin{merke}
+            Jede Oracle-Datenbank besitzt eine eigene, eindeutige DBID. Diese kann der View \identifier{v\$database} entnommen werden.
+          \end{merke}
+
+          Im Einzelnen beinhaltet der Recovery Katalog Informationen \"uber folgende Dinge:
+          \begin{itemize}
+            \item Backup Sets und Pieces von Datendateien, Redo Logs und Archive Logs
+            \item Kopien von Datendateien
+            \item Kopien von Archive Logs
+            \item Tablespaces und Datendateien der Zieldatenbank(en)
+            \item RMAN stored scripts
+            \item Dauerhafte Konfigurationseinstellungen des RMAN
+          \end{itemize}
+        \subsubsection{Resynchronisieren des Recovery Katalogs}
+          Damit der Recovery Katalog aktuell bleibt, muss er immer wieder mit dem RMAN Repository resynchronisiert werden. Dies geschieht mit Hilfe eines \enquote{Snapshot Controlfile}, dass immer dann durch den RMAN automatisch erzeugt wird, wenn eine Resynchronisation notwendig ist. Es stellt eine konsistente Momentaufnahme der Kontrolldatei dar. Da solche Snapshots nur kurzzeitig verwendet werden, werden sie nicht im Recovery Katalog registriert. RMAN speichert die Checkpoint SCN aus dem Snapshot Controlfile im Recovery Katalog, um die Aktualit\"at des Katalogs sicherzustellen.
+
+          Die Datenbank garantiert, das immer nur ein RMAN-Prozess auf ein Snapshot Controlfile zugreift. Dies erm\"oglicht, dass sich unterschiedliche RMAN-Prozesse nicht gegenseitig st\"oren.
+    \section{Konfigurieren des RMAN}
+      Die Konfiguration des RMAN ist einfach und unkompliziert, da f\"ur fast alle Parameter Standardwerte existieren. Dadurch ist es m\"oglich, ohne manuelle Konfiguration direkt mit dem RMAN zu arbeiten.
+
+      Um den RMAN jedoch effizienter nutzen zu k\"onnen, ist es notwendig die wichtigsten Optionen des RMAN zu kennen. RMAN-Parameter k\"onnen mit dem Kommando \languagerman{CONFIGURE} gesetzt und gespeichert werden, so dass sie nicht bei jedem Backup erneut ge\"andert werden m\"ussen. Das Kommando \languagerman{SHOW} erm\"oglicht die Ausgabe aller Optionen.
+      \subsection{Die aktuelle RMAN-Konfiguration anzeigen}
+        Mit Hilfe des Kommandos \languagerman{SHOW} k\"onnen die aktuellen Werte der RMAN-Parameter angezeigt werden.
+        \begin{lstlisting}[caption={Das SHOW-Kommando},label=admin1006,language=rman]
+RMAN> SHOW retention policy;
+RMAN> SHOW device type;
+RMAN> SHOW default device type;
+RMAN> SHOW channel;
+
+RMAN> SHOW all;
+        \end{lstlisting}
+        Das Kommando \languagerman{SHOW all} zeigt alle Optionen als Serie von \languagerman{CONFIGURE}-Kommandos. Sie kann in eine Textdatei gespeichert werden, die dann dazu dienen kann, die Konfiguration f\"ur eine andere Datenbank einzurichten. Das Spooling in eine Textdatei wird mit Hilfe des \languagerman{SPOOL LOG TO} \oscommand{Dateiname}-Kommandos aktiviert und mit \languagerman{SPOOL LOG OFF} wieder deaktiviert.
+        \begin{lstlisting}[caption={Ausgabe des Kommandos SHOW-ALL},label=admin1007,language=rman]
+RMAN> SPOOL LOG TO '/home/oracle/rman.cfg';
+RMAN> SHOW ALL;
+RMAN> SPOOL LOG OFF;
+        \end{lstlisting}
+      \subsection{Anpassen der RMAN-Konfiguration}
+        \subsubsection{Das Backup-Standardger\"at festlegen}
+          Standardm\"a\ss{}ig legt der RMAN alle Backups in einem Verzeichnis auf der Festplatte ab. Er kann aber auch so konfiguriert werden, dass er seine Backups auf ein SBT-Ger\"at speichert.
+
+          Nach der Konfiguration des SBT-Ger\"ates, kann es im RMAN zum Backup-Standardger\"at gemacht werden:
+          \begin{lstlisting}[caption={Konfigurieren des Backup-Standardger\"ats},label=admin1008,language=rman]
+RMAN> CONFIGURE DEFAULT DEVICE TYPE TO sbt;
+          \end{lstlisting}
+          Anschlie\ss{}end werden alle Backups, bei denen kein Backupger\"at angegeben wurde, auf das Backup-Standardger\"at gespeichert. Um eine Festplatte als Backup-Standardger\"at einzurichten, muss dem \languagerman{DEFAULT DEVICE TYPE}-Parameter der Wert \enquote{disk} gegeben werden:
+          \begin{lstlisting}[caption={Konfigurieren des Backup-Standardger\"ats auf Festplatte},label=admin1009,language=rman]
+RMAN> CONFIGURE DEFAULT DEVICE TYPE TO disk;
+          \end{lstlisting}
+          Auch ohne das Einrichten eines Backup-Standardger\"ats, k\"onnen Backups auf SBT-Ger\"at oder Festplatte gespeichert werden. Das folgende Beispiel zeigt zwei unterschiedliche
+          \languagerman{BACKUP}-Kommandos:
+          \begin{lstlisting}[caption={Backup-Beispiele},label=admin1010,language=rman]
+RMAN> BACKUP DEVICE TYPE SBT database;
+RMAN> BACKUP DEVICE TYPE DISK database;
+RMAN> BACKUP database;
+          \end{lstlisting}
+          Das erste Kommando \languagerman{BACKUP DEVICE TYPE SBT DATABASE} speichert das Backup der Zieldatenbank auf ein SBT-Ger\"at. Das zweite sichert das Backup auf Festplatte, da als Device Type der Wert \enquote{disk} vorgegeben wurde. Das dritte \languagerman{BACKUP database}-Kommando benutzt das Backup-Standardger\"at.
+          \begin{merke}
+            Parameter, die einem Kommando, wie z. B. \languagerman{BACKUP}, \languagerman{RESTORE} oder \languagerman{RECOVER} mitgegeben werden, haben immer Vorrang vor einer Einstellung, die mit \languagerman{CONFIGURE} vorkonfiguriert wurde.
+          \end{merke}
+          \begin{lstlisting}[caption={\"Uberschreiben einer Konfigurationseinstellungen},label=admin1011,language=rman]
+RMAN> CONFIGURE DEFAULT DEVICE TYPE TO sbt;
+RMAN> BACKUP database
+2>    DEVICE TYPE disk;
+          \end{lstlisting}
+        \subsubsection{Konfigurieren des Standard-Backuptyps}
+          Der Standard-Backuptyp legt fest, welche Art von Backup gemacht wird, wenn nichts spezielles definiert wurde. Zur Auswahl stehen:
+          \begin{itemize}
+            \item Unkomprimierte Backup Sets
+            \item Komprimierte Backup Sets
+            \item Image Copies
+          \end{itemize}
+          \begin{merke}
+            Wurde hier nichts abweichendes konfiguriert, erstellt RMAN unkomprimierte Backup Sets. Es existiert keine M\"oglichkeit Image Copies f\"ur ein SBT-Ger\"at zu konfigurieren, da RMAN nur Backup Sets auf SBT-Ger\"ate schreiben kann.
+          \end{merke}
+          \begin{lstlisting}[caption={Standard-Backuptyp festlegen},label=admin1012,language=rman]
+RMAN> CONFIGURE DEVICE TYPE disk
+2>    BACKUP TYPE TO copy;
+RMAN> CONFIGURE DEVICE TYPE disk
+2>    BACKUP TYPE TO backupset;
+
+RMAN> CONFIGURE DEVICE TYPE disk
+2>    BACKUP TYPE TO compressed backupset;
+RMAN> CONFIGURE DEVICE TYPE sbt
+2>    BACKUP TYPE TO compressed backupset;
+          \end{lstlisting}
+          Komprimierte Backup Sets k\"onnen sowohl auf Festplatte, als auch auf einem SBT-Ger\"at gespeichert werden.
+      \subsection{RMAN auf seine Standardkonfiguration zur\"ucksetzen}
+        Jeder RMAN-Parameter kann auf seinen Standardwert zur\"uckgesetzt werden. Dies geschieht mit dem RMAN-Kommando \languagerman{CONFIGURE ... CLEAR}.
+        \begin{lstlisting}[caption={CONFIGURE ... CLEAR},label=admin1013,language=rman]
+RMAN> CONFIGURE BACKUP OPTIMIZATION CLEAR;
+RMAN> CONFIGURE RETENTION POLICY CLEAR;
+RMAN> CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE TYPE DISK CLEAR;
+        \end{lstlisting}
+    \section{Kan\"ale f\"ur RMAN konfigurieren}
+      Ein Kanal im Sinne von RMAN ist ein Datenstrom zwischen einem Speicherger\"at und einem Serverprozess. Die meisten RMAN-Kommandos werden mit Hilfe eines Serverprozesses ausgef\"uhrt. Wie in \abbildung{rman_channel} zu sehen ist, erstellt jeder Kanal eine Verbindung zu einer Zieldatenbank, in dem er dort einen Serverprozess startet. Der Serverprozess f\"uhrt dann die Backup-, Restore- oder Recovery-T\"atigkeiten durch.
+      \bild{RMAN und Channels}{rman_channel}{1}
+      Kan\"ale k\"onnen in RMAN auf zwei unterschiedliche Arten erstellt werden: automatisch oder manuell.
+      \subsection{Die manuelle Kanalanforderung}
+        In RMAN ist es m\"oglich Kan\"ale manuell, f\"ur ganz bestimmte Zwecke anzufordern. Dies geschieht durch das \languagerman{ALLOCATE}-Kommando, wie in \beispiel{admin1014} gezeigt wird.
+        \begin{lstlisting}[caption={Manuelle Kanalanforderung},label=admin1014,language=rman]
+RMAN> RUN
+2>    {
+3>      ALLOCATE CHANNEL c1 DEVICE TYPE disk;
+4>      BACKUP database PLUS ARCHIVELOG;
+5>    }
+        \end{lstlisting}
+        Die Zeile \languagerman{ALLOCATE CHANNEL c1 DEVICE TYPE disk} fordert einen Kanal namens \identifier{c1} an. Dieser liest seine Daten von einem Disk-Ger\"at. Zu beachten ist an dieser Stelle der RUN-Block.
+
+        \begin{merke}
+          RUN-Bl\"ocke sind vergleichbar mit Prozeduren/Methoden aus der Programmierung. Sie stellen eine in sich geschlossene Einheit dar, die eine Abfolge von Befehlen enth\"alt, welche sequenziell abgearbeitet wird. F\"ur die manuelle Kanalanforderung ist es zwingend notwendig, einen RUN-Block zu benutzen.
+        \end{merke}
+
+        RMAN benutzt den angeforderten Kanal f\"ur alle Operationen, die innerhalb des RUN-Blocks definiert sind. Nach dem der RUN-Block abgearbeitet worden ist, wird der Kanal automatisch wieder geschlossen.
+      \subsection{Die automatische Kanalanforderung}
+        Seit Oracle 10g ist es nicht mehr zwingend erforderlich, Kan\"ale manuell anzufordern. Der RMAN h\"alt standardm\"a\ss{}ig immer einen generischen Kanal f\"ur alle Operationen bereit.
+        \begin{merke}
+          Ein Kanal ist generisch, wenn er nur auf den Standardeinstellungen von RMAN beruht. Das hei\ss{}t, er wird z. B. durch das Standardbackupger\"at beeinflusst.
+        \end{merke}
+        \subsubsection{Kan\"ale vordefinieren}
+          Mit Hilfe des Kommandos \languagerman{CONFIGURE CHANNEL} k\"onnen die Konfigurationseinstellungen f\"ur Kan\"ale ge\"andert werden. Das folgende Beispiel zeigt, wie f\"ur einen Kanal der Speicherort (das Format) konfiguriert wird.
+          \begin{lstlisting}[caption={Vordefinieren eines Channels mit Speicherort},label=admin1015,language=rman]
+RMAN> CONFIGURE CHANNEL DEVICE TYPE disk
+2>    FORMAT '/u04/backup/ora_df%t_%s%p.bkp';
+          \end{lstlisting}
+          Dieses Kommando legt als Speicherort f\"ur den Channel das Verzeichnis\ \oscommand{/u04/backup/} fest. Das Format f\"ur den Dateinamen der Backups gliedert sich wie folgt:
+          \begin{itemize}
+            \item Der Dateiname beginnt mit den Buchstaben \oscommand{ora\_df}.
+            \item Der Platzhalter \oscommand{\%t} wird durch einen Zeitstempel ersetzt.
+            \item Der Platzhalter \oscommand{\%s} wird mit der Nummer des Backup Sets ersetzt.
+            \item Der Platzhalter \oscommand{\%p} wird mit der Nummer des Backup Piece ersetzt.
+          \end{itemize}
+
+          \begin{merke}
+            Zu beachten bei der Konfiguration eines expliziten Speicherorts f\"ur Backup Sets ist: Wird ein expliziter Speicherort f\"ur Backup Sets konfiguriert, werden die Backup Sets au\ss{}erhalb der Fast Recovery Area (siehe \ref{configureflashrecoveryarea}) gespeichert. Damit geht die gesamte Funktionalit\"at der Fast Recovery Area verloren.
+          \end{merke}
+          Ein anderes Beispiel f\"ur die Konfiguration eines Kanals zeigt \beispiel{admin1016}.
+          \begin{lstlisting}[caption={Ein vordefinierter Channel mit Backup Piece Size},label=admin1016,language=rman]
+RMAN> CONFIGURE CHANNEL DEVICE TYPE disk
+2>    MAXPIECESIZE = 500M;
+          \end{lstlisting}
+          In diesem Beispiel wird die Maximalgr\"o\ss{}e f\"ur die einzelnen Backup Pieces auf 500 Megabyte festgelegt.  Jedes \"uber diesen Kanal angefertigte Backup Set, wird automatisch in 500 Megabyte St\"ucke, sogenannte Backup Pieces, zerlegt.
+
+          \bild{Ein Backup Set, das aus drei Backup Pieces besteht}{backuppieces}{0.55}
+
+        \subsubsection{Optimierung automatisch angeforderter Kan\"ale}
+          RMAN optimiert die Nutzung von automatisch angeforderten Kan\"alen dahin gehend, dass ein solcher Kanal nur so lange offen bleibt, wie er ben\"otigt wird.
+
+          Im folgenden Beispiel sind drei Backup-Operationen zu sehen. Die Erste \"offnet den vordefinierten Kanal. Die zweite und die dritte Operation ben\"otigen einen exakt genauso konfigurierten Kanal, wie die erste Operation. Deshalb wird der Kanal nicht jedes mal neu ge\"offnet, sondern bleibt offen.
+
+          \begin{merke}
+            Erst nach der Benutzung eines der beiden Kommandos \languagerman{ALLOCATE} oder \languagerman{CONFIGURE} wird der vordefinierte Kanal wieder geschlossen.
+          \end{merke}
+          \begin{lstlisting}[caption={Optimierung der automatischen Kanalanforderung},label=admin1017,language=rman]
+RMAN> BACKUP datafile 1; --Kanal wird geoeffnet
+RMAN> BACKUP current controlfile; -- Kanal wird erneut genutzt
+RMAN> BACKUP archivelog all; -- Kanal wird weiter genutzt und bleibt offen
+RMAN> CONFIGURE DEFAULT DEVICE TYPE TO disk; -- Der Kanal wird geschlossen
+          \end{lstlisting}
+      \subsection{Parallelisierung bei der Kanalanforderung}
+        Mit Hilfe der Parallelisierung k\"onnen, in einem Arbeitsschritt, mehrere gleichartige Kan\"ale synchron angefordert werden.
+        \subsubsection{Parallelisierung manuell angeforderter Kan\"ale}
+          Bei der manuellen Kanalanforderung ist die Parallelisierung sehr einfach einzurichten. Im folgenden Beispiel werden zwei Kan\"ale angefordert, \oscommand{c1} und \oscommand{c2}. Da  mehrere Dateien gesichert werden m\"ussen, kann RMAN die Parallelisierung nutzen und die Arbeit wird auf beide Kan\"ale verteilt.
+\clearpage
+          \begin{lstlisting}[caption={Parallelisierung und die manuelle Kanalanforderung},label=admin1018,language=rman]
+RMAN> RUN {
+2>      ALLOCATE CHANNEL c1 DEVICE TYPE disk;
+3>      ALLOCATE CHANNEL c2 DEVICE TYPE disk;
+4>      BACKUP database PLUS ARCHIVELOG;
+5>    }
+          \end{lstlisting}
+          \begin{merke}
+            RMAN nutzt immer so viele Kan\"ale, wie er f\"ur seine aktuelle Operation ben\"otigt. Sind zwei Kan\"ale angefordert und RMAN kann nur einen f\"ur seine Arbeit nutzen (z. B. weil nur eine Datei gesichert werden soll), nutzt er auch nur den ersten angeforderten Kanal.
+          \end{merke}
+        \subsubsection{Parallelisierung automatisch angeforderter Kan\"ale}
+          In seiner Standardeinstellung hat RMAN nur einen einzigen Kanal zur Verf\"ugung. Um mehrere Kan\"ale zu nutzen, muss die Parallelisierung aktiviert werden. \beispiel{admin1019} zeigt das Kommando zur parallelen Anforderung von 3 Festplatten-Kan\"alen.
+          \begin{lstlisting}[caption={Parallelisierung von Kan\"alen},label=admin1019,language=rman]
+RMAN> CONFIGURE DEVICE TYPE disk PARALLELISM 3;
+          \end{lstlisting}
+          Hier gilt das gleiche Prinzip, wie bei der manuellen Kanalanforderung: Es werden immer nur so viele Kan\"ale genutzt, wie zur Verf\"ugung stehen und ben\"otigt werden. Jeder einzelne dieser Kan\"ale kann mit Hilfe des \languagerman{CONFIGURE CHANNEL}-Kommandos konfiguriert werden.
+          \begin{lstlisting}[caption={Unterschiedliche Kan\"ale vordefinieren},label=admin1020,language=rman]
+RMAN> CONFIGURE CHANNEL 0 DEVICE TYPE disk
+2>    MAXPIECESIZE = 500M;
+RMAN> CONFIGURE CHANNEL 1 DEVICE TYPE sbt
+2>    PARMS 'SBT_LIBRARY=oracle.disksbt,ENV=(BACKUP_DIR=/u04)';
+RMAN> CONFIGURE CHANNEL 2 DEVICE TYPE disk
+2   > FORMAT '/u02/backup/backupset_%u.bkp';
+          \end{lstlisting}
+          \begin{merke}
+            Mit \languagerman{CONFIGURE CHANNEL n} werden Kan\"ale durch Nummern von 0 bis n angesprochen. Somit ist es m\"oglich, getrennte Konfigurationen f\"ur Kan\"ale anzulegen. Die Kommandos \languagerman{CONFIGURE CHANNEL} und \languagerman{CONFIGURE CHANNEL 0} sind identisch.
+          \end{merke}
+          Wenn alle parallel angeforderten Kan\"ale die gleichen Einstellungen aufweisen sollen, kann das Kommando \languagerman{CONFIGURE CHANNEL} genutzt werden, um Kanal Nummer 0 zu konfigurieren. Wurde nur dieser eine Kanal eingerichtet, besitzen alle ge\"offneten Kan\"ale die gleichen Vorgaben.
+          \begin{lstlisting}[caption={Parallele Anforderung von Kan\"alen mit gleicher Konfiguration},label=admin1021,language=rman]
+RMAN> CONFIGURE DEVICE TYPE disk
+2>    PARALLELISM 3;
+RMAN> CONFIGURE CHANNEL DEVICE TYPE disk
+2>    MAXPIECESIZE = 500M
+3>    FORMAT '/u02/backup/%d_%D-%M-%Y_%u.bkp';
+          \end{lstlisting}
+          Im vorangegangenen Beispiel werden drei Kan\"ale parallel genutzt. Die Konfiguration f\"ur alle drei Kan\"ale wird von der Konfiguration des Kanals Nummer 0 abgeleitet.
+        \subsubsection{Namenskonventionen der automatischen Kanalanforderung}
+          RMAN benutzt die Konvention \enquote{ORA\_ger\"at\_n} f\"ur die Benennung automatisch angeforderter Kan\"ale. Der Platzhalter \enquote{ger\"at} steht dabei f\"ur das Ger\"at, auf das der Kanal zeigt, beispielsweise \enquote{disk} oder \enquote{sbt\_tape}. n steht f\"ur die laufende Nummer des Kanals. RMAN benennt den ersten Festplatten-Kanal \enquote{ORA\_DISK\_1}, den zweiten \enquote{ORA\_DISK\_2} usw. F\"ur Streamerger\"ate lautet der Name des ersten automatisch angeforderten Kanals \enquote{ORA\_SBT\_TAPE\_1}.
+
+          Das folgende Beispiel zeigt den Zusammenhang zwischen automatischer Kanalanforderung, Parallelisierung und deren Namenskonventionen.
+
+          Der Nutzer setzt folgende Kommandos ab:
+          \begin{lstlisting}[caption={Namenskonventionen f\"ur RMAN-Kan\"ale},label=admin1022,language=rman]
+RMAN> CONFIGURE DEVICE TYPE disk PARALLELISM 3;
+RMAN> BACKUP database PLUS ARCHIVELOG;
+          \end{lstlisting}
+          Effektiv tut RMAN folgendes:
+          \begin{lstlisting}[caption={Namenskonventionen f\"ur vordefinierte RMAN-Kan\"ale 2},label=admin1023,language=rman]
+RMAN> RUN {
+2>      ALLOCATE CHANNEL ORA_DISK_1 DEVICE TYPE disk;
+3>      ALLOCATE CHANNEL ORA_DISK_2 DEVICE TYPE disk;
+4>      ALLOCATE CHANNEL ORA_DISK_3 DEVICE TYPE disk;
+5>
+6>      BACKUP database PLUS ARCHIVELOG;
+7>    }
+          \end{lstlisting}
+\clearpage
+          \begin{merke}
+            Beachtet werden muss, das Kan\"ale die mit dem Pr\"afix \textit{ORA\_} beginnen, nur f\"ur die interne Nutzung durch RMAN angefordert werden k\"onnen. Wird ein Kanal mit einem solchen Namen manuell angefordert, quittiert RMAN dies mit der folgenden Fehlermeldung:
+\begin{verbatim}
+RMAN-00571: ===========================================================
+RMAN-00569: =============== ERROR MESSAGE STACK FOLLOWS ===============
+RMAN-00571: ===========================================================
+RMAN-03002: Fehler bei allocate Befehl auf 07/22/2013 14:06:01
+RMAN-06472: Kanal-ID ORA_DISK_1 wird automatisch zugewiesen
+\end{verbatim}
+          \end{merke}
+        \subsubsection{Automatisches Channel-Failover}
+          Sind f\"ur eine Operation mehrere Kan\"ale angeforderte, kann RMAN im Falle dessen, dass ein Kanal ausf\"allt, auf einen anderen Kanal wechseln. Somit kann die Operation unter Umst\"anden trotz des Ausfalls eines Kanals fortgesetzt werden. Dieser Mechanismus wird als \enquote{Channel-Failover} bezeichnet.
+    \section{Autobackup f\"ur Kontrolldateien und SPFiles konfigurieren}
+      \label{controlfileautobackup}
+      In vielen Recoverysituationen ist es sehr wichtig, ein Backup der aktuellen Kontrolldatei zu besitzen. Um die Wahrscheinlichkeit zu erh\"ohen, dass ein solches Backup existiert, bietet Oracle die M\"oglichkeit, das \enquote{Controlfile Autobackup} einzurichten. Es wird ein automatisches Backup der Kontrolldatei angefertigt, sobald \"Anderungen am RMAN Repositoy gemacht wurden.
+
+      Mit Hilfe eines Controlfile Autobackups kann RMAN die Datenbank auch dann wiederherstellen, wenn die aktuelle Kontrolldatei, der Recovery Katalog und das SPFile nicht mehr verf\"ugbar sind.  Um das automatische Controlfile Autobackup zu konfigurieren, werden die beiden folgenden Kommandos verwendet:
+      \begin{lstlisting}[caption={Controlfile Autobackup konfigurieren},label=admin1024,language=rman]
+RMAN> CONFIGURE CONTROLFILE AUTOBACKUP ON;
+RMAN> CONFIGURE CONTROLFILE AUTOBACKUP OFF;
+      \end{lstlisting}
+      \begin{merke}
+        Oracle empfiehlt, dass das Controlfile Autobackup immer aktiviert sein sollte.
+      \end{merke}
+
+      Der Ablauf eines Controlfile Autobackup gliedert sich wie folgt:
+      \bild{Ablauf eines Controlfile Autobackups}{controlfile_autobackup}{0.35}
+
+      Nachdem das Controlfile Autobackup abgeschlossen wurde, wird der komplette Pfad und der Dateiname des Backup Sets in die Alert.log Datei eingetragen.
+
+      Wie in \abbildung{controlfile_autobackup} zu sehen, wird nur in zwei Situationen ein Controlfile Autobackup durchgef\"uhrt:
+      \begin{enumerate}
+        \item Wenn ein Backup erfolgreich verlaufen ist.
+        \item Wenn eine strukturelle \"Anderung an der Datenbank vorgenommen wurde (hinzuf\"ugen oder entfernen von Tablespaces, \"andern von Redo Log Gruppen, u. \"a.).
+      \end{enumerate}
+      Im ersten Fall wird das Autobackup durch einen RMAN Channel durchgef\"uhrt. Im zweiten Fall f\"uhrt der Serverprozess, der die Struktur\"anderung an der Datenbank vorgenommen hat das Autobackup durch.
+      \begin{merke}
+        Sobald Datendatei Nummer 1, der System-Tablespace in einem Backup enthalten ist, wird immer die Kontrolldatei mitgesichert, auch wenn das Controlfile Autoback deaktiviert ist.
+      \end{merke}
+
+      \begin{literaturinternet}
+        \item \cite[Control File and Server Parameter File Autobackups]{cfandspfileautobackups}
+      \end{literaturinternet}
+    \section{Die Backup Retention Policy}
+      \label{backupretentionpolicy}
+      Die Backup Retention Policy\footnote{Retention Policy (w\"ortliche \"Ubersetzung): Erhaltungsregel} legt fest, welche Backups erhalten bleiben m\"ussen, um ein Recovery der Datenbank durchf\"uhren zu k\"onnen. Diese Regel kann auf einem Zeitfenster (Recovery Window) basieren oder auf Redundanz.
+      \subsection{Zeitfensterbasierte Retention Policy einrichten}
+        Als Recovery Window wird ein Zeitraum bezeichnet, der vom aktuellen Datum ausgehend x Tage in die Vergangenheit reicht. Innerhalb dieses Zeitfensters kann die Datenbank mit einem Point-In-Time-Recovery in jeden beliebigen Zustand zur\"uckversetzt werden. Der fr\"uhest m\"ogliche Zeitpunkt, an den eine Datenbank zur\"uckversetzt werden kann, wird als \textit{Point Of Recoverability} bezeichnet.
+        \begin{lstlisting}[caption={RECOVERY WINDOW setzen},label=admin1025,language=rman]
+RMAN> CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 7 DAYS;
+        \end{lstlisting}
+        Diese Regel stellt sicher, dass f\"ur jede Datendatei ein Backup existiert, das \"alter ist, als der Point of Recoverability, in diesem Falle also \"alter als sieben Tage.
+
+        Alle Backups, die \"alter sind, als das aktuellste Backup, das die genannte Bedingung erf\"ullt gelten als obsolet (nicht mehr ben\"otigt).
+
+        Das folgende Beispiel soll die Nutzung eines Recovery Window verdeutlichen. Folgendes gilt:
+        \begin{itemize}
+          \item Es wurden Backups am 01.06.20XX und am 13.06.20XX gemacht.
+          \item Die Datenbank befindet sich im Archivelog Modus und alle notwendigen Archive sind vorhanden.
+        \end{itemize}
+        In \abbildung{recovery_window_example_1} ist das aktuelle Datum der 30.06.20XX. Der Point of Recoverability liegt am 23.06.20XX, sieben Tage vom aktuellen Datum zur\"uck. Um ein Recovery gem\"a\ss{}\ der g\"ultigen Retention Policy machen zu k\"onnen, wird das Backup vom 13.06.20X, sowie die Archive Logs von Sequenz 550 bis 800, ben\"otigt. Das Backup vom 01.06.20XX und alle Archive Logs vor Sequenz 550 sind obsolet und k\"onnen gel\"oscht werden.
+        \bild{Nutzung eines Recovery Window}{recovery_window_example_1}{1.5}
+\clearpage
+        \abbildung{recovery_window_example_2} zeigt ein ver\"andertes Szenario:
+
+        \bild{Nutzung eines Recovery Window}{recovery_window_example_2}{1.5}
+
+        Das aktuelle Datum ist der 11.07.20XX und der Point of Recoverability ist der 04.07.20XX. Um die Retention Policy zu erf\"ullen, werden nun das Backup vom 30.06.20XX und alle Archive von Logs von Sequenz 800 an ben\"otigt. Das Backup vom 06.07.20X ist zwar aktueller als das vom 30.06.20XX, es kann aber die Retention Policy nicht erf\"ullen, da es j\"unger ist als der Point of Recoverability.
+      \subsection{Eine redundanzbasierte Retention Policy einrichten}
+        Eine redundanzbasierte Retention Policy legt fest, wie viele Backups von einer Datendatei vorhanden sein m\"ussen, um die Policy zu erf\"ullen.
+        \begin{lstlisting}[caption={REDUNDANCY setzen},label=admin1026,language=rman]
+RMAN> CONFIGURE RETENTION POLICY TO REDUNDANCY 2;
+        \end{lstlisting}
+        Dieses Kommando legt fest, dass von jeder Datendatei mindestens zwei Backups vorhanden sein m\"ussen. Hierbei wird kein Unterschied zwischen Image Copy und Backup Set gemacht.
+
+        Welche der beiden Verwaltungsmethoden vorzuziehen ist, h\"angt davon ab, ob ein Point-In-Time-Recovery der Datenbank in Frage kommt oder nicht. Falls nicht, erweist sich die redundanzbasierte Methode als platzsparender. Im anderen Falle ist die zeitfensterbasierte Variante besser, da mittels des Point Of Recoverability genau bestimmt werden kann, wie weit ein Point-In-Time-Recovery in die Vergangenheit zur\"uckreichen kann.
+        \begin{merke}
+          Die Standardeinstellung f\"ur die Retention Policy ist REDUNDANCY = 1.
+        \end{merke}
+\clearpage
+			\subsection{Die Retention Policy anzeigen lassen}
+        Mit Hilfe des \languagerman{SHOW}-Kommandos kann die aktuelle Retention Policy angezeigt werden.
+        \begin{lstlisting}[caption={Anzeigen der Retention Policy},label=admin1027,language=rman]
+RMAN> SHOW RETENTION POLICY;
+        \end{lstlisting}
+      \subsection{Die Retention Policy abschalten}
+        Mit dem folgenden Kommando kann die Retention Policy abgeschaltet werden:
+        \begin{lstlisting}[caption={Abschalten der Retention Policy},label=admin1028,language=rman]
+RMAN> CONFIGURE RETENTION POLICY TO NONE;
+        \end{lstlisting}
+      \subsection{Backups aus der Retention Policy ausschlie\ss{}en}
+        Es kann vorkommen, dass man bestimmte Backups f\"ur besondere Zwecke l\"anger aufbewahren muss, als die Retention Policy dies zul\"asst. Solche Langzeit Backups k\"onnen im RMAN Repository verzeichnet sein, m\"ussen aber von der Retention Policy ausgenommen werden.
+
+        Ein Backup kann von der Retention Policy ausgeschlossen werden, indem:
+        \begin{itemize}
+          \item Die \languagerman{KEEP}-Option des \languagerman{BACKUP}-Kommandos verwendet wird
+            \begin{lstlisting}[caption={Ein neues Backup aus der Retention Policy ausschlie\ss{}en},label=admin1029,language=rman]
+RMAN> BACKUP database KEEP UNTIL TIME "31.12.2014" NOLOGS
+2>    FORMAT "/u03/backup/ORCL/backup_%s_%p.bkp";
+            \end{lstlisting}
+          \item Das \languagerman{CHANGE}-Kommando mit der \languagerman{KEEP}-Option verwendet wird.
+            \begin{lstlisting}[caption={Ein bestehendes Backup aus der Retention Policy ausschlie\ss{}en},label=admin1030,language=rman]
+RMAN> CHANGE BACKUPSET 2 KEEP UNTIL TIME "31.12.2014"
+2>    NOLOGS;
+            \end{lstlisting}
+        \end{itemize}
+        Backups die von der Retention Policy ausgeschlossen sind, sind nach wie vor vollst\"andig g\"ultig und nutzbar. Um ein Backup wieder in die Retention Policy einzuschlie\ss{}en, wird die \languagerman{NOKEEP}-Option des \languagerman{CHANGE}-Kommandos verwendet.
+        \subsubsection{LOGS und NOLOGS}
+          Die Optionen \languagerman{LOGS} und \languagerman{NOLOGS} legen fest, ob die zu einem Backup ben\"otigten Archive Logs (alle Archive Logs die neuer sind als das Backup) mit von der Retention Policy ausgeschlossen werden (\languagerman{LOGS}) oder ob die Archive Logs nicht ber\"ucksichtigt werden sollen (\languagerman{NOLOGS}).
+
+          Es gibt die M\"oglichkeit, ein Backup f\"ur immer aus der Retention Policy auszuschlie\ss{}en. Dies funktioniert mit der Option \languagerman{KEEP FOREVER}. Hierbei sollte jedoch immer die Option \languagerman{NOLOGS} verwendet werden, da sonst alle Archive Logs, die j\"unger als das Backup sind f\"ur immer aufbewahrt werden m\"ussten.
+        \subsubsection{Einschr\"ankungen der KEEP-Option}
+          F\"ur die Nutzung der \languagerman{KEEP}-Option gibt es die folgenden Einschr\"ankungen.
+          \begin{itemize}
+            \item Werden Backup Sets mit einem Keep-Attribut versehen, k\"onnen diese nicht in der Fast Recovery Area (sieh \ref{configureflashrecoveryarea}) gespeichert werden. Aus diesem Grund muss hier zwingend ein alternativer Speicherort mit dem \languagerman{FORMAT}-Schl\"usselwort gesetzt werden. Anderenfalls bricht RMAN den Backupjob mit der Fehlermeldung ab:
+            \begin{lstlisting}[caption={Keine Dateien mit KEEP-Attribut in der FRA aufbewahren!},label=admin1031,language=terminal]
+% ORA-19811: Dateien in DB_RECOVERY_FILE_DEST mit Keep-Attribut
+           sind nicht moeglich.
+            \end{lstlisting}
+            \item Backups, die Archive Logs beinhalten, k\"onnen nicht aus der Retention Policy ausgeschlossen werden. Oracle bricht einen solchen Versuch mit der folgenden Fehlermeldung ab:
+            \begin{lstlisting}[caption={Backups mit Archive Logs d\"urfen kein KEEP-Attribut haben!},label=admin1032,language=terminal]
+RMAN-06530: &CHANGE& ... &KEEP& not supported for backup &set& which contains
+            archive logs.
+            \end{lstlisting}
+          \end{itemize}
+    \section{Die Fast Recovery Area}
+      \label{configureflashrecoveryarea}
+      \begin{merke}
+        Mit Oracle 10g wurde die \enquote{Flash Recovery Area} eingef\"uhrt. Da es immer wieder zu Verwechslungen mit der Technologie \enquote{Flashback Database} kam, wurde die Flash Recovery Area, in Oracle 11g in \enquote{Fast Recovery Area} umbenannt.
+      \end{merke}
+      Wie bereits erw\"ahnt, ist die Fast Recovery Area ein Speicherbereich auf einem Daten\-tr\"ager, der verschiedene, f\"ur das Recovery der Datenbank ben\"otigte Dateien zwischenspeichert (Cache-Funktion).
+
+      Die Fast Recovery Area erleichtert die Administration der Datenbank dahingehend, dass Backupdateien automatisch benannt werden, dass sie automatisch solange vorgehalten werden, wie sie f\"ur ein Restore and Recovery ben\"otigt werden und dass sie automatisch gel\"oscht werden, wenn sie nicht mehr ben\"otigt werden.
+      \subsection{Planen der Fast Recovery Area}
+        Die in der Fast Recovery Area gespeicherten Dateien werden in zwei Kategorien eingeteilt.
+        \subsubsection{Permanente Dateien}
+          Die einzigen permanenten Dateien sind gespiegelte Kopien der Kontrolldatei und der Redo Log Dateien. Diese Dateien k\"onnen nicht gel\"oscht werden, ohne einen Absturz der Instanz zu bewirken.
+        \subsubsection{Fl\"uchtige Dateien}
+          Alle anderen Dateien gelten als fl\"uchtig und werden von Oracle automatisch gel\"oscht, wenn Sie aufgrund der Backup Retention Policy als veraltet gelten oder wenn sie durch ein Backup erfasst wurden.
+
+          Dies schlie\ss{}t folgende Dateien ein:
+          \begin{itemize}
+            \item Archivierte Redo Logs
+            \item Image Copies von Datendateien
+            \item Image Copies von Kontrolldateien
+            \item Kontrolldatei-Autobackups
+            \item Backup Pieces
+          \end{itemize}
+        \subsubsection{Den geeigneten Speicherplatz f\"ur die Recovery Area finden}
+          Bevor eine Fast Recovery Area erstellt werden kann, muss der geeignete
+          Speicherort f\"ur sie gefunden werden (Verzeichnis oder ASM Disk
+          Group).
+\clearpage
+          \begin{merke}
+            Eine Fast Recovery Area kann nicht auf einem Raw-Datentr\"ager gespeichert werden.
+          \end{merke}
+          Des Weiteren muss f\"ur die Fast Recovery Area eine Disk Quota festgelegt werden, die bestimmt, wie gro\ss{} die Area werden darf.
+
+          Die Fast Recovery Area sollte auf einem anderen Datentr\"ager liegen, als die Datenbank, da sonst die Gefahr besteht, das Datenbank und Fast Recovery Area, verloren gehen.
+        \subsubsection{Die Gr\"o\ss{}e der Fast Recovery Area planen}
+          Die Fast Recovery Area sollte gro\ss{} genug sein, um folgende Dateien aufzunehmen:
+          \begin{itemize}
+            \item Kopien aller Datendateien
+            \item Inkrementelle Backups
+            \item Online Redo Logs
+            \item Archivierte Redo Logs, die in noch keinem Backup gesichert wurden
+            \item Kontrolldateien
+            \item Kontrolldatei-Autobackups
+          \end{itemize}
+          Sollte so viel Speicherplatz nicht zur Verf\"ugung stehen, ist es das Beste, die Fast Recovery Area gro\ss{} genug zu machen, um Backups der wichtigsten Tablespaces zu speichern und alle archivierten Redo Logs, die in noch keinem Backup gesichert wurden. Im Minimum muss die Fast Recovery Area jedoch so gro\ss{} sein, dass sie die noch nicht durch ein Backup gesicherten archivierten Redo Logs aufnehmen kann.
+
+          \begin{merke}
+            Wie gro\ss{}\ man seine Fast Recovery Area planen sollte h\"angt von verschiedenen Faktoren ab. Diese sind unter anderem:
+            \begin{itemize}
+              \item Finden viele oder nur sehr wenige \"Anderungen an der Datenbank statt?
+              \item Werden Backups nur auf Festplatte oder auch auf SBT-Ger\"ate gespeichert?
+              \item Wie viele Backups m\"ussen st\"andig verf\"ugbar sein?
+              \item Soll der Flashback Database Mechanismus genutzt werden oder nicht?
+            \end{itemize}
+          \end{merke}
+      \subsection{Konfigurieren der Fast Recovery Area}
+        Um die Fast Recovery Area zu aktivieren, m\"ussen die beiden Initialisierungsparameter \parameter{DB\_RECOVERY\_FILE\_DEST\_SIZE} und \parameter{DB\_RECOVERY\_FILE\_DEST} gesetzt werden.
+        \begin{merke}
+          Der Parameter \parameter{DB\_RECOVERY\_FILE\_DEST\_SIZE} muss zuerst gesetzt werden. Er legt den maximal zur Verf\"ugung stehen Speicherplatz f\"ur die Fast Recovery Area fest. Der Wert f\"ur diesen Parameter sollte immer so geplant werden, das ein Verwaltungsoverhead von ca. 10\% auf dem betreffenden Datentr\"ager \"ubrig bleibt.
+        \end{merke}
+        \begin{lstlisting}[caption={DB\_RECOVERY\_FILE\_DEST\_SIZE setzen},label=admin1033,language=oracle_sql]
+SQL> ALTER SYSTEM SET db_recovery_file_dest_size=4G;
+        \end{lstlisting}
+        \begin{merke}
+          \parameter{DB\_RECOVERY\_FILE\_DEST} legt ein Verzeichnis oder eine ASM Disk Group als Speicherort f\"ur die Fast Recovery Area fest.
+        \end{merke}
+        \begin{lstlisting}[caption={DB\_RECOVERY\_FILE\_DEST\_SIZE setzen},label=admin1034,language=oracle_sql]
+SQL> ALTER SYSTEM SET db_recovery_file_dest='/u05/fast_recovery_area';
+        \end{lstlisting}
+        \subsubsection{Die Views v\$recovery\_file\_dest und v\$recovery\_area\_usage}
+          Diese beiden Views enthalten n\"utzliche Informationen dar\"uber, ob gen\"ugend Speicherplatz f\"ur die Fast Recovery Area zur Verf\"ugung gestellt wird.
+          \begin{itemize}
+            \item \identifier{v\$recovery\_file\_dest}: Enth\"alt Informationen
+            \"uber den Speicherort, die Disk Quota, den genutzten Speicher und
+            den noch zur Verf\"ugung stehenden Speicher in der Fast Recovery
+            Area.
+            \begin{lstlisting}[caption={\identifier{v\$recovery\_file\_dest}},label=admin1035,language=oracle_sql]
+SQL> col name format a23
+SQL> SELECT name, space_limit / POWER(1024, 2) AS Space_Limit,
+  2         ROUND(space_used / POWER(1024, 2),2) AS space_used, 
+  3         number_of_files
+  4  FROM   v$recovery_file_dest;
+
+NAME                    SPACE_LIMIT SPACE_USED NUMBER_OF_FILES
+----------------------- ----------- ---------- ---------------
+/u05/fast_recovery_area        4096     640,09               4
+
+            \end{lstlisting}
+
+           \item \identifier{v\$recovery\_area\_usage}: Zeigt Informationen dar\"uber an, wie viel Speicherplatz jede Dateiart in der Fast Recovery Area belegt und wie viel Speicherplatz durch das L\"oschen als veraltet markierter Dateien gewonnen werden kann.
+            \begin{lstlisting}[caption={\identifier{v\$recovery\_area\_usage}},label=admin1036,language=oracle_sql]
+SQL> SELECT file_type,
+  2         TO_CHAR(percent_space_used, '90.00') AS pct_space_used,
+  3         TO_CHAR(percent_space_reclaimable, '90.00') AS pct_space_recl,
+  4         number_of_files
+  5  FROM   v$recovery_area_usage;
+  
+FILE_TYPE            PCT_SP PCT_SP NUMBER_OF_FILES
+-------------------- ------ ------ ---------------
+CONTROL &FILE&           0.00   0.00               0
+REDO &LOG&               0.00   0.00               0
+ARCHIVED &LOG&           0.00   0.00               0
+&BACKUP& PIECE           15.63   0.23               4
+IMAGE COPY             0.00   0.00               0
+&FLASHBACK& &LOG&            0.00   0.00               0
+&FOREIGN& ARCHIVED &LOG&     0.00   0.00               0
+            \end{lstlisting}
+          \end{itemize}
+
+          \begin{literaturinternet}
+            \item \cite{sthref3529}
+            \item \cite{sthref3528}
+          \end{literaturinternet}
+
+        \subsubsection{Die Fast Recovery Area abschalten}
+          Um die Fast Recovery Area abzuschalten, muss lediglich der Initialisierungsparameter \parameter{db\_recovery\_file\_dest} auf einen Null-String ('') zur\"uckgesetzt werden.
+          \begin{lstlisting}[caption={Die Fast Recovery Area abschalten},label=admin1037,language=oracle_sql]
+SQL> ALTER SYSTEM
+  2  SET db_recovery_file_dest='';
+          \end{lstlisting}
+          Sowohl die in der Fast Recovery Area gespeicherten Dateien als auch die Eintr\"age im RMAN Repository bleiben dabei erhalten.
+        \subsubsection{Verhalten der Fast Recovery Area bei einem Instanz-Crash}
+          Grunds\"atzlich verwaltet sich die Fast Recovery Area selbst. Im Falle eines Instanz-Crashes kann es jedoch vorkommen, das aktuell ge\"offnete Dateien unvollst\"andig in der Fast Recovery Area zur\"uckbleiben. Oracle zeigt dies mit der folgenden Fehlermeldung im Alert Log:
+          \begin{lstlisting}[caption={Besch\"adigte Dateien in der Fast Recovery Area},label=admin1038,language=rman]
+ORA-19816: WARNING: Files may exist in location that are not known to database.
+          \end{lstlisting}
+          \textit{location} wird ersetzt durch den aktuellen Speicherort der Fast Recovery Area.
+
+          Liegt ein solcher Fall vor, gibt es zwei M\"oglichkeiten, um die Situation zu bereinigen:
+          \begin{itemize}
+            \item Die betreffende Datei kann, falls der Dateiheader unbesch\"adigt ist, einfach erneut durch RMAN erfasst und im Repository gespeichert werden.
+              \begin{lstlisting}[caption={Besch\"adigte Dateien in der Fast Recovery Area neu katalogisieren},label=admin1039,language=rman]
+RMAN> CATALOG RECOVERY AREA;
+              \end{lstlisting}
+            \item Die Datei muss manuell gel\"oscht werden, da der Dateiheader zerst\"ort/ung\"ultig ist.
+          \end{itemize}
+      \subsection{Speicherplatzverwaltung in der Fast Recovery Area}
+        Oracle l\"oscht keine Dateien in der Fast Recovery Area, bevor nicht weiterer Speicherplatz ben\"otigt wird. Der daraus resultierende Effekt ist, dass Dateien die bereits auf ein SBT-Ger\"at gesichert wurden, meist noch einige Zeit danach in der Fast Recovery Area vorhanden sind. Somit fungiert die Area als Cache.
+        \subsubsection{Welche Dateien werden wann gel\"oscht}
+          Es sind vier einfache Regeln, von denen drei hier genannt werden, wann welche Dateien aus der Fast Recovery Area entfernt werden:
+          \begin{itemize}
+            \item Permanente Dateien werden nie gel\"oscht.
+            \item Dateien, die durch die Retention Policy als veraltet markiert wurden werden ge\-l\"oscht, wenn neuer Speicherplatz ben\"otigt wird.
+            \item Fl\"uchtige Dateien, die von einem Backup erfasst wurden, werden gel\"oscht, wenn weiterer Speicherplatz ben\"otigt wird.
+          \end{itemize}
+          \begin{merke}
+            Welche Dateien in der Fast Recovery Area zuerst gel\"oscht werden, kann nicht genau bestimmt werden.
+          \end{merke}
+        \subsubsection{Wenn nicht genug Speicher zur Verf\"ugung steht...}
+          Ist die Retention Policy des RMAN so eingestellt, das mehr Speicherplatz f\"ur Backups ben\"otigt wird, als in der Fast Recovery Area vorhanden ist oder wurde die Retention Policy abgeschaltet, kann es passieren, dass die Fast Recovery Area sich zu 100\% f\"ullt.
+
+          Sind nur noch weniger als 15\% freier Speicher in der Fast Recovery Area vorhanden, wird eine Warnung durch die Datenbank ausgegeben. Sind es nur noch 3\%, wird eine kritische Warnung angezeigt. Die Datenbank wird solange neuen Speicher anfordern, bis keiner mehr vorhanden ist.
+
+          Eine komplett gef\"ullte Fast Recovery Area l\"ost folgende Fehlermeldung aus:
+          \begin{lstlisting}[caption={100\% gef\"ullte Fast Recovery Area},label=admin1040,language=terminal]
+ORA-19809: limit exceeded for recovery files
+ORA-19804: cannot reclaim nnnnn bytes disk space from mmmmm limit
+          \end{lstlisting}
+          \textit{nnnnn} stellt dabei die ben\"otigte Speichermenge und \textit{mmmmm} die Disk Quota der Fast Recovery Area dar.
+
+          Oft reagiert die Datenbank auf so einen Fehler, in dem sie stehen bleibt. Wenn zum Beispiel ein als zwingend markierter Speicherort der Archived Logs in der Fast Recovery Area liegt, kann die Datenbank nicht mit ihrem Betrieb fortfahren, bis das Problem behoben ist.
+        \subsubsection{Bereinigen einer vollen Fast Recovery Area}
+          Es gibt verschieden M\"oglichkeiten, eine zu 100 \% gef\"ullte FRA zu bereinigen:
+          \begin{itemize}
+            \item Mehr Speicherplatz verf\"ugbar machen, in dem der Wert des Initialisierungsparameters \parameter{db\_recovery\_file\_dest\_size} erh\"oht wird.
+            \item Backups von den Dateien in der Fast Recovery Area auf Band anfertigen(siehe \ref{FRABackups}) und anschlie\ss{}end, mit Hilfe des RMAN Kommandos \languagerman{DELETE} die Fast Recovery Area entleeren.
+          \end{itemize}
+          \begin{merke}
+            Manuelle Eingriffe in die Fast Recovery Area mit Betriebssystemmitteln sollten vermieden werden, da die Datenbank derartige \"Anderungen nicht registriert und der Speicherplatz nach wie vor als belegt gilt. Solche Fehler k\"onnen anschlie\ss{}end nur mittels des RMAN Kommandos \languagerman{CROSSCHECK} behoben werden.
+          \end{merke}
+        \subsubsection{Die Fast Recovery Area an einen neuen Platz verschieben}
+          Muss die Fast Recovery Area an einen neuen Platz verschoben werden, gen\"ugt es, das SQL*Plus-Tool zu \"offnen und den Parameter \parameter{DB\_RECOVERY\_FILE\_DEST} anzupassen:
+          \begin{lstlisting}[caption={Den Speicherort der Fast Recovery Area \"andern},label=changeFRAlocation,language=oracle_sql]
+SQL> ALTER SYSTEM
+  2  SET db_recovery_file_dest='/u04/fast_recovery_area'
+  3  SCOPE=both;
+          \end{lstlisting}
+          \begin{merke}
+            Anschlie\ss{}end an die \"Anderung dieses Parameters, werden alle Dateien am neuen Speicherort erstellt. Alle bereits bestehenden Dateien verbleiben am Alten und verbrauchen weiterhin Speicherplatz in der Fast Recovery Area, bis sie durch die automatische Verwaltung der Fast Recovery Area gel\"oscht werden.
+          \end{merke}
+          Die n\"achsten Schritte sind nur dann notwendig, wenn auch die bestehenden Dateien an den neuen Speicherort \"uberf\"uhrt werden m\"ussen. Mit Hilfe des \languagerman{BACKUP}-Kommandos k\"onnen einzelne Dateiarten in die neue Fast Recovery Area gesichert werden.
+          \begin{lstlisting}[caption={Verschieben von Dateien in eine neue Fast Recovery Area},label=admin1041,language=rman]
+RMAN> BACKUP AS COPY ARCHIVELOG ALL DELETE INPUT;
+
+RMAN> BACKUP DEVICE TYPE DISK BACKUPSET ALL DELETE INPUT;
+
+RMAN> BACKUP AS COPY DATAFILECOPY ALL DELETE INPUT;
+          \end{lstlisting}
+          Hiermit werden alle Archive Logs, Backup Sets und Image Copies in die neue Fast Recovery Area gesichert und am alten Speicherort gel\"oscht. Bei allen anderen Dateitypen sorgt die automatische Verwaltung f\"ur das L\"oschen, wenn die Dateien nicht mehr ben\"otigt werden.
+        \subsubsection{Zusammenspiel zwischen Retention Policy und der Fast Recovery Area}
+          Wird ein Backup als obsolet gekennzeichnet, ist dies immer auf eine im RMAN konfigurierte Retention Policy zur\"uckzuf\"uhren. Wird die Fast Recovery Area konfiguriert, benutzt die Datenbank einen internen Algorithmus, um Dateien bestimmen zu k\"onnen, die von der Festplatte gel\"oscht werden k\"onnen. Es gibt zwei F\"alle, wann Dateien durch die Verwaltung der Fast Recovery Area gel\"oscht werden:
+          \begin{itemize}
+            \item Dateien tragen den Status obsolete, da sie gegen die konfigurierte Retention Policy versto\ss{}en.
+            \item Dateien sind noch nicht obsolete, wurden aber anderweitig, z. B. auf Tape, gesichert.
+          \end{itemize}
+\clearpage
