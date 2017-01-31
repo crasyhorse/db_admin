@@ -2217,8 +2217,192 @@ SELECT *
 FROM   udf_Customers_At_Branch(10);
           \end{lstlisting}
     \section{Datenbankverschlüsselung}
-%TODO Datenbankverschlüsselung
-%https://msdn.microsoft.com/de-de/library/bb510663(v=sql.120).aspx
+      Die SQL Server-Verschlüsselung ist ein Mechanismus der es ermöglicht,
+      sensible Daten, mit Hilfe eines Schlüssels oder eines Kennwortes, durch
+      einen zusätzlichen Zugriffsschutz gegen Datenverlust zu sichern. Gesetzt
+      den Fall, dass die Zugriffsschutzbarrieren der Datenbank umgangen werden
+      und ein \enquote{Angreifer} Daten entwendet, kann die Verschlüsselung eine
+      probate Möglichkeit darstellen, die Beute für den Dieb unbrauchbar zu
+      machen.
+      \begin{merke}
+        Man muss sich bewußt sein, dass jede Verschlüsselung
+        ein \enquote{Hindernis auf Zeit} ist. 
+      \end{merke}
+      \subsection{Aufbau der Transparenten Datenbankverschlüsselung (TDE)}
+        Seit der Version 2005 stellt Microsoft SQL Server eine hierarchische
+        Infrastruktur zur Verschlüsselung von Daten und zur Verwaltung von
+        Schlüsseln bereit. Dabei kommen Passwörter, symmetrische und
+        asymmetrische Schlüssel, sowie Zertifikate zum Einsatz.
+
+        Die Basis für die SQL Server-Verschlüsselungshierarchie ist die
+        \enquote{Windows Operating System level Data Protection API}, kurz
+        \enquote{DPAPI}. Diese wird dazu benutzt den
+        \enquote{Diensthauptschlüssel} / \enquote{Service Master Key},
+        kurz \enquote{SMK} zu schützen.
+        \begin{merke}
+          SQL Server 2012 benutzt den AES-Algorithmus zur Verschlüsselung des
+          SMK.
+        \end{merke}
+        \bild{Architektur der trans\-parenten
+          Datenbank\-verschlüs\-selung (TDE)}{encryption_hierarchie}{1.7}
+        \begin{scriptsize}
+          \abbildung{encryption_hierarchie} - Architektur der transparenten
+          Datenbankverschlüsselung (TDE) - Quelle: \parencite{bb934049}
+        \end{scriptsize}
+        \subsubsection{Der Service Master Key} 
+          Beim SMK handelt es sich um einen symmetrische Schlüssel der beim
+          Setup des SQL Servers aus
+          \begin{itemize}
+            \item den Anmeldeinformationen des SQL Server-Dienstkontos und 
+            \item den Anmeldeinformationen des Computers, auf dem der SQL Server
+            installiert wird
+          \end{itemize}
+          erstellt wird. Verschlüsselt wird er mit dem Computerschlüssel des
+          Computers, auf dem SQL Server installiert wird. Es existiert immer nur
+          ein SMK pro SQL Server.
+          
+          Der SMK dient zur Verschlüsselung von folgenden Bestandteilen:
+          \begin{itemize}
+            \item {Datenbankhauptschlüssel}/\enquote{Database Master Key} (DMK),
+            \item Kennwörtern für Verbindungsserver,
+            \item Anmeldeinformationen 
+          \end{itemize}
+          Entschlüssel werden kann der SMK nur von dem Dienstkonto, unter dem
+          er erstellt wurde oder von einem Prinzipal, der auf die
+          Anmeldeinformationen des Computers zugreifen kann. Damit es bei
+          einem Wechsel des SQL Server-Dienstkontos nicht zu Problemen kommt,
+          sollte immer der SQL Konfigurations Manager genutzt werden. Dieser
+          entschüsselt und verschlüsselt den SMK automatisch.
+          
+          Muss der Computer, auf dem Microsoft SQL Server installiert ist, neu
+          erstellt werden, sollte der Domänenbenutzer, der zuvor als
+          Dienstkonto genutzt wurde auch weiterhin genutzt werden. Dieser kann
+          ohne Problem den SMK wiederherstellten. Soll ein anderer
+          Domänenbenutzer als Dienstkonto für den SQL Server verwendet werden,
+          muss der SMK mittels Backup and Recovery wiederhergestellt werden.
+          
+          Soll SQL Server auf einen anderen Computer verschoben werden, bleibt
+          nur die Möglichkeit, den SMK mittels Backup and Recovery
+          wiederherzustellen.
+          \begin{merke}
+            Der SMK ist der Stamm der Verschlüsselungshierarchie. Sollte er
+            verloren gehen, sind die weiteren Bestandteile der Hierarchie
+            unbrauchbar.
+          \end{merke}
+          \begin{literaturinternet}
+            \item \cite{ms189060}
+          \end{literaturinternet}
+        \subsubsection{Der Database Master key (DMK)}
+          Der Database Master Key bzw. der Datenbankhauptschlüssel ist ein
+          symmetrischer Schlüssel, der in der \identifier{master}-Datenbank
+          gespeichert wird. Für jede Datenbank innerhalb einer SQL
+          Server-Instanz wird ein eigener, eindeutiger DMK erzeugt, dessen
+          Aufgabe es ist, private Schlüssel von Zertifikaten oder asymmetrischen
+          Schlüsseln zu sichern. Dies geschieht, in dem mit Hilfe des DMK ein 
+          Serverzertifikat innerhalb der \identifier{master}-Datenbank erzeugt
+          wird. Dieses Zertifikat verschüsselt dann den
+          \enquote{Datenbankverschlüsselungs Schlüssel}, der in jeder Datenbank
+          angelegt werden kann.
+          \begin{literaturinternet}
+            \item \cite{bb964742}
+          \end{literaturinternet}
+        \subsubsection{Das Serverzertifikat}
+          Zertifikate sind digital signierte Securables, die einen öffentlichen
+          und optional auch einen privaten Schlüssel enthalten. In SQL Server
+          werden Zertifikate mit dem Standard IETF X.509v3 erstellt. Sie können
+          verwendet werden, um Objekte zu signieren oder zu verschlüsseln. Im
+          konkreten Fall des Serverzertifikates wird es dazu benutzt, um den
+          Database encryption key einer Datenbank zu generieren.
+          
+          Die privaten Schlüssel, welche mit SQL Server zu einem Zertifikat
+          generiert werden sind 1024 Bits lang. Werden private Schlüssel aus
+          einer externen Quelle importiert, haben diese eine Länge zwischen 384
+          und 4096 Bits. Damit ein Zertifikat in Zusammenhang mit TDE genutzt
+          werden kann, muss der private Schlüssel eine Länge von genau 3456 Bits
+          aufweisen.
+          \begin{merke}
+            Der private Schlüssel muss dem öffentlichen Schlüssel entsprechen,
+            der mit dem Zertifikat zusammenhängt.
+          \end{merke}
+          \begin{literaturinternet}
+            \item \cite{bb895327}
+          \end{literaturinternet}
+        \subsubsection{Der Database encryption key (DEK)}
+          Der Datenbankverschlüsselungs Schlüssel bzw. Database encryption key
+          ist ein symmetrischer Schlüssel, der für die Verschlüsselung der Daten
+          innerhalb einer Datenbank zuständig ist. Er wird direkt in der
+          Datenbank gespeichert, für die er erzeugt wurde.
+      \subsection{Einrichten der Transparenten Datenbankverschlüsselung}
+        \subsubsection{Erstellen eines Datenbankhauptschlüssels (DMK)}
+          \begin{lstlisting}[language=ms_sql,caption={Erstellen eines
+          Datenbankhauptschlüssels},label=sql19_26]
+USE [Bank]
+GO
+
+CREATE MASTER KEY 
+ENCRYPTION BY PASSWORD = '2S0d0V5sMehI0#DVe4x9i8z6';  
+GO 
+          \end{lstlisting}
+          \begin{literaturinternet}
+            \item \cite{aa337551}
+            \item \cite{ms174382}
+          \end{literaturinternet}
+        \subsubsection{Erstelle des benötigten Serverzertifikates}
+          \begin{lstlisting}[language=ms_sql,caption={Erstellen des
+          Serverzertifikates},label=sql19_27]
+USE [Bank]
+GO
+
+CREATE CERTIFICATE dek_server_certificate 
+WITH SUBJECT = 'DEK Server certificate';  
+          \end{lstlisting}
+          Alternativ kann das Serverzertifikat auch aus einer Zertifikatsdatei
+          importiert werden.
+          \begin{lstlisting}[language=ms_sql,caption={Erstellen des Serverzertifikates aus einer Datei},label=sql19_28]
+USE [Bank]
+GO
+
+CREATE CERTIFICATE dek_server_certificate  
+    FROM FILE = 'D:\certs\dek_server_certificate.cer' 
+    WITH PRIVATE KEY (FILE = 'D:\certs\dek_server_certificate_key.pk', 
+    DECRYPTION BY PASSWORD = '2S0d0V5sMehI0#DVe4x9i8z6');
+GO        \end{lstlisting}
+          \begin{merke}
+            Der private Schlüssel eines Zertifikates wird standardmässig mit dem
+            Datenbankhauptschlüssel verschlüsselt. Sollte kein DMK vorhanden
+            sein muss ein Passwort angegeben werden, da dies anderen Falls
+            zu einem Fehler führt.
+          \end{merke}
+          \begin{literaturinternet}
+            \item \cite{ms187798}
+          \end{literaturinternet}
+        \subsubsection{Erzeugen des Datenbankverschlüsselungs Schlüssels (DEK)}
+          \begin{lstlisting}[language=ms_sql,caption={Erstellen des
+          Datenbankverschlüsselungs Schlüssels},label=sql19_29]
+USE [Bank]
+GO
+
+CREATE DATABASE ENCRYPTION KEY
+WITH ALGORITHM = AES_256
+ENCRYPTION BY SERVER CERTIFICATE dek_server_certificate;
+GO
+          \end{lstlisting}
+          \begin{literaturinternet}
+            \item \cite{bb677241}
+          \end{literaturinternet}
+        \subsubsection{Aktivieren der Verschlüsselung einer Datenbank}
+          \begin{lstlisting}[language=ms_sql,caption={Aktivieren
+          der Verschlüsselung},label=sql19_30]
+USE [Bank]
+GO
+
+ALTER DATABASE Bank
+SET ENCRYPTION ON;
+GO
+          \end{lstlisting}
+          \begin{literaturinternet}
+            \item \cite{bb934049}
+          \end{literaturinternet}
     \section{Verschlüsselung der Kommunikation - SSL}
       Der Secure Socket Layer (SSL) stellt eine einfache Möglichkeit zur
       Verschlüsselung des Datenverkehrs auf Protokollebene dar. Der SQL Server

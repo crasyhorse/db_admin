@@ -1759,7 +1759,7 @@ GO
           Dateigruppe begrenzt bleiben.
           \item \languagemssql{CHECKTABLE}: Wie \languagemssql{?DBCC?
           CHECKDB}, aber nur für die angegebene Tabelle.
-          \item \languagemssql{CHECKCONSTRAINTS}: Überprüfung die
+          \item \languagemssql{CHECKCONSTRAINTS}: Überprüft die
           Funktionsfähigkeit eines bestimmten oder aller Constraints auf
           einer Tabelle.
         \end{itemize}
@@ -1810,8 +1810,8 @@ DBCC CHECKDB
             \item \textbf{PHYSICAL\_ONLY}: Es werden nur physikalische
             Überprüfungen durchgeführt. Dadurch wird die Ausführungszeit des
             DBCC-Kommandos deutlich reduziert.
-            \item \textbf{DATA\_PURITY}: Führt eine logische
-            Konsistenzprüfung von Spaltenwerten durch, z. B. ob ein
+            \item \textbf{DATA\_PURITY}: Kommando zur Durchführung einer
+            logischen Konsistenzprüfung von Spaltenwerten, z. B. ob ein
             Datums-/Zeitwert innerhalb der gültigen Grenzen einer Spalte vom Typ
             \identifier{datetime} liegt. Diese Option wird nur benötigt, wenn
             eine Datenbank mit einer früheren Version von SQL Server erstellt
@@ -1845,7 +1845,7 @@ DBCC CHECKDB
   Service Broker-Meldung 9669, Status 1: Analysierte Konversationsendpunkte: 0.
   Service Broker-Meldung 9674, Status 1: Analysierte Konversationsgruppen: 0.
   Service Broker-Meldung 9670, Status 1: Analysierte Remotedienstbindungen: 0.
-  Service Broker-Meldung 9605, Status 1: Analysierte Konversationsprioritäten: 0.
+  Service Broker-Meldung 9605, Status 1: Analysierte Konversationsprioritäten:0.
   DBCC-Ergebnis für 'sys.sysrscols'.
   Es sind 1086 Zeilen auf 14 Seiten für das sys.sysrscols-Objekt vorhanden.
   DBCC-Ergebnis für 'sys.sysrowsets'.
@@ -1888,7 +1888,7 @@ DBCC CHECKDB
           gezielt eine Dateigruppe geprüft werden kann. Die Syntax for
           \languagemssql{CHECKFILEGROUP} lautet wie folgt:
           \begin{lstlisting}[language=ebnf, caption={Die Syntax zu
-          CHECKFILEGROUP}, label=admin03_30]
+          CHECKFILEGROUP}, label=admin03_31]
 DBCC §CHECKFILEGROUP§
   [
     [ |(| filegroup_name / filegroup_id / 0 
@@ -1902,7 +1902,7 @@ DBCC §CHECKFILEGROUP§
   ]        
         \end{lstlisting}
         \begin{lstlisting}[language=ms_sql,caption={Konsistenzprüfung
-        einer Dateigruppe},label=admin03_31] 
+        einer Dateigruppe},label=admin03_32] 
 USE [demo_grafisch]
 GO
 
@@ -1927,7 +1927,7 @@ ausgegeben hat, wenden Sie sich an den Systemadministrator.
           der Syntax der \languagemssql{CHECKDB}-Abweisung.
 \clearpage
           \begin{lstlisting}[language=ms_sql,caption={Konsistenzprüfung
-          einer einzelnen Tabelle},label=admin03_31] 
+          einer einzelnen Tabelle},label=admin03_33] 
 USE [demo_grafisch]
 GO
 
@@ -1960,7 +1960,7 @@ ausgegeben hat, wenden Sie sich an den Systemadministrator.
           sowohl die Daten- als auch die Protokolldateien einer Datenbank
           schrumpfen.
           \begin{lstlisting}[language=ebnf, caption={Die Syntax zu
-          SHRINKDATABASE}, label=admin03_32]
+          SHRINKDATABASE}, label=admin03_34]
 DBCC §SHRINKDATABASE§
     |(| database_name / database_id / 0 
       [ , target_percent ]
@@ -1978,7 +1978,7 @@ DBCC §SHRINKDATABASE§
             verschoben. Ein mit der Option \languagemssql{NOTRUNCATE}
             ausgeführtes \languagemssql{?DBCC? SHRINKDATABASE} wirkt sich nur
             auf die Datendateien, aber nicht auf die Protokolldatei aus.
-            \item \textbf{TRUNCATEONLY}: Der gesamte, am Ende einer
+            \item \textbf{TRUNCATEONLY}: Der gesamte am Ende einer
             Datei befindliche Speicherplatz wird freigegeben/abgeschnitten.
             Dateien werden somit verkleinert, es findet jedoch keine
             Defragmentierung innerhalb einer Datei statt. Durch die Angabe von
@@ -2006,19 +2006,19 @@ DBCC §SHRINKDATABASE§
             \languagemssql{TRUNCATEONLY}
           \end{enumerate}
           \begin{merke}
-            Werden die beiden Option \languagemssql{TRUNCATEONLY} und
+            Werden die beiden Optionen \languagemssql{TRUNCATEONLY} und
             \languagemssql{NOTRUNCATE} weggelassen, wird das
             \languagemssql{SHRINKDATABASE}-Kommando zweimal ausgeführt. Zuerst mit
             \languagemssql{NOTRUNCATE} und anschließend mit
             \languagemssql{TRUNCATEONLY}
           \end{merke}        
           \begin{lstlisting}[language=ms_sql,caption={Verkleinern einer
-          Datenbank},label=admin03_33]
+          Datenbank},label=admin03_35]
 USE [master] GO
 
 ?DBCC? SHRINKDATABASE(demo_grafisch, 25)
           \end{lstlisting}          
-          Das \languagemssql{SHRINKDATABASE}-Kommando aus \beispiel{admin03_33}
+          Das \languagemssql{SHRINKDATABASE}-Kommando aus \beispiel{admin03_35}
           verkleinert die Datendateien der Datenbank \identifier{demo\_grafisch}
           um 25 \%. Wenn z. B. eine Datendatei eine Größe von 20 MB und
           eine Mindestgröße von 15 MB hat und mit 8 MB Daten gefüllt ist, wird SQL
@@ -2060,7 +2060,7 @@ USE [master] GO
           \end{itemize}
           Die Syntax für \languagemssql{SHRINKFILE} lautet:
           \begin{lstlisting}[language=ebnf, caption={Die Syntax zu
-          SHRINKFILE}, label=admin03_34]
+          SHRINKFILE}, label=admin03_36]
 DBCC §SHRINKFILE§
     |(| { file_name / file_id }
         { , [ §EMPTYFILE§ ] / 
@@ -2106,7 +2106,7 @@ DBCC §SHRINKFILE§
           SQL Server-Instanz die Auslastung ihrer Protokolldatei angezeigt
           werden.
           \begin{lstlisting}[language=ebnf, caption={Die Syntax zu
-          SQLPERF}, label=admin03_35]
+          SQLPERF}, label=admin03_37]
 DBCC SQLPERF |(| §LOGSPACE§ |)|
           \end{lstlisting}
           \begin{lstlisting}[language=ms_sql,caption={Anzeigen
@@ -2152,7 +2152,7 @@ GO
         Mit dem Kommando \languagemssql{?DBCC? HELP} kann zu jedem anderen
         DBCC-Befehl eine Syntax-Hilfe abgerufen werden.
         \begin{lstlisting}[language=ms_sql, caption={DBCC Help - Syntaxhilfe
-        aufrufen}, label=admin03_36] 
+        aufrufen}, label=admin03_38] 
 DBCC HELP |(| 'CHECKDB' |)|
 
 dbcc CHECKDB 
@@ -2180,7 +2180,7 @@ Die DBCC-Ausführung wurde abgeschlossen.
 Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich 
 an den Systemadministrator.
           \end{lstlisting}          
-          Mit dem Befehl aus \beispiel{admin03_36} wird eine Syntax-Hilfe zum
+          Mit dem Befehl aus \beispiel{admin03_38} wird eine Syntax-Hilfe zum
           Kommando \languagemssql{?DBCC? CHECKDB} angezeigt.
           \begin{literaturinternet}
             \item \cite{ms176040}
