@@ -23,17 +23,17 @@
 		<link>
 			<name>bibliographie</name>
 			<type>2</type>
-			<location>/home/fweidinger/workspace/db_admin/bibliographie</location>
+			<locationURI>DB_ADMIN_LOC/bibliographie</locationURI>
 		</link>
 		<link>
 			<name>einstellungen</name>
 			<type>2</type>
-			<location>/home/fweidinger/workspace/db_admin/einstellungen</location>
+			<locationURI>DB_ADMIN_LOC/einstellungen</locationURI>
 		</link>
 		<link>
 			<name>grafiken</name>
 			<type>2</type>
-			<location>/home/fweidinger/workspace/db_admin/grafiken</location>
+			<locationURI>DB_ADMIN_LOC/grafiken</locationURI>
 		</link>
 		<link>
 			<name>modellierung</name>
@@ -43,7 +43,7 @@
 		<link>
 			<name>sql</name>
 			<type>2</type>
-			<location>/home/fweidinger/workspace/db_admin/sql</location>
+			<locationURI>DB_ADMIN_LOC/sql</locationURI>
 		</link>
 		<link>
 			<name>transformation.tex</name>
@@ -51,4 +51,10 @@
 			<locationURI>PARENT-1-PROJECT_LOC/modellierung/transformation.tex</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>DB_ADMIN_LOC</name>
+			<value>file:/home/fweidinger/workspace/db_admin</value>
+		</variable>
+	</variableList>
 </projectDescription>

@@ -1,0 +1,2763 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{aa337551}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Aa3}
+  \field{extraalpha}{1}
+  \field{sortinit}{A}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen eines Datenbank-Hauptschlüssels}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/aa337551(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{aa337545}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Aa3}
+  \field{extraalpha}{2}
+  \field{sortinit}{A}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen eines Datenbankbenutzers}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/aa337545(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{AGDLP}{manual}{}
+  \list{organization}{1}{%
+    {Wikipedia - The Free Encyclopedia}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Agd}
+  \field{sortinit}{A}
+  \field{edition}{Windows Server 2000 und aufwärts}
+  \field{title}{AGDLP}
+  \verb{url}
+  \verb http://en.wikipedia.org/wiki/AGDLP
+  \endverb
+\endentry
+
+\entry{askpfeplat20121217}{manual}{}
+  \list{organization}{1}{%
+    {Doug Symalla}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Ask}
+  \field{sortinit}{A}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Windows Server 2012: Group Managed Service Accounts}
+  \verb{url}
+  \verb http://blogs.technet.com/b/askpfeplat/archive/2012/12/17/windows-server
+  \verb -2012-group-managed-service-accounts.aspx
+  \endverb
+\endentry
+
+\entry{autoId8}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{Aut}
+  \field{sortinit}{A}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{3}
+  \field{edition}{11g R2}
+  \field{subtitle}{Implicit Data Conversion}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/sql_elements002.h
+  \verb tm#autoId8
+  \endverb
+\endentry
+
+\entry{bb522469}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Bb5}
+  \field{extraalpha}{1}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb522469(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{bb522682}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Bb5}
+  \field{extraalpha}{2}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ALTER DATABASE SET-Optionen (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb522682(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{bb669084}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb6}
+  \field{extraalpha}{1}
+  \field{sortinit}{B}
+  \field{edition}{.NET Framework (current version)}
+  \field{title}{Autorisierung und Berechtigungen in SQL Server}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb669084(v=vs.110).aspx
+  \endverb
+\endentry
+
+\entry{bb677241}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb6}
+  \field{extraalpha}{2}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2012}
+  \field{title}{CREATE DATABASE ENCRYPTION KEY (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb677241(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{bb669065}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb6}
+  \field{extraalpha}{3}
+  \field{sortinit}{B}
+  \field{edition}{.NET Framework (current version)}
+  \field{title}{Server- und Datenbankrollen in SQL Server}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb669065(v=vs.110).aspx
+  \endverb
+\endentry
+
+\entry{bb895327}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb8}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2012}
+  \field{title}{SQL Server Certificates and Asymmetric Keys}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/bb895327(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{bb964742}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb9}
+  \field{extraalpha}{1}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2014}
+  \field{title}{SQL Server and Database Encryption Keys (Database Engine)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/bb964742(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{bb934049}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bb9}
+  \field{extraalpha}{2}
+  \field{sortinit}{B}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Transparente Datenverschlüsselung (TDE)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/bb934049(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{btmcm210tsnilwutrs}{manual}{}
+  \list{organization}{1}{%
+    {Degremont Michel on blogs.technet.microsoft.com}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Btm}
+  \field{sortinit}{B}
+  \field{edition}{November 8, 2009}
+  \field{title}{The SQL Network Interface library was unable to register SPN}
+  \verb{url}
+  \verb https://blogs.technet.microsoft.com/mdegre/2009/11/08/the-sql-network-i
+  \verb nterface-library-was-unable-to-register-spn/
+  \endverb
+\endentry
+
+\entry{cc280372}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Cc2}
+  \field{extraalpha}{1}
+  \field{sortinit}{C}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen gefilterter Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/cc280372.aspx
+  \endverb
+\endentry
+
+\entry{cc280744}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Cc2}
+  \field{extraalpha}{2}
+  \field{sortinit}{C}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Kerberos-Authentifizierung und SQL Server}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/cc280744%28v=sql.105%29.asp
+  \verb x
+  \endverb
+\endentry
+
+\entry{cc280745}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Cc2}
+  \field{extraalpha}{3}
+  \field{sortinit}{C}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Verwenden der Kerberos-Authentifizierung mit SQL Server}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/cc280745%28v=sql.105%29.asp
+  \verb x
+  \endverb
+\endentry
+
+\entry{cc755804}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Cc7}
+  \field{sortinit}{C}
+  \field{edition}{Windows Server 2012}
+  \field{title}{How Service Publication and Service Principal Names Work}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/cc755804(v=ws.10).aspx
+  \endverb
+\endentry
+
+\entry{dd304523}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dd3}
+  \field{extraalpha}{1}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2012}
+  \field{title}{[MS-TDS]: Tabular Data Stream Protocol}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/dd304523.aspx
+  \endverb
+\endentry
+
+\entry{dd391923}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Dd3}
+  \field{extraalpha}{2}
+  \field{sortinit}{D}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Resetting the Password of a Managed Service Account}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/dd391923(v=ws.10).aspx
+  \endverb
+\endentry
+
+\entry{defsafdr2}{manual}{}
+  \list{organization}{1}{%
+    {Rick Byham, Microsoft}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Def}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Database Engine Fixed Server and Fixed Database Roles}
+  \verb{url}
+  \verb http://social.technet.microsoft.com/wiki/contents/articles/2024.databas
+  \verb e-engine-fixed-server-and-fixed-database-roles.aspx
+  \endverb
+\endentry
+
+\entry{isbn9780735658561}{book}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Delaney}{D.}%
+     {K.}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Beauchemin}{B.}%
+     {B.}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cunningham}{C.}%
+     {C.}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kehayias}{K.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nevarez}{N.}%
+     {B.}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Randal}{R.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {O'Reilly Media Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \strng{namehash}{DK+1}
+  \strng{fullhash}{DKBBCCKJNBRP1}
+  \field{labelalpha}{Del+13}
+  \field{sortinit}{D}
+  \field{title}{Microsoft SQL Server 2012 Internals}
+  \list{location}{1}{%
+    {1005 Gravenstein Highway North Sebastopol California 95472}%
+  }
+  \field{year}{2013}
+\endentry
+
+\entry{dn133182}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn1}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Collations and Code Pages}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/dn133182(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{dn205319}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn2}
+  \field{extraalpha}{1}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Anleitung zur Abfrageverarbeitung für speicheroptimierte
+  Tabellen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/dn205319(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{dn249342}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn2}
+  \field{extraalpha}{2}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Systeminterne Kompilierung von Tabellen und gespeicherten
+  Prozeduren}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/dn249342(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{dn205318}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn2}
+  \field{extraalpha}{3}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Tabellen- und Zeilengröße in speicheroptimierten Tabellen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/dn205318(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{dn269114}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn2}
+  \field{extraalpha}{4}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Ändern von speicheroptimierten Tabellen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/dn269114(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{dn511014}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dn5}
+  \field{sortinit}{D}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Einführung in speicheroptimierte Tabellen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/dn511014(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{DynLinLib}{manual}{}
+  \list{organization}{1}{%
+    {Wikipedia}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Dyn}
+  \field{sortinit}{D}
+  \field{title}{Dynamic Link Library}
+  \verb{url}
+  \verb https://de.wikipedia.org/wiki/Dynamic_Link_Library
+  \endverb
+\endentry
+
+\entry{ee677610}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{1}
+  \field{sortinit}{E}
+  \field{edition}{SQL Server 2014}
+  \field{title}{CREATE SERVER ROLE (Transact-SQL)}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/ee677610(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ee677643}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{2}
+  \field{sortinit}{E}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DROP SERVER ROLE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ee677643(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ee677627}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{3}
+  \field{sortinit}{E}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen einer Serverrolle}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/ee677627(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ee617223}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{4}
+  \field{sortinit}{E}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Install-ADServiceAccount}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/ee617223.aspx
+  \endverb
+\endentry
+
+\entry{ee617258}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{5}
+  \field{sortinit}{E}
+  \field{edition}{Windows Server 2012}
+  \field{title}{New-ADGroup}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ee617258.aspx
+  \endverb
+\endentry
+
+\entry{ee617202}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ee6}
+  \field{extraalpha}{6}
+  \field{sortinit}{E}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Uninstall-ADServiceAccount}
+  \verb{url}
+  \verb https://technet.microsoft.com/library/ee617202.aspx
+  \endverb
+\endentry
+
+\entry{ff487261}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ff4}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Herstellen einer Verbindung mit dem Datenbankmodul unter
+  Verwendung von Erweiterter Schutz}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ff487261(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ff929106}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{1}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sp\_kill\_filestream\_non\_transacted\_handles (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/ff929106(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ff929168}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{2}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sys.dm\_filestream\_non\_transacted\_handles (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/ff929168(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{gc20110407msdvdo}{manual}{}
+  \list{organization}{1}{%
+    {GOVARDHAN GUNNALA}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gc2}
+  \field{sortinit}{G}
+  \field{edition}{07. April 2011}
+  \field{title}{MS SQL: dbo versus db\_owner}
+  \verb{url}
+  \verb http://www.gunnalag.com/2011/04/07/ms-sql-dbo-versus-db_owner/
+  \endverb
+\endentry
+
+\entry{gg492087}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gg4}
+  \field{extraalpha}{1}
+  \field{sortinit}{G}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Arbeiten mit Verzeichnissen und Pfaden in FileTables}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/gg492087(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{gg492088}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gg4}
+  \field{extraalpha}{2}
+  \field{sortinit}{G}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Beschreibung von Columnstore-Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/gg492088.aspx
+  \endverb
+\endentry
+
+\entry{gg492084}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gg4}
+  \field{extraalpha}{3}
+  \field{sortinit}{G}
+  \field{edition}{SQL Server 2014}
+  \field{title}{FileTable Schema}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/gg492084(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{gg509097}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gg5}
+  \field{extraalpha}{1}
+  \field{sortinit}{G}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Aktivieren der erforderlichen Komponenten für FileTable}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/gg509097(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{gg509088}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Gg5}
+  \field{extraalpha}{2}
+  \field{sortinit}{G}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen, Ändern und Löschen von FileTables}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/gg509088(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{hh213609}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Hh2}
+  \field{sortinit}{H}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Heaps (Tabellen ohne gruppierte Indizes)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/hh213609(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{hh479588}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Hh4}
+  \field{sortinit}{H}
+  \field{edition}{SQL Server 2014}
+  \field{title}{SSIS-Katalog}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/hh479588(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{hh852236}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Hh8}
+  \field{sortinit}{H}
+  \field{edition}{Windows Server 2012 / Windows 8}
+  \field{title}{New-ADServiceAccount}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/hh852236(v=wps.620).aspx
+  \endverb
+\endentry
+
+\entry{i27561}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I27}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{3}
+  \field{edition}{11g R2}
+  \field{subtitle}{Schema Object Names and Qualifiers}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/sql_elements008.h
+  \verb tm#i27561
+  \endverb
+\endentry
+
+\entry{i34570}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I34}
+  \field{extraalpha}{1}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{Number Format Models}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/sql_elements004.h
+  \verb tm#i34570
+  \endverb
+\endentry
+
+\entry{i34924}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I34}
+  \field{extraalpha}{2}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{Datetime Format Models}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/sql_elements004.h
+  \verb tm#i34924
+  \endverb
+\endentry
+
+\entry{i77725}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I77}
+  \field{extraalpha}{1}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{LENGTH}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions088.htm#
+  \verb i77725
+  \endverb
+\endentry
+
+\entry{i77598}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I77}
+  \field{extraalpha}{2}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Reference 11g Release2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{INSTR}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions080.htm#
+  \verb i77598
+  \endverb
+\endentry
+
+\entry{i77449}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I77}
+  \field{extraalpha}{3}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Reference 11g Release2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{FLOOR}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions067.htm#
+  \verb i77449
+  \endverb
+\endentry
+
+\entry{i77996}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I77}
+  \field{extraalpha}{4}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{MOD}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions101.htm#
+  \verb i77996
+  \endverb
+\endentry
+
+\entry{i78493}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I78}
+  \field{extraalpha}{1}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{POWER}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions129.htm#
+  \verb i78493
+  \endverb
+\endentry
+
+\entry{i78633}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I78}
+  \field{extraalpha}{2}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{ROUND}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions155.htm#
+  \verb i78633
+  \endverb
+\endentry
+
+\entry{i84140}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I84}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{LOG}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions093.htm#
+  \verb i84140
+  \endverb
+\endentry
+
+\entry{i87066}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I87}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Language Reference 11g Release 2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{SUBSTR}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions181.htm#
+  \verb i87066
+  \endverb
+\endentry
+
+\entry{i97801}{online}{}
+  \keyw{orasqlref}
+  \field{labelalpha}{I97}
+  \field{sortinit}{I}
+  \field{booktitle}{Oracle Database SQL Reference 11g Release2}
+  \field{chapter}{5}
+  \field{edition}{11g R2}
+  \field{subtitle}{CEIL}
+  \verb{url}
+  \verb http://docs.oracle.com/cd/E11882_01/server.112/e26088/functions024.htm#
+  \verb i97801
+  \endverb
+\endentry
+
+\entry{jj128430}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Jj1}
+  \field{extraalpha}{1}
+  \field{sortinit}{J}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Create the Key Distribution Services KDS Root Key}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/jj128430.aspx
+  \endverb
+\endentry
+
+\entry{jj128431}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Jj1}
+  \field{extraalpha}{2}
+  \field{sortinit}{J}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Erste Schritte mit gruppenverwalteten Dienstkonten}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/jj128431.aspx#BKMK_RemoveGM
+  \verb SA
+  \endverb
+\endentry
+
+\entry{jj835095}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Jj8}
+  \field{sortinit}{J}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Handbuch zum SQL Server Indexentwurf}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/jj835095(v=sql.120).aspx#Clust
+  \verb ered
+  \endverb
+\endentry
+
+\entry{KleKonSS2IMOAid}{manual}{}
+  \list{organization}{1}{%
+    {Informatik Aktuell - Klemens Konopasek}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Kle}
+  \field{sortinit}{K}
+  \field{edition}{28. Januar 2015}
+  \field{title}{SQL Server 2014 In-Memory OLTP: Ab in den Speicher!}
+  \verb{url}
+  \verb http://www.informatik-aktuell.de/betrieb/datenbanken/sql-server-2014-in
+  \verb -memory-oltp.html
+  \endverb
+\endentry
+
+\entry{KLTTLIctVcaiSS}{online}{}
+  \keyw{Transaction Log, VLF, creation, algorithm, 2014}
+  \field{labelalpha}{Klt}
+  \field{sortinit}{K}
+  \field{booktitle}{Important change to VLF creation algorithm in SQL Server
+  2014}
+  \field{edition}{SQL Server 2014}
+  \field{subtitle}{SQLskills Kimberly L. Tripp}
+  \verb{url}
+  \verb http://www.sqlskills.com/blogs/paul/important-change-vlf-creation-algor
+  \verb ithm-sql-server-2014/
+  \endverb
+\endentry
+
+\entry{llobelwp20101212ss2fp2o4}{manual}{}
+  \list{organization}{2}{%
+    {Lenni Lobel on SQL Server}%
+    {.NET Development}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Llo}
+  \field{sortinit}{L}
+  \field{edition}{01. Oktober 2011}
+  \field{title}{SQL Server 2008 FILESTREAM Part 2 of 3: Enabling and Using
+  FILESTREAM}
+  \verb{url}
+  \verb https://lennilobel.wordpress.com/2010/12/12/sql-server-2008-filestream-
+  \verb part-2-of-3-enabling-and-using-filestream-2/
+  \endverb
+\endentry
+
+\entry{MirDimSSTLP1LSaWALA}{online}{}
+  \keyw{Transaction Log, Log Block}
+  \field{labelalpha}{Mir}
+  \field{sortinit}{M}
+  \field{booktitle}{SQL Server Transaction Log – Part 1 – Log Structure and
+  Write-Ahead Logging (WAL) Algorithm}
+  \field{edition}{SQL Server 2014}
+  \field{subtitle}{SQLShack}
+  \verb{url}
+  \verb http://www.sqlshack.com/sql-server-transaction-log-part-1-log-structure
+  \verb -write-ahead-logging-wal-algorithm/
+  \endverb
+\endentry
+
+\entry{ms189605}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{1}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Abfragetypen und Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189605(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms189629}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{2}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Affinity I/O Mask (Serverkonfigurationsoption)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189629(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187104}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{3}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Affinitätsmaske (Serverkonfiguration)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187104(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190645}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{4}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Aktivieren von Indizes und Einschränkungen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190645(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms174269}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{5}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ALTER DATABASE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174269(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189828}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{6}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ALTER LOGIN (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189828(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189775}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{7}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ALTER ROLE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189775(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms176060}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{8}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{ALTER USER (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms176060(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms190794}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{9}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Anfügen und Trennen von Datenbanken (SQL Server)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190794(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms191291}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{10}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Berechtigungen (Datenbankmodul)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms191291(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189612}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{11}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Berechtigungen der festen Datenbankrollen (Datenbankmodul)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/library/ms189612.aspx
+  \endverb
+\endentry
+
+\entry{ms189818}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{12}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{CEILING (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189818(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms186323}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{13}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{CHARINDEX (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms186323(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms175043}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{14}
+  \field{sortinit}{M}
+  \field{edition}{Windows Server 2014}
+  \field{title}{Configure a Windows Firewall for Database Engine Access}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms175043(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187798}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{15}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{CREATE CERTIFICATE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187798(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms174382}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{16}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{CREATE MASTER KEY (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174382(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187936}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{17}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{CREATE ROLE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187936(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms173463}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{18}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{CREATE USER (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms173463(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms143547}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{19}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Dateispeicherorte für Standard- und benannte Instanzen von SQL
+  Server}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/ms143547(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms191530}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{20}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Datentypkonvertierung (Datenbankmodul)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms191530(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189496}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{21}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC CHECKCONSTRAINTS (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189496(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms176061}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{22}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC CHECKDB (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms176064(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187332}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{23}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC CHECKFILEGROUP (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187332(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms174338}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{24}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC CHECKTABLE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174338(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms176040}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{25}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC HELP (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms176040(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190488}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{26}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC SHRINKDATABASE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190488(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189493}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{27}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC SHRINKFILE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189493(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189768}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{28}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DBCC SQLPERF (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189768(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms177456}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{29}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Deaktivieren von Indizes und Einschränkungen}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms177456(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms186710}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{30}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{DENY Server Principal Permissions (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms186710(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms188012}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{31}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{DROP LOGIN (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188012(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms174988}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{32}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{DROP ROLE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174988(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms189438}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{33}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{DROP USER (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189438(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms188754}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{34}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Dynamische Verwaltungssichten und Funktionen (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188754(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190730}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{35}
+  \field{sortinit}{M}
+  \field{edition}{Windows Server 2012}
+  \field{title}{Enable the Lock Pages in Memory Option (Windows)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/ms190730.aspx
+  \endverb
+\endentry
+
+\entry{ms189067}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{36}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Encrypting Connections to SQL Server}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms189067(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms187019}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{37}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen eindeutiger Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187019.aspx
+  \endverb
+\endentry
+
+\entry{ms186342}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{38}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen gruppierter Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms186342.aspx
+  \endverb
+\endentry
+
+\entry{ms189280}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{39}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen nicht gruppierter Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189280(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190806}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{40}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Erstellen von Indizes mit eingeschlossenen Spalten}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190806.aspx
+  \endverb
+\endentry
+
+\entry{ms178531}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{41}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{FLOOR (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms178531(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188371}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{42}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{GRANT (Objektberechtigungen) (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188371(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms186717}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{43}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{GRANT Server Permissions (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms186717(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms178640}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{44}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{GRANT Server Principal Permissions (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms178640(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms187965}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{45}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{GRANT (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187965(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms143506}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{46}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Hardware- und Softwareanforderungen für die Installation von
+  SQL Server 2014}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms143506(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188270}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{47}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Heap Structures}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188270(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms191192}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{48}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{How to: Enable Encrypted Connections to the Database Engine
+  (SQL Server Configuration Manager)}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms191192(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms186778}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{49}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Informationsschemasichten (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms186778(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms174365}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{50}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Katalogsichten (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174365(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187376}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{51}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{Kompatibilitätssichten (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187376(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms190329}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{52}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{LEN (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190329(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms175121}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{53}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{LOG10 (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms175121(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms180892}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{54}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Logische Architektur des Transaktionsprotokolls}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms180892(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms187501}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{55}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Managing Space Used by Objects}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms187501(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms187837}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{56}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{master-Datenbank}
+  \verb{url}
+  \verb https://technet.microsoft.com/de-de/library/ms187837(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms186388}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{57}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Modelldatenbank}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms186388(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187112}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{58}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{msdb-Datenbank}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187112(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189858}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{59}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Neuorganisieren und Neuerstellen von Indizes}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189858(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190312}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{60}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{OPENROWSET (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190312(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188676}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{61}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Ownership Chains}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms188676(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms188706}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{62}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Partitioned Tables and Indexes}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms188706(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms179355}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{63}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Physische Architektur des Transaktionsprotokolls}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms179355(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms174276}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{64}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{POWER (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174276(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms181127}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{65}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Prinzipale (Datenbankmodul)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms181127(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms175475}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{66}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Problembehandlung bei verwaisten Benutzern (SQL Server)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms175475(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190309}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{67}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Rangfolge der Datentypen (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190309(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms176069}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{68}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{RECONFIGURE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms176069(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms191153}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{69}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Register a Service Principal Name for Kerberos Connections}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms191153(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190468}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{70}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{remote admin connections Option}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms190468(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms190940}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{71}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Ressourcendatenbank}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190940(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms186226}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{72}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{REVOKE Server Principal Permissions (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms186226(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms187728}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{73}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{REVOKE (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187728(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms189121}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{74}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Rollen auf Datenbankebene}
+  \verb{url}
+  \verb https://msdn.microsoft.com/library/ms189121.aspx
+  \endverb
+\endentry
+
+\entry{ms188659}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{75}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Rollen auf Serverebene}
+  \verb{url}
+  \verb https://msdn.microsoft.com/library/ms188659.aspx
+  \endverb
+\endentry
+
+\entry{ms175003}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{76}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{ROUND (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms175003(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms178521}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{77}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Servereigenschaften (Seite Datenbankeinstellungen)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms178521(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189357}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{78}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Servereigenschaften (Seite Erweitert)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms189357(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms180124}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{79}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Servereigenschaften (Seite Verbindungen)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms180124(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188470}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{80}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Servereigenschaften (Sicherheit)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188470(1v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms189060}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{81}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Service Master Key}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms189060(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190401}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{82}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Sicherungsfähige Elemente}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190401(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms174378}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{83}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sp\_change\_users\_login (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms174378(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188787}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{84}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sp\_configure (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188787(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188031}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{85}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sp\_detach\_db (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms188031(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms175536}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{86}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server}
+  \field{title}{SQL Writer Service}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/ms175536.aspx
+  \endverb
+\endentry
+
+\entry{ms162819}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{87}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{sqlservr (Anwendung)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms162819(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187748}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{88}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{SUBSTRING (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187748(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms175012}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{89}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{sys.partitions (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms175012(v=sql.110).aspx
+  \endverb
+\endentry
+
+\entry{ms189051}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{90}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Table and Index Organization}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms189051(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms190768}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{91}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{tempdb-Datenbank}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms190768(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms190925}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{92}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{The Transaction Log (SQL Server)}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/ms190925(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms188396}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{93}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2012}
+  \field{title}{Trace Flags (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms188396.aspx
+  \endverb
+\endentry
+
+\entry{ms187879}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{94}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2008 R2}
+  \field{title}{Using Identifiers As Object Names}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187879(v=sql.105).aspx
+  \endverb
+\endentry
+
+\entry{ms175905}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{95}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Verschieben eines vorhandenen Indexes in eine andere
+  Dateigruppe}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-DE/library/ms175905(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms183524}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{96}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Verteilungsdatenbank}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms183524(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms187997}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ms1}
+  \field{extraalpha}{97}
+  \field{sortinit}{M}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Zuordnen von Systemtabellen zu Systemsichten (Transact-SQL)}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ms187997(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ms677601}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Ms6}
+  \field{sortinit}{M}
+  \field{title}{Name Formats for Unique SPNs}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ms677601(v=VS.85).aspx
+  \endverb
+\endentry
+
+\entry{msavvaiws2008r2}{manual}{}
+  \list{organization}{1}{%
+    {Active Directory UA Docs}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Msa}
+  \field{sortinit}{M}
+  \field{edition}{Windows Server 2008 R2}
+  \field{title}{Managed Service Accounts (MSAs) Versus Virtual Accounts in
+  Windows Server 2008 R2}
+  \verb{url}
+  \verb http://social.technet.microsoft.com/wiki/contents/articles/391.managed-
+  \verb service-accounts-msas-versus-virtual-accounts-in-windows-server-2008-r2
+  \verb .aspx
+  \endverb
+\endentry
+
+\entry{mssRSSiutOo}{manual}{}
+  \list{organization}{1}{%
+    {MSSQL Tips - Ben Snaidero}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Mss}
+  \field{extraalpha}{1}
+  \field{sortinit}{M}
+  \field{edition}{31. Januar 2012}
+  \field{title}{Rebuilding SQL Server indexes using the ONLINE option}
+  \verb{url}
+  \verb https://www.mssqltips.com/sqlservertip/2361/rebuilding-sql-server-index
+  \verb es-using-the-online-option/
+  \endverb
+\endentry
+
+\entry{mssqltips1714}{manual}{}
+  \list{organization}{1}{%
+    {K. Brian Kelley}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Mss}
+  \field{extraalpha}{2}
+  \field{sortinit}{M}
+  \field{edition}{3/24/2009}
+  \field{title}{Server level permissions for SQL Server 2005 and SQL Server
+  2008}
+  \verb{url}
+  \verb https://www.mssqltips.com/sqlservertip/1714/server-level-permissions-fo
+  \verb r-sql-server-2005-and-sql-server-2008/
+  \endverb
+\endentry
+
+\entry{mswcttssnilcnrtspns}{manual}{}
+  \list{organization}{1}{%
+    {Karthick P.K on mssqlwiki.com}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Msw}
+  \field{sortinit}{M}
+  \field{edition}{Dezember 9, 2013}
+  \field{title}{The SQL Server Network Interface library could not register the
+  Service Principal Name (SPN)}
+  \verb{url}
+  \verb https://mssqlwiki.com/tag/the-sql-server-network-interface-library-coul
+  \verb d-not-register-the-service-principal-name-spn/
+  \endverb
+\endentry
+
+\entry{practdbacocsp}{manual}{}
+  \list{organization}{1}{%
+    {Nelson John}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Pra}
+  \field{sortinit}{P}
+  \field{edition}{Thursday, 29 March 2012}
+  \field{title}{Caveats of a CONTROL SERVER permission}
+  \verb{url}
+  \verb http://www.practicalsqldba.com/2012/03/caveats-of-control-server-permis
+  \verb sion.html
+  \endverb
+\endentry
+
+\entry{PSRSsIVsnadlfs}{online}{}
+  \keyw{Transaction Log, default, size}
+  \field{labelalpha}{Psr}
+  \field{sortinit}{P}
+  \field{booktitle}{Initial VLF sequence numbers and default log file size}
+  \field{edition}{SQL Server 2014}
+  \field{subtitle}{SQLskills Paul S. Randal}
+  \verb{url}
+  \verb http://www.sqlskills.com/blogs/paul/initial-vlf-sequence-numbers-and-de
+  \verb fault-log-file-size/
+  \endverb
+\endentry
+
+\entry{qzaidi20101012}{manual}{}
+  \list{organization}{1}{%
+    {Quasim Zaidi}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Qza}
+  \field{sortinit}{Q}
+  \field{title}{qUICKLY Explained: Service Principal Name: Registration,
+  Duplication}
+  \verb{url}
+  \verb http://blogs.technet.com/b/qzaidi/archive/2010/10/12/quickly-explained-
+  \verb service-principal-name-registration-duplication.aspx
+  \endverb
+\endentry
+
+\entry{somarskoggranperm}{manual}{}
+  \list{organization}{1}{%
+    {Erland Sommarskog, SQL Server MVP}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Som}
+  \field{sortinit}{S}
+  \field{edition}{31.12.2011}
+  \field{title}{Giving Permissions through Stored Procedures}
+  \verb{url}
+  \verb http://www.sommarskog.se/grantperm.html
+  \endverb
+\endentry
+
+\entry{sqlosteam20140219}{manual}{}
+  \list{organization}{1}{%
+    {G. Bowerman}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Sql}
+  \field{extraalpha}{1}
+  \field{sortinit}{S}
+  \field{edition}{SQL Server 2012}
+  \field{title}{MSA accounts used with SQL}
+  \verb{url}
+  \verb http://blogs.msdn.com/b/sqlosteam/archive/2014/02/19/msa-accounts-used-
+  \verb with-sql.aspx
+  \endverb
+\endentry
+
+\entry{sqlityTIAMLSWwt}{manual}{}
+  \list{organization}{1}{%
+    {sqlity.net}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Sql}
+  \field{extraalpha}{2}
+  \field{sortinit}{S}
+  \field{title}{sqlity.net - The Index Allocation Map (IAM)}
+  \verb{url}
+  \verb http://sqlity.net/en/2315/index-allocation-map/
+  \endverb
+\endentry
+
+\entry{sqlarticlesagwwf}{manual}{}
+  \list{organization}{1}{%
+    {VIDHYASAGAR on SQL-Articles}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Sql}
+  \field{extraalpha}{3}
+  \field{sortinit}{S}
+  \field{edition}{15. August 2012}
+  \field{title}{Working with Filetables}
+  \verb{url}
+  \verb http://sql-articles.com/articles/general/working-with-filetables/
+  \endverb
+\endentry
+
+\entry{sslshopwiaccsr}{manual}{}
+  \list{organization}{1}{%
+    {SSLShopper - SSL Comparison}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ssl}
+  \field{sortinit}{S}
+  \field{title}{What is a CSR (Certificate Signing Request)?}
+  \verb{url}
+  \verb https://www.sslshopper.com/what-is-a-csr-certificate-signing-request.ht
+  \verb ml
+  \endverb
+\endentry
+
+\entry{stovfl909155}{manual}{}
+  \list{organization}{1}{%
+    {John Saunders on Stackoverflow}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Sto}
+  \field{sortinit}{S}
+  \field{title}{Stackoverflow - Equivalent of Oracle's RowID in SQL Server}
+  \verb{url}
+  \verb http://stackoverflow.com/questions/909155/equivalent-of-oracles-rowid-i
+  \verb n-sql-server
+  \endverb
+\endentry
+
+\entry{tallan20120101iafsiad}{manual}{}
+  \list{organization}{1}{%
+    {Lenni Lobel on Tallan's Technology Blog}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Tal}
+  \field{sortinit}{T}
+  \field{edition}{01. Januar 2012}
+  \field{title}{It’s a File System… It’s a Database Table… It’s SQL
+  Server Denali FileTable!}
+  \verb{url}
+  \verb https://blog.tallan.com/2012/01/01/its-a-file-system-its-a-database-tab
+  \verb le-its-sql-server-denali-filetable/
+  \endverb
+\endentry
+
+\entry{utilUDPaC}{manual}{}
+  \list{organization}{1}{%
+    {Use The Index, Luke - A guide to database performance for developers}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Uti}
+  \field{sortinit}{U}
+  \field{edition}{17. Januar 2014}
+  \field{title}{Unsinnige Defaults: Primärschlüssel als Clusterschlüssel}
+  \verb{url}
+  \verb http://use-the-index-luke.com/de/blog/2014-01/unsinnige-defaults-primae
+  \verb rschluessel-als-clusterschluessel
+  \endverb
+\endentry
+
+\entry{vafduw78as2008r2}{manual}{}
+  \list{organization}{1}{%
+    {Wolfgang Sommergut}%
+  }
+  \keyw{WindowsServerAdmin}
+  \field{labelalpha}{Vaf}
+  \field{sortinit}{V}
+  \field{edition}{Windows Server 2008 R2, Windows 7/8}
+  \field{title}{Virtual Accounts für Dienste unter Windows 7/8 und ab Server
+  2008 R2}
+  \verb{url}
+  \verb http://www.windowspro.de/tipp/virtual-accounts-fuer-dienste-unter-windo
+  \verb ws-78-ab-server-2008-r2
+  \endverb
+\endentry
+
+\entry{wikipTicketGrantingTicket}{manual}{}
+  \list{organization}{1}{%
+    {Wikipedia - Die freie Enzyklopädie}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Wik}
+  \field{sortinit}{W}
+  \field{edition}{Deutsch}
+  \field{title}{Ticket Granting Ticket}
+  \verb{url}
+  \verb https://de.wikipedia.org/wiki/Ticket_Granting_Ticket
+  \endverb
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

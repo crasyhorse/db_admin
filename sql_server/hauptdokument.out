@@ -1,0 +1,413 @@
+\BOOKMARK [-1][-]{part.1}{Grundlagen des Datenbankdesigns}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Entwicklung eines Datenmodells}{part.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Die Modellierungsinformationen}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Klassifizierung von Objekten}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.2.1}{Definitionen und Syntaxregeln}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.2}{Traditionelles Pendant}{section.1.2}% 6
+\BOOKMARK [1][-]{section.1.3}{Festlegung der relevanten Eigenschaften}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.3.1}{Definitionen und Syntaxregeln}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.2}{Traditionelle Datenspeicherung}{section.1.3}% 9
+\BOOKMARK [1][-]{section.1.4}{Festlegung der Identifizierung}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.4.1}{Identifizierungsvarianten}{section.1.4}% 11
+\BOOKMARK [2][-]{subsection.1.4.2}{Markierung der Identifizierenden Eigenschaft}{section.1.4}% 12
+\BOOKMARK [2][-]{subsection.1.4.3}{Klassisches Pendant}{section.1.4}% 13
+\BOOKMARK [1][-]{section.1.5}{Modellierungsformen}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{Beschreibung sachlogischer Zusammenh\344nge zwischen Objekttypen}{part.1}% 15
+\BOOKMARK [1][-]{section.2.1}{Benennung, Optionalit\344t und Kardinalit\344t}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.1.1}{Benennung}{section.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.1.2}{Optionalit\344t}{section.2.1}% 18
+\BOOKMARK [2][-]{subsection.2.1.3}{Kardinalit\344t}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.4}{Darstellung im Modell}{section.2.1}% 20
+\BOOKMARK [1][-]{section.2.2}{Notationen f\374r Kardinalit\344ten}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.1}{Die Chen-Notation}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.2}{\(Min,Max\)-Notation}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.3}{Schreib-/Leseweise der Kardinalit\344ten}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.4}{Referentielle Integrit\344t}{section.2.2}% 25
+\BOOKMARK [1][-]{section.2.3}{Redundante Beziehungstypen}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.4}{Parallele Beziehungstypen}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.5}{Mehrfachbeziehungen}{chapter.2}% 28
+\BOOKMARK [1][-]{section.2.6}{Eigenschaften von Beziehungstypen}{chapter.2}% 29
+\BOOKMARK [1][-]{section.2.7}{Begriffe}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.8}{\334bungen - Einfache ER-Modellierung}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.8.1}{\334bungsaufgabe Sportverein}{section.2.8}% 32
+\BOOKMARK [2][-]{subsection.2.8.2}{\334bungsaufgabe IT-Helpdesk}{section.2.8}% 33
+\BOOKMARK [2][-]{subsection.2.8.3}{\334bungsaufgabe Unternehmensberatung}{section.2.8}% 34
+\BOOKMARK [1][-]{section.2.9}{L\366sungen - Einfache ER-Modellierung}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.9.1}{\334bungsaufgabe Sportverein}{section.2.9}% 36
+\BOOKMARK [2][-]{subsection.2.9.2}{\334bungsaufgabe IT-Helpdesk}{section.2.9}% 37
+\BOOKMARK [2][-]{subsection.2.9.3}{\334bungsaufgabe Unternehmensberatung}{section.2.9}% 38
+\BOOKMARK [0][-]{chapter.3}{Erweiterte ER Modellierung}{part.1}% 39
+\BOOKMARK [1][-]{section.3.1}{Rekursive Beziehungen}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.1.1}{Definition eines rekursiven Beziehungstyps}{section.3.1}% 41
+\BOOKMARK [2][-]{subsection.3.1.2}{Syntaxregeln f\374r rekursive Beziehungstypen}{section.3.1}% 42
+\BOOKMARK [1][-]{section.3.2}{Anwendung rekursiver Beziehungstypen}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.2.1}{Version A}{section.3.2}% 44
+\BOOKMARK [2][-]{subsection.3.2.2}{Version B}{section.3.2}% 45
+\BOOKMARK [1][-]{section.3.3}{Spezialisierung}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.3.1}{Definitionen}{section.3.3}% 47
+\BOOKMARK [2][-]{subsection.3.3.2}{Kombinationen}{section.3.3}% 48
+\BOOKMARK [2][-]{subsection.3.3.3}{Vollst\344ndige \334berdeckung und Disjunkt}{section.3.3}% 49
+\BOOKMARK [2][-]{subsection.3.3.4}{Vollst\344ndige \334berdeckung und nicht Disjunkt}{section.3.3}% 50
+\BOOKMARK [2][-]{subsection.3.3.5}{Nicht vollst\344ndige \334berdeckung und Disjunkt}{section.3.3}% 51
+\BOOKMARK [2][-]{subsection.3.3.6}{Nicht vollst\344ndige \334berdeckung und nicht Disjunkt}{section.3.3}% 52
+\BOOKMARK [1][-]{section.3.4}{Generalisierung}{chapter.3}% 53
+\BOOKMARK [2][-]{subsection.3.4.1}{Beispiel f\374r die Generalisierung}{section.3.4}% 54
+\BOOKMARK [1][-]{section.3.5}{\334bungen - Erweiterte ER-Modellierung}{chapter.3}% 55
+\BOOKMARK [2][-]{subsection.3.5.1}{\334bungsaufgabe Schwimmbad}{section.3.5}% 56
+\BOOKMARK [2][-]{subsection.3.5.2}{\334bungsaufgabe Kindergarten}{section.3.5}% 57
+\BOOKMARK [2][-]{subsection.3.5.3}{\334bungsaufgabe Bank}{section.3.5}% 58
+\BOOKMARK [2][-]{subsection.3.5.4}{\334bungsaufgabe Autoh\344ndler}{section.3.5}% 59
+\BOOKMARK [2][-]{subsection.3.5.5}{\334bungsaufgabe Universit\344t}{section.3.5}% 60
+\BOOKMARK [2][-]{subsection.3.5.6}{\334bungsaufgabe Diensthundeschule}{section.3.5}% 61
+\BOOKMARK [1][-]{section.3.6}{L\366sungen - Erweiterte ER-Modellierung}{chapter.3}% 62
+\BOOKMARK [2][-]{subsection.3.6.1}{\334bungsaufgabe Schwimmbad}{section.3.6}% 63
+\BOOKMARK [2][-]{subsection.3.6.2}{\334bungsaufgabe Kindergarten}{section.3.6}% 64
+\BOOKMARK [2][-]{subsection.3.6.3}{\334bungsaufgabe Bank}{section.3.6}% 65
+\BOOKMARK [2][-]{subsection.3.6.4}{\334bungsaufgabe Autoh\344ndler}{section.3.6}% 66
+\BOOKMARK [2][-]{subsection.3.6.5}{\334bungsaufgabe Universit\344t}{section.3.6}% 67
+\BOOKMARK [2][-]{subsection.3.6.6}{\334bungsaufgabe Diensthundeschule}{section.3.6}% 68
+\BOOKMARK [0][-]{chapter.4}{Transformation}{part.1}% 69
+\BOOKMARK [1][-]{section.4.1}{Grundlagen}{chapter.4}% 70
+\BOOKMARK [2][-]{subsection.4.1.1}{Begriffsdefinitionen}{section.4.1}% 71
+\BOOKMARK [2][-]{subsection.4.1.2}{Kurzschreibweise der Tabellen}{section.4.1}% 72
+\BOOKMARK [1][-]{section.4.2}{Transformation von Objekttypen}{chapter.4}% 73
+\BOOKMARK [1][-]{section.4.3}{Transformation bin\344rer Beziehungstypen}{chapter.4}% 74
+\BOOKMARK [2][-]{subsection.4.3.1}{Der \(1,1\):\(1,1\) Beziehungstyp}{section.4.3}% 75
+\BOOKMARK [2][-]{subsection.4.3.2}{Der \(1,1\):\(0,1\) Beziehungstyp}{section.4.3}% 76
+\BOOKMARK [2][-]{subsection.4.3.3}{Der \(0,1\):\(0,1\) Beziehungstyp}{section.4.3}% 77
+\BOOKMARK [2][-]{subsection.4.3.4}{Der \(1,1\):\(0,*\) Beziehungstyp}{section.4.3}% 78
+\BOOKMARK [2][-]{subsection.4.3.5}{Der \(0,1\):\(0,*\) Beziehungstyp}{section.4.3}% 79
+\BOOKMARK [2][-]{subsection.4.3.6}{Der \(1,1\):\(1,*\) Beziehungstyp}{section.4.3}% 80
+\BOOKMARK [2][-]{subsection.4.3.7}{Der \(0,1\):\(1,*\) Beziehungstyp}{section.4.3}% 81
+\BOOKMARK [2][-]{subsection.4.3.8}{Der \(0,*\):\(0,*\) Beziehungstyp}{section.4.3}% 82
+\BOOKMARK [2][-]{subsection.4.3.9}{Der \(1,*\):\(0,*\) Beziehungstyp}{section.4.3}% 83
+\BOOKMARK [2][-]{subsection.4.3.10}{Der \(1,*\):\(1,*\) Beziehungstyp}{section.4.3}% 84
+\BOOKMARK [2][-]{subsection.4.3.11}{Transformation von Beziehungsattributen}{section.4.3}% 85
+\BOOKMARK [1][-]{section.4.4}{Transformation des Begleitbeispiels Bundeswehr}{chapter.4}% 86
+\BOOKMARK [1][-]{section.4.5}{Transformation rekursiver Beziehungstypen}{chapter.4}% 87
+\BOOKMARK [2][-]{subsection.4.5.1}{Der \(1,1\):\(1,1\) Rekursiv-Beziehungstyp}{section.4.5}% 88
+\BOOKMARK [2][-]{subsection.4.5.2}{Der \(0,1\):\(0,1\) Rekursiv-Beziehungstyp}{section.4.5}% 89
+\BOOKMARK [2][-]{subsection.4.5.3}{Der \(1,1\):\(0,*\) Rekursiv-Beziehungstyp}{section.4.5}% 90
+\BOOKMARK [2][-]{subsection.4.5.4}{Der \(0,1\):\(0,*\) Rekursiv-Beziehungstyp}{section.4.5}% 91
+\BOOKMARK [2][-]{subsection.4.5.5}{Der \(0,*\):\(0,*\) Rekursiv-Beziehungstyp}{section.4.5}% 92
+\BOOKMARK [2][-]{subsection.4.5.6}{Der \(1,*\):\(0,*\) Rekursiv-Beziehungstyp}{section.4.5}% 93
+\BOOKMARK [2][-]{subsection.4.5.7}{Der \(1,*\):\(1,*\) Rekursiv-Beziehungstyp}{section.4.5}% 94
+\BOOKMARK [1][-]{section.4.6}{Transformation von Kardinalit\344ts-Beschr\344nkungen}{chapter.4}% 95
+\BOOKMARK [1][-]{section.4.7}{Transformation der Spezialisierung / Generalisierung}{chapter.4}% 96
+\BOOKMARK [-1][-]{part.2}{SQL}{}% 97
+\BOOKMARK [0][-]{chapter.5}{Einstieg in SQL}{part.2}% 98
+\BOOKMARK [1][-]{section.5.1}{Einf\374hrung}{chapter.5}% 99
+\BOOKMARK [1][-]{section.5.2}{Grundlegende Operationen in SQL}{chapter.5}% 100
+\BOOKMARK [2][-]{subsection.5.2.1}{Mengenoperationen}{section.5.2}% 101
+\BOOKMARK [2][-]{subsection.5.2.2}{Die Projektion}{section.5.2}% 102
+\BOOKMARK [2][-]{subsection.5.2.3}{Die Selektion}{section.5.2}% 103
+\BOOKMARK [2][-]{subsection.5.2.4}{Kartesisches Produkt}{section.5.2}% 104
+\BOOKMARK [2][-]{subsection.5.2.5}{Die Join-Operation im Allgemeinen}{section.5.2}% 105
+\BOOKMARK [2][-]{subsection.5.2.6}{Inner-Joins}{section.5.2}% 106
+\BOOKMARK [2][-]{subsection.5.2.7}{Outer-Joins}{section.5.2}% 107
+\BOOKMARK [1][-]{section.5.3}{Auswahlabfragen mit SQL}{chapter.5}% 108
+\BOOKMARK [2][-]{subsection.5.3.1}{Schema einer Auswahlabfrage}{section.5.3}% 109
+\BOOKMARK [2][-]{subsection.5.3.2}{Der * als Joker}{section.5.3}% 110
+\BOOKMARK [2][-]{subsection.5.3.3}{Arithmetische Ausdr\374cke}{section.5.3}% 111
+\BOOKMARK [2][-]{subsection.5.3.4}{NULL Werte}{section.5.3}% 112
+\BOOKMARK [2][-]{subsection.5.3.5}{Verkettung von Zeichenketten}{section.5.3}% 113
+\BOOKMARK [2][-]{subsection.5.3.6}{Spaltenaliasnamen}{section.5.3}% 114
+\BOOKMARK [1][-]{section.5.4}{Einige Konventionen zu SQL}{chapter.5}% 115
+\BOOKMARK [0][-]{chapter.6}{Selektieren und Sortieren}{part.2}% 116
+\BOOKMARK [1][-]{section.6.1}{Selektieren von Zeilen: Die WHERE-Klausel}{chapter.6}% 117
+\BOOKMARK [2][-]{subsection.6.1.1}{Relationale Operatoren}{section.6.1}% 118
+\BOOKMARK [2][-]{subsection.6.1.2}{Logische Verkn\374pfung von Ausdr\374cken}{section.6.1}% 119
+\BOOKMARK [1][-]{section.6.2}{Festlegen einer Sortierung}{chapter.6}% 120
+\BOOKMARK [2][-]{subsection.6.2.1}{Die ORDER BY Klausel}{section.6.2}% 121
+\BOOKMARK [2][-]{subsection.6.2.2}{Auf- und absteigendes Sortieren}{section.6.2}% 122
+\BOOKMARK [1][-]{section.6.3}{\334bungen - Selektieren und Sortieren}{chapter.6}% 123
+\BOOKMARK [1][-]{section.6.4}{L\366sungen - Selektieren und sortieren}{chapter.6}% 124
+\BOOKMARK [0][-]{chapter.7}{Funktionen}{part.2}% 125
+\BOOKMARK [1][-]{section.7.1}{Der Begriff der Funktion}{chapter.7}% 126
+\BOOKMARK [1][-]{section.7.2}{Zeichenkettenfunktionen}{chapter.7}% 127
+\BOOKMARK [2][-]{subsection.7.2.1}{Gro\337- oder Kleinschreibung - UPPER, LOWER, INITCAP}{section.7.2}% 128
+\BOOKMARK [2][-]{subsection.7.2.2}{Zeichenketten bearbeiten}{section.7.2}% 129
+\BOOKMARK [1][-]{section.7.3}{Arithmetische Funktionen}{chapter.7}% 130
+\BOOKMARK [2][-]{subsection.7.3.1}{FROM oder nicht FROM, das ist hier die Frage}{section.7.3}% 131
+\BOOKMARK [2][-]{subsection.7.3.2}{Arithmetische Funktionen anwenden}{section.7.3}% 132
+\BOOKMARK [1][-]{section.7.4}{Datumsfunktionen}{chapter.7}% 133
+\BOOKMARK [2][-]{subsection.7.4.1}{Datumswerte}{section.7.4}% 134
+\BOOKMARK [2][-]{subsection.7.4.2}{Datumsarithmetik in Oracle}{section.7.4}% 135
+\BOOKMARK [2][-]{subsection.7.4.3}{Datumsarithmetik in MS SQL Server}{section.7.4}% 136
+\BOOKMARK [1][-]{section.7.5}{Sonstige Funktionen}{chapter.7}% 137
+\BOOKMARK [1][-]{section.7.6}{Datentypen}{chapter.7}% 138
+\BOOKMARK [2][-]{subsection.7.6.1}{Numerische Datentypen}{section.7.6}% 139
+\BOOKMARK [2][-]{subsection.7.6.2}{Zeichendatentypen}{section.7.6}% 140
+\BOOKMARK [2][-]{subsection.7.6.3}{Datums- und Zeittypen}{section.7.6}% 141
+\BOOKMARK [1][-]{section.7.7}{Konvertierung von Datentypen}{chapter.7}% 142
+\BOOKMARK [2][-]{subsection.7.7.1}{Implizite Datentypkonvertierung}{section.7.7}% 143
+\BOOKMARK [2][-]{subsection.7.7.2}{Explizite Datentypkonvertierung}{section.7.7}% 144
+\BOOKMARK [1][-]{section.7.8}{\334bungen - Funktionen}{chapter.7}% 145
+\BOOKMARK [1][-]{section.7.9}{L\366sungen - Funktionen}{chapter.7}% 146
+\BOOKMARK [0][-]{chapter.8}{Erweiterte Datenselektion}{part.2}% 147
+\BOOKMARK [1][-]{section.8.1}{Der Inner Join}{chapter.8}% 148
+\BOOKMARK [2][-]{subsection.8.1.1}{Die ON-Klausel}{section.8.1}% 149
+\BOOKMARK [2][-]{subsection.8.1.2}{Tabellenaliasnamen}{section.8.1}% 150
+\BOOKMARK [2][-]{subsection.8.1.3}{Die USING-Klausel \(Nur Oracle\)}{section.8.1}% 151
+\BOOKMARK [2][-]{subsection.8.1.4}{Der Natural-Join \(Nur Oracle\)}{section.8.1}% 152
+\BOOKMARK [2][-]{subsection.8.1.5}{Die Theta-Style Syntax}{section.8.1}% 153
+\BOOKMARK [2][-]{subsection.8.1.6}{Mehr als zwei Tabellen verkn\374pfen}{section.8.1}% 154
+\BOOKMARK [1][-]{section.8.2}{Outer Joins}{chapter.8}% 155
+\BOOKMARK [2][-]{subsection.8.2.1}{Left- und Right-Outer-Join}{section.8.2}% 156
+\BOOKMARK [2][-]{subsection.8.2.2}{Der Full Outer Join}{section.8.2}% 157
+\BOOKMARK [1][-]{section.8.3}{Spezielle Joins}{chapter.8}% 158
+\BOOKMARK [2][-]{subsection.8.3.1}{Der Self-Join}{section.8.3}% 159
+\BOOKMARK [2][-]{subsection.8.3.2}{Non-Equi-Joins}{section.8.3}% 160
+\BOOKMARK [1][-]{section.8.4}{Mengenoperationen}{chapter.8}% 161
+\BOOKMARK [2][-]{subsection.8.4.1}{Voraussetzungen zur Nutzung der SET-Operatoren}{section.8.4}% 162
+\BOOKMARK [2][-]{subsection.8.4.2}{Die SET-Operatoren}{section.8.4}% 163
+\BOOKMARK [1][-]{section.8.5}{\334bungen - Erweiterte Datenselektion}{chapter.8}% 164
+\BOOKMARK [1][-]{section.8.6}{L\366sungen - Erweiterte Datenselektion}{chapter.8}% 165
+\BOOKMARK [0][-]{chapter.9}{Gruppenfunktionen}{part.2}% 166
+\BOOKMARK [1][-]{section.9.1}{Die GROUP BY-Klausel}{chapter.9}% 167
+\BOOKMARK [1][-]{section.9.2}{Die Aggregatfunktionen}{chapter.9}% 168
+\BOOKMARK [2][-]{subsection.9.2.1}{Die Funktion COUNT}{section.9.2}% 169
+\BOOKMARK [2][-]{subsection.9.2.2}{Die Funktion SUM}{section.9.2}% 170
+\BOOKMARK [2][-]{subsection.9.2.3}{Die Funktion AVG}{section.9.2}% 171
+\BOOKMARK [2][-]{subsection.9.2.4}{Die Funktionen MIN und MAX}{section.9.2}% 172
+\BOOKMARK [2][-]{subsection.9.2.5}{Gruppierungen mit mehreren Ebenen}{section.9.2}% 173
+\BOOKMARK [1][-]{section.9.3}{Gruppierte Abfragen filtern}{chapter.9}% 174
+\BOOKMARK [2][-]{subsection.9.3.1}{Die WHERE-Klausel}{section.9.3}% 175
+\BOOKMARK [2][-]{subsection.9.3.2}{Die HAVING-Klausel}{section.9.3}% 176
+\BOOKMARK [1][-]{section.9.4}{Die Abarbeitungsreihenfolge des SELECT-Statements}{chapter.9}% 177
+\BOOKMARK [1][-]{section.9.5}{\334bungen - Gruppenfunktionen}{chapter.9}% 178
+\BOOKMARK [1][-]{section.9.6}{L\366sungen - Gruppenfunktionen}{chapter.9}% 179
+\BOOKMARK [0][-]{chapter.10}{Unterabfragen \(Subqueries\)}{part.2}% 180
+\BOOKMARK [1][-]{section.10.1}{Grunds\344tzliches zu Unterabfragen}{chapter.10}% 181
+\BOOKMARK [2][-]{subsection.10.1.1}{Was sind Unterabfragen?}{section.10.1}% 182
+\BOOKMARK [2][-]{subsection.10.1.2}{Wann sind Unterabfragen notwendig?}{section.10.1}% 183
+\BOOKMARK [2][-]{subsection.10.1.3}{Regeln f\374r Unterabfragen}{section.10.1}% 184
+\BOOKMARK [2][-]{subsection.10.1.4}{Arten von Unterabfragen}{section.10.1}% 185
+\BOOKMARK [1][-]{section.10.2}{Skalare Unterabfragen \(Scalar Subqueries\)}{chapter.10}% 186
+\BOOKMARK [2][-]{subsection.10.2.1}{Wo k\366nnen skalare Unterabfragen stehen?}{section.10.2}% 187
+\BOOKMARK [2][-]{subsection.10.2.2}{Fehlerquellen in skalaren Unterabfragen}{section.10.2}% 188
+\BOOKMARK [1][-]{section.10.3}{Einspaltige Unterabfragen}{chapter.10}% 189
+\BOOKMARK [2][-]{subsection.10.3.1}{Einspaltige Unterabfragen in WHERE- und HAVING-Klausel}{section.10.3}% 190
+\BOOKMARK [2][-]{subsection.10.3.2}{Existenzpr\374fungen}{section.10.3}% 191
+\BOOKMARK [1][-]{section.10.4}{Inlineviews / Derived Tables}{chapter.10}% 192
+\BOOKMARK [1][-]{section.10.5}{Top N Analysen}{chapter.10}% 193
+\BOOKMARK [2][-]{subsection.10.5.1}{Die Top N Analyse in Oracle}{section.10.5}% 194
+\BOOKMARK [2][-]{subsection.10.5.2}{Die Top N Analyse in MS SQL Server}{section.10.5}% 195
+\BOOKMARK [1][-]{section.10.6}{Pivot-Tabellen}{chapter.10}% 196
+\BOOKMARK [2][-]{subsection.10.6.1}{Der PIVOT-Operator \(Oracle\)}{section.10.6}% 197
+\BOOKMARK [2][-]{subsection.10.6.2}{Der PIVOT-Operator \(MS SQL Server\)}{section.10.6}% 198
+\BOOKMARK [1][-]{section.10.7}{\334bungen - Unterabfragen}{chapter.10}% 199
+\BOOKMARK [1][-]{section.10.8}{L\366sungen - Unterabfragen}{chapter.10}% 200
+\BOOKMARK [0][-]{chapter.11}{Data Manipulation Language \(DML\)}{part.2}% 201
+\BOOKMARK [1][-]{section.11.1}{Die DML-Anweisungen}{chapter.11}% 202
+\BOOKMARK [2][-]{subsection.11.1.1}{Datens\344tze einf\374gen - Die INSERT-Anweisung}{section.11.1}% 203
+\BOOKMARK [2][-]{subsection.11.1.2}{Datens\344tze \344ndern - Die UPDATE-Anweisung}{section.11.1}% 204
+\BOOKMARK [2][-]{subsection.11.1.3}{Datens\344tze l\366schen - Die DELETE-Anweisung}{section.11.1}% 205
+\BOOKMARK [1][-]{section.11.2}{Das Transaktionskonzept - COMMIT und ROLLBACK}{chapter.11}% 206
+\BOOKMARK [2][-]{subsection.11.2.1}{Beginn und Ende einer Transaktion}{section.11.2}% 207
+\BOOKMARK [2][-]{subsection.11.2.2}{Eine Transaktion erfolgreich abschlie\337en}{section.11.2}% 208
+\BOOKMARK [2][-]{subsection.11.2.3}{Eine Transaktion r\374ckg\344ngig machen}{section.11.2}% 209
+\BOOKMARK [0][-]{chapter.12}{Data Definition Language}{part.2}% 210
+\BOOKMARK [1][-]{section.12.1}{Tabellen erstellen und verwalten}{chapter.12}% 211
+\BOOKMARK [2][-]{subsection.12.1.1}{Namenskonventionen und Einschr\344nkungen}{section.12.1}% 212
+\BOOKMARK [2][-]{subsection.12.1.2}{CREATE TABLE - Tabellen erstellen}{section.12.1}% 213
+\BOOKMARK [2][-]{subsection.12.1.3}{CREATE TABLE AS... \(CTAS\)}{section.12.1}% 214
+\BOOKMARK [2][-]{subsection.12.1.4}{ALTER TABLE - Tabellen ver\344ndern}{section.12.1}% 215
+\BOOKMARK [2][-]{subsection.12.1.5}{DROP TABLE - Tabellen l\366schen}{section.12.1}% 216
+\BOOKMARK [2][-]{subsection.12.1.6}{TRUNCATE TABLE - Tabellen leeren}{section.12.1}% 217
+\BOOKMARK [1][-]{section.12.2}{Views erstellen verwalten}{chapter.12}% 218
+\BOOKMARK [2][-]{subsection.12.2.1}{Was sind Views?}{section.12.2}% 219
+\BOOKMARK [2][-]{subsection.12.2.2}{Views erstellen}{section.12.2}% 220
+\BOOKMARK [2][-]{subsection.12.2.3}{Views und DML}{section.12.2}% 221
+\BOOKMARK [2][-]{subsection.12.2.4}{Views \344ndern}{section.12.2}% 222
+\BOOKMARK [2][-]{subsection.12.2.5}{Views l\366schen}{section.12.2}% 223
+\BOOKMARK [1][-]{section.12.3}{\334bungen - Erstellen von Views}{chapter.12}% 224
+\BOOKMARK [1][-]{section.12.4}{L\366sungen - Erstellen von Views}{chapter.12}% 225
+\BOOKMARK [0][-]{chapter.13}{Constraints}{part.2}% 226
+\BOOKMARK [1][-]{section.13.1}{Was sind Constraints}{chapter.13}% 227
+\BOOKMARK [1][-]{section.13.2}{Die Constraints}{chapter.13}% 228
+\BOOKMARK [2][-]{subsection.13.2.1}{Das CHECK-Constraint}{section.13.2}% 229
+\BOOKMARK [2][-]{subsection.13.2.2}{Das NOT NULL-Constraint}{section.13.2}% 230
+\BOOKMARK [2][-]{subsection.13.2.3}{Das UNIQUE-Constraint}{section.13.2}% 231
+\BOOKMARK [2][-]{subsection.13.2.4}{Das PRIMARY KEY-Constraint}{section.13.2}% 232
+\BOOKMARK [2][-]{subsection.13.2.5}{Das FOREIGN KEY-Constraint}{section.13.2}% 233
+\BOOKMARK [2][-]{subsection.13.2.6}{Das SQL Server DEFAULT-Constraint}{section.13.2}% 234
+\BOOKMARK [1][-]{section.13.3}{Constraints umbenennen und l\366schen}{chapter.13}% 235
+\BOOKMARK [2][-]{subsection.13.3.1}{Constraints umbenennen}{section.13.3}% 236
+\BOOKMARK [2][-]{subsection.13.3.2}{Constraints l\366schen}{section.13.3}% 237
+\BOOKMARK [2][-]{subsection.13.3.3}{Standardwerte in SQL Server l\366schen}{section.13.3}% 238
+\BOOKMARK [-1][-]{part.3}{Datenbankadministration}{}% 239
+\BOOKMARK [0][-]{chapter.14}{Einf\374hrung in die SQL Server Datenbankarchitektur}{part.3}% 240
+\BOOKMARK [1][-]{section.14.1}{SQL Server und die Client-Server-Architektur}{chapter.14}% 241
+\BOOKMARK [2][-]{subsection.14.1.1}{Der Client}{section.14.1}% 242
+\BOOKMARK [2][-]{subsection.14.1.2}{Der Datenbankserver}{section.14.1}% 243
+\BOOKMARK [1][-]{section.14.2}{Speicherstrukuren der SQL Server Instanz}{chapter.14}% 244
+\BOOKMARK [2][-]{subsection.14.2.1}{Zugriffsprotokolle}{section.14.2}% 245
+\BOOKMARK [2][-]{subsection.14.2.2}{Der Buffer Pool und seine Bestandteile}{section.14.2}% 246
+\BOOKMARK [2][-]{subsection.14.2.3}{Die Prozessarchitektur des SQL Servers}{section.14.2}% 247
+\BOOKMARK [1][-]{section.14.3}{Query Processor \(Relational Engine\)}{chapter.14}% 248
+\BOOKMARK [2][-]{subsection.14.3.1}{Command Parser}{section.14.3}% 249
+\BOOKMARK [2][-]{subsection.14.3.2}{Query Optimizer}{section.14.3}% 250
+\BOOKMARK [2][-]{subsection.14.3.3}{Query Executor}{section.14.3}% 251
+\BOOKMARK [1][-]{section.14.4}{Datendateien - Aufbau und Verwaltung}{chapter.14}% 252
+\BOOKMARK [2][-]{subsection.14.4.1}{Aufbau einer Datendatei}{section.14.4}% 253
+\BOOKMARK [2][-]{subsection.14.4.2}{Speicherverwaltung in den Datendateien}{section.14.4}% 254
+\BOOKMARK [1][-]{section.14.5}{Das Transaktionsprotokoll}{chapter.14}% 255
+\BOOKMARK [2][-]{subsection.14.5.1}{Features des Transaktionsprotokolls}{section.14.5}% 256
+\BOOKMARK [2][-]{subsection.14.5.2}{Aufbau des Transaktions Logs}{section.14.5}% 257
+\BOOKMARK [2][-]{subsection.14.5.3}{Virtual Log Files im Detail}{section.14.5}% 258
+\BOOKMARK [2][-]{subsection.14.5.4}{Write-Ahead-Logging}{section.14.5}% 259
+\BOOKMARK [0][-]{chapter.15}{Installation des SQL Server 2014}{part.3}% 260
+\BOOKMARK [1][-]{section.15.1}{Managed Service Accounts}{chapter.15}% 261
+\BOOKMARK [2][-]{subsection.15.1.1}{F\344higkeiten}{section.15.1}% 262
+\BOOKMARK [2][-]{subsection.15.1.2}{Nachteile}{section.15.1}% 263
+\BOOKMARK [1][-]{section.15.2}{Group Managed Service Accounts}{chapter.15}% 264
+\BOOKMARK [2][-]{subsection.15.2.1}{Grundvoraussetzungen}{section.15.2}% 265
+\BOOKMARK [2][-]{subsection.15.2.2}{Kurzer Ausflug: AGDLP}{section.15.2}% 266
+\BOOKMARK [2][-]{subsection.15.2.3}{Einen Managed Service Account erstellen}{section.15.2}% 267
+\BOOKMARK [2][-]{subsection.15.2.4}{\(De-\)Installation eines gMSA auf einem Zielserver}{section.15.2}% 268
+\BOOKMARK [1][-]{section.15.3}{Virtual Accounts}{chapter.15}% 269
+\BOOKMARK [1][-]{section.15.4}{Installation des SQL Server 2014}{chapter.15}% 270
+\BOOKMARK [2][-]{subsection.15.4.1}{Systemvoraussetzungen}{section.15.4}% 271
+\BOOKMARK [2][-]{subsection.15.4.2}{SQL Server-Instanzen}{section.15.4}% 272
+\BOOKMARK [2][-]{subsection.15.4.3}{Die Verzeichnisse des SQL Servers}{section.15.4}% 273
+\BOOKMARK [2][-]{subsection.15.4.4}{SQL Server installieren}{section.15.4}% 274
+\BOOKMARK [1][-]{section.15.5}{Installationsnachbereitung}{chapter.15}% 275
+\BOOKMARK [2][-]{subsection.15.5.1}{Der SQL Server Configuration Manager}{section.15.5}% 276
+\BOOKMARK [2][-]{subsection.15.5.2}{Instant File Initialization}{section.15.5}% 277
+\BOOKMARK [2][-]{subsection.15.5.3}{Lock Pages in Memory \(Sperren von Seiten im Speicher\)}{section.15.5}% 278
+\BOOKMARK [0][-]{chapter.16}{Verwalten einer SQL Server Instanz}{part.3}% 279
+\BOOKMARK [1][-]{section.16.1}{Die Windows Dienste des SQL Servers}{chapter.16}% 280
+\BOOKMARK [2][-]{subsection.16.1.1}{SQL Server}{section.16.1}% 281
+\BOOKMARK [2][-]{subsection.16.1.2}{SQL Server-Agent}{section.16.1}% 282
+\BOOKMARK [2][-]{subsection.16.1.3}{SQL Server-Browser}{section.16.1}% 283
+\BOOKMARK [2][-]{subsection.16.1.4}{SQL Server Integration Services 12.0}{section.16.1}% 284
+\BOOKMARK [2][-]{subsection.16.1.5}{Der SQL Server VSS Writer}{section.16.1}% 285
+\BOOKMARK [1][-]{section.16.2}{Das SQL Server Management Studio}{chapter.16}% 286
+\BOOKMARK [2][-]{subsection.16.2.1}{Login mit dem Management Studio}{section.16.2}% 287
+\BOOKMARK [2][-]{subsection.16.2.2}{Der Aufbau des SSMS - Objekt-Explorer}{section.16.2}% 288
+\BOOKMARK [2][-]{subsection.16.2.3}{Der Aufbau des SSMS - Der Abfrageeditor}{section.16.2}% 289
+\BOOKMARK [2][-]{subsection.16.2.4}{Aufbau des SSMS - Der Projektmappen-Explorer}{section.16.2}% 290
+\BOOKMARK [1][-]{section.16.3}{Die SQL Server Systemdatenbanken}{chapter.16}% 291
+\BOOKMARK [2][-]{subsection.16.3.1}{Die MASTER-Datenbank}{section.16.3}% 292
+\BOOKMARK [2][-]{subsection.16.3.2}{Die MSDB-Datenbank}{section.16.3}% 293
+\BOOKMARK [2][-]{subsection.16.3.3}{Die MODEL-Datenbank}{section.16.3}% 294
+\BOOKMARK [2][-]{subsection.16.3.4}{Die TEMP-Datenbank}{section.16.3}% 295
+\BOOKMARK [2][-]{subsection.16.3.5}{Die DISTRIBUTION-Datenbank}{section.16.3}% 296
+\BOOKMARK [2][-]{subsection.16.3.6}{Die MSSQLSYSTEMRESOURCE-Datenbank}{section.16.3}% 297
+\BOOKMARK [2][-]{subsection.16.3.7}{Der Integration Services Katalog - SSISDB}{section.16.3}% 298
+\BOOKMARK [1][-]{section.16.4}{Konfigurieren der Servereigenschaften}{chapter.16}% 299
+\BOOKMARK [2][-]{subsection.16.4.1}{Die Grundeinstellungen}{section.16.4}% 300
+\BOOKMARK [2][-]{subsection.16.4.2}{Konfiguration des Arbeitsspeichers}{section.16.4}% 301
+\BOOKMARK [2][-]{subsection.16.4.3}{Die Prozessoreinstellungen}{section.16.4}% 302
+\BOOKMARK [2][-]{subsection.16.4.4}{Sicherheitseinstellungen}{section.16.4}% 303
+\BOOKMARK [2][-]{subsection.16.4.5}{Verbingungseinstellungen}{section.16.4}% 304
+\BOOKMARK [2][-]{subsection.16.4.6}{Datenbankeinstellungen}{section.16.4}% 305
+\BOOKMARK [2][-]{subsection.16.4.7}{Erweiterte Einstellungen}{section.16.4}% 306
+\BOOKMARK [2][-]{subsection.16.4.8}{Berechtigungen}{section.16.4}% 307
+\BOOKMARK [1][-]{section.16.5}{Die gespeicherte Systemprozedur sp\137configure}{chapter.16}% 308
+\BOOKMARK [2][-]{subsection.16.5.1}{Basisoptionen und erweiterte Optionen}{section.16.5}% 309
+\BOOKMARK [2][-]{subsection.16.5.2}{\304ndern der Konfiguration mit sp\137configure}{section.16.5}% 310
+\BOOKMARK [2][-]{subsection.16.5.3}{Basiskonfigurationseinstellungen anzeigen}{section.16.5}% 311
+\BOOKMARK [2][-]{subsection.16.5.4}{Erweiterte Konfigurationseinstellungen abfragen}{section.16.5}% 312
+\BOOKMARK [1][-]{section.16.6}{Datengewinnung - Systemsichten}{chapter.16}% 313
+\BOOKMARK [2][-]{subsection.16.6.1}{Katalogsichten}{section.16.6}% 314
+\BOOKMARK [2][-]{subsection.16.6.2}{Informationsschemasichten}{section.16.6}% 315
+\BOOKMARK [2][-]{subsection.16.6.3}{Kompatibilit\344tssichten}{section.16.6}% 316
+\BOOKMARK [2][-]{subsection.16.6.4}{Dynamische Verwaltungssichten und -funktionen}{section.16.6}% 317
+\BOOKMARK [1][-]{section.16.7}{Datenbanken erstellen}{chapter.16}% 318
+\BOOKMARK [2][-]{subsection.16.7.1}{Anlegen einer Datenbank mit dem SSMS}{section.16.7}% 319
+\BOOKMARK [2][-]{subsection.16.7.2}{Anlegen einer Datenbank mittels T-SQL \(CREATE DATABASE\)}{section.16.7}% 320
+\BOOKMARK [1][-]{section.16.8}{Datenbanken bearbeiten und l\366schen}{chapter.16}% 321
+\BOOKMARK [2][-]{subsection.16.8.1}{Die Datenbank demo\137grafisch}{section.16.8}% 322
+\BOOKMARK [2][-]{subsection.16.8.2}{Die Eigenschaften einer Datenbank ver\344ndern}{section.16.8}% 323
+\BOOKMARK [2][-]{subsection.16.8.3}{Datenbankoptionen ver\344ndern}{section.16.8}% 324
+\BOOKMARK [2][-]{subsection.16.8.4}{Vergr\366\337ern und schrumpfen einer Datenbank}{section.16.8}% 325
+\BOOKMARK [2][-]{subsection.16.8.5}{Datenbanken trennen und einh\344ngen}{section.16.8}% 326
+\BOOKMARK [2][-]{subsection.16.8.6}{Systemdatenbanken verschieben}{section.16.8}% 327
+\BOOKMARK [2][-]{subsection.16.8.7}{Datenbanken l\366schen}{section.16.8}% 328
+\BOOKMARK [1][-]{section.16.9}{Der DBCC - Database Console Commands}{chapter.16}% 329
+\BOOKMARK [2][-]{subsection.16.9.1}{\334berpr\374fungskommandos}{section.16.9}% 330
+\BOOKMARK [2][-]{subsection.16.9.2}{Verwaltungsanweisungen}{section.16.9}% 331
+\BOOKMARK [2][-]{subsection.16.9.3}{Informationsanweisungen}{section.16.9}% 332
+\BOOKMARK [2][-]{subsection.16.9.4}{Sonstige Anweisungen}{section.16.9}% 333
+\BOOKMARK [1][-]{section.16.10}{\334bungen - Verwalten einer SQL Server-Instanz}{chapter.16}% 334
+\BOOKMARK [1][-]{section.16.11}{L\366sungen - Verwalten einer SQL Server-Instanz}{chapter.16}% 335
+\BOOKMARK [0][-]{chapter.17}{Filestream}{part.3}% 336
+\BOOKMARK [1][-]{section.17.1}{Filestream}{chapter.17}% 337
+\BOOKMARK [2][-]{subsection.17.1.1}{Wie funktioniert Filestream}{section.17.1}% 338
+\BOOKMARK [2][-]{subsection.17.1.2}{Filestream konfigurieren}{section.17.1}% 339
+\BOOKMARK [2][-]{subsection.17.1.3}{Eine Filestream-Dateigruppe anlegen}{section.17.1}% 340
+\BOOKMARK [1][-]{section.17.2}{FileTables}{chapter.17}% 341
+\BOOKMARK [2][-]{subsection.17.2.1}{Konfigurieren des Features FileTable}{section.17.2}% 342
+\BOOKMARK [2][-]{subsection.17.2.2}{Anlegen und \304ndern von FileTables}{section.17.2}% 343
+\BOOKMARK [2][-]{subsection.17.2.3}{Benutzen von FileTables}{section.17.2}% 344
+\BOOKMARK [1][-]{section.17.3}{Projekt - Benutzen von Filestream und FileTables}{chapter.17}% 345
+\BOOKMARK [0][-]{chapter.18}{Schemaobjekte verwalten}{part.3}% 346
+\BOOKMARK [1][-]{section.18.1}{Heap Organized Tables}{chapter.18}% 347
+\BOOKMARK [2][-]{subsection.18.1.1}{Partitionen}{section.18.1}% 348
+\BOOKMARK [2][-]{subsection.18.1.2}{Allocation Units}{section.18.1}% 349
+\BOOKMARK [2][-]{subsection.18.1.3}{Index Allocation Maps}{section.18.1}% 350
+\BOOKMARK [2][-]{subsection.18.1.4}{Die Zeilen ID - RID}{section.18.1}% 351
+\BOOKMARK [1][-]{section.18.2}{Speicheroptimierte Tabellen \(SOT\)}{chapter.18}% 352
+\BOOKMARK [2][-]{subsection.18.2.1}{Das Konzept der Speicheroptimierten Tabellen}{section.18.2}% 353
+\BOOKMARK [2][-]{subsection.18.2.2}{Systeminterne Kompilierung}{section.18.2}% 354
+\BOOKMARK [2][-]{subsection.18.2.3}{Systemintern kompilierte Tabellen und Prozeduren}{section.18.2}% 355
+\BOOKMARK [1][-]{section.18.3}{B\344ume in der Informatik}{chapter.18}% 356
+\BOOKMARK [2][-]{subsection.18.3.1}{Wichtige Eigenschaften von B\344umen}{section.18.3}% 357
+\BOOKMARK [2][-]{subsection.18.3.2}{B*-Baum Indizes}{section.18.3}% 358
+\BOOKMARK [1][-]{section.18.4}{Indexentwurf im SQL Server}{chapter.18}% 359
+\BOOKMARK [2][-]{subsection.18.4.1}{Allgemeine Hilfestellungen f\374r den Indexentwurf}{section.18.4}% 360
+\BOOKMARK [2][-]{subsection.18.4.2}{Die Sortierreihenfolge von Indizes festlegen}{section.18.4}% 361
+\BOOKMARK [1][-]{section.18.5}{Die verschiedenen Indextypen und deren Merkmale}{chapter.18}% 362
+\BOOKMARK [2][-]{subsection.18.5.1}{Gruppierte Indizes - Clustered Indexes}{section.18.5}% 363
+\BOOKMARK [2][-]{subsection.18.5.2}{Nicht gruppierte Indizes - Nonclustered Indexes}{section.18.5}% 364
+\BOOKMARK [2][-]{subsection.18.5.3}{Eigenschaften von Indizes}{section.18.5}% 365
+\BOOKMARK [2][-]{subsection.18.5.4}{Der Columnstore-Index}{section.18.5}% 366
+\BOOKMARK [1][-]{section.18.6}{Administrative T\344tigkeiten an Indizes}{chapter.18}% 367
+\BOOKMARK [2][-]{subsection.18.6.1}{Indizes reorganisieren}{section.18.6}% 368
+\BOOKMARK [2][-]{subsection.18.6.2}{Deaktivieren von Indizes}{section.18.6}% 369
+\BOOKMARK [2][-]{subsection.18.6.3}{Aktivieren von Indizes}{section.18.6}% 370
+\BOOKMARK [2][-]{subsection.18.6.4}{Verschieben eines Indexes in eine andere Dateigruppe}{section.18.6}% 371
+\BOOKMARK [1][-]{section.18.7}{\334bungen - Schemaobjekte verwalten}{chapter.18}% 372
+\BOOKMARK [1][-]{section.18.8}{L\366sungen - Schemaobjekte verwalten}{chapter.18}% 373
+\BOOKMARK [0][-]{chapter.19}{Sicherheit im SQL Server}{part.3}% 374
+\BOOKMARK [1][-]{section.19.1}{Sicherheit auf Betriebssystemebene}{chapter.19}% 375
+\BOOKMARK [2][-]{subsection.19.1.1}{NTFS-Zugriffsrechte}{section.19.1}% 376
+\BOOKMARK [2][-]{subsection.19.1.2}{Die Windows-Firewall}{section.19.1}% 377
+\BOOKMARK [1][-]{section.19.2}{Konfigurieren der Authentifizierung}{chapter.19}% 378
+\BOOKMARK [2][-]{subsection.19.2.1}{Unterschiede zwischen NTLM und Kerberos}{section.19.2}% 379
+\BOOKMARK [2][-]{subsection.19.2.2}{Service Principal Names \(SPN\)}{section.19.2}% 380
+\BOOKMARK [2][-]{subsection.19.2.3}{Umstellung auf Kerberos}{section.19.2}% 381
+\BOOKMARK [1][-]{section.19.3}{Von Privilegien, Rollen, Prinzipalen und Securables}{chapter.19}% 382
+\BOOKMARK [2][-]{subsection.19.3.1}{Privilegien}{section.19.3}% 383
+\BOOKMARK [2][-]{subsection.19.3.2}{Rollen}{section.19.3}% 384
+\BOOKMARK [2][-]{subsection.19.3.3}{Prinzipale}{section.19.3}% 385
+\BOOKMARK [2][-]{subsection.19.3.4}{Securables - Sicherungsf\344hige Elemente}{section.19.3}% 386
+\BOOKMARK [1][-]{section.19.4}{Sicherheit auf Serverebene}{chapter.19}% 387
+\BOOKMARK [2][-]{subsection.19.4.1}{Securables und Prinzipale}{section.19.4}% 388
+\BOOKMARK [2][-]{subsection.19.4.2}{Serverrollen}{section.19.4}% 389
+\BOOKMARK [2][-]{subsection.19.4.3}{Privilegienverwaltung auf Serverebene}{section.19.4}% 390
+\BOOKMARK [2][-]{subsection.19.4.4}{Verwalten von Logins}{section.19.4}% 391
+\BOOKMARK [2][-]{subsection.19.4.5}{Den Authentifizierungsmodus w\344hlen}{section.19.4}% 392
+\BOOKMARK [2][-]{subsection.19.4.6}{Distributed Administrator Connection - DAC}{section.19.4}% 393
+\BOOKMARK [1][-]{section.19.5}{Sicherheit auf Datenbankebene}{chapter.19}% 394
+\BOOKMARK [2][-]{subsection.19.5.1}{Securables und Prinzipale}{section.19.5}% 395
+\BOOKMARK [2][-]{subsection.19.5.2}{Datenbankbenutzer}{section.19.5}% 396
+\BOOKMARK [2][-]{subsection.19.5.3}{Datenbankbenutzer verwalten}{section.19.5}% 397
+\BOOKMARK [2][-]{subsection.19.5.4}{Das Problem der verwaisten Benutzer}{section.19.5}% 398
+\BOOKMARK [2][-]{subsection.19.5.5}{Privilegien auf Datenbankebene}{section.19.5}% 399
+\BOOKMARK [2][-]{subsection.19.5.6}{Rollen}{section.19.5}% 400
+\BOOKMARK [1][-]{section.19.6}{Datenbankschemata}{chapter.19}% 401
+\BOOKMARK [2][-]{subsection.19.6.1}{Securables}{section.19.6}% 402
+\BOOKMARK [2][-]{subsection.19.6.2}{Erstellen eines Rollen- und Rechtekonzeptes}{section.19.6}% 403
+\BOOKMARK [1][-]{section.19.7}{Datenbankverschl\374sselung}{chapter.19}% 404
+\BOOKMARK [2][-]{subsection.19.7.1}{Aufbau der Transparenten Datenbankverschl\374sselung \(TDE\)}{section.19.7}% 405
+\BOOKMARK [2][-]{subsection.19.7.2}{Einrichten der Transparenten Datenbankverschl\374sselung}{section.19.7}% 406
+\BOOKMARK [1][-]{section.19.8}{Verschl\374sselung der Kommunikation - SSL}{chapter.19}% 407
+\BOOKMARK [2][-]{subsection.19.8.1}{Vorbereitende Ma\337nahmen}{section.19.8}% 408
+\BOOKMARK [2][-]{subsection.19.8.2}{Konfigurieren der serverseitigen Verschl\374sselung}{section.19.8}% 409
+\BOOKMARK [2][-]{subsection.19.8.3}{Konfigurieren der clientseitigen Verschl\374sselung}{section.19.8}% 410
+\BOOKMARK [2][-]{subsection.19.8.4}{Ist die Verbindung auch wirklich verschl\374sselt?}{section.19.8}% 411
+\BOOKMARK [2][-]{subsection.19.8.5}{Nutzen der Option "Erweiterter Schutz"}{section.19.8}% 412
+\BOOKMARK [-1][-]{part.4}{Appendix}{}% 413

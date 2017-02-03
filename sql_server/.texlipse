@@ -1,12 +1,12 @@
 #TeXlipse project settings
-#Thu Jan 08 14:39:58 CET 2015
+#Fri Feb 03 10:07:11 CET 2017
 markTmpDer=true
 builderNum=2
 outputDir=
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
-tempDir=tmp
+tempDir=
 mainTexFile=hauptdokument.tex
 outputFile=IT-SysAdminFwDB_SK_SQL_Server.pdf
 langSpell=de
