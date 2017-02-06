@@ -514,31 +514,31 @@
         authentifiziert?},label=sql19_01]
 SELECT net_transport, client_net_address, encrypt_option, auth_scheme
 FROM   sys.dm_exec_connections;
-        \end{lstlisting}
-        \begin{center}
-          \begin{small}
-            \changefont{pcr}{m}{n}
-            \tablefirsthead{
-              \multicolumn{1}{l}{\textbf{NET\_TRANSPORT}} &
-              \multicolumn{1}{l}{\textbf{CLIENT\_NET\_ADDRESS}} &
-              \multicolumn{1}{l}{\textbf{ENCRYPT\_OPTION}} &
-              \multicolumn{1}{l}{\textbf{AUTH\_SCHEME}} \\
-              \cmidrule(l){1-1}\cmidrule(l){2-2}\cmidrule(l){3-3}\cmidrule(l){4-4}
+          \end{lstlisting}
+          \begin{center}
+            \begin{small}
+              \changefont{pcr}{m}{n}
+              \tablefirsthead{
+                \multicolumn{1}{l}{\textbf{NET\_TRANSPORT}} &
+                \multicolumn{1}{l}{\textbf{CLIENT\_NET\_ADDRESS}} &
+                \multicolumn{1}{l}{\textbf{ENCRYPT\_OPTION}} &
+                \multicolumn{1}{l}{\textbf{AUTH\_SCHEME}} \\
+                \cmidrule(l){1-1}\cmidrule(l){2-2}\cmidrule(l){3-3}\cmidrule(l){4-4}
+                }
+              \tablehead{}
+              \tabletail{
+                \multicolumn{2}{l}{\textbf{1 Zeile ausgew\"ahlt}} \\
               }
-            \tablehead{}
-            \tabletail{
-              \multicolumn{2}{l}{\textbf{1 Zeile ausgew\"ahlt}} \\
-            }
-            \tablelasttail{
-              \multicolumn{2}{l}{\textbf{1 Zeile ausgew\"ahlt}} \\
-            }
-            \begin{mssql}
-              \begin{supertabular}{llll}
-                TCP & 192.168.111.43 & TRUE & KERBEROS \\
-              \end{supertabular}
-            \end{mssql}
-          \end{small}
-        \end{center}
+              \tablelasttail{
+                \multicolumn{2}{l}{\textbf{1 Zeile ausgew\"ahlt}} \\
+              }
+              \begin{mssql}
+                \begin{supertabular}{llll}
+                  TCP & 192.168.111.43 & TRUE & KERBEROS \\
+                \end{supertabular}
+              \end{mssql}
+            \end{small}
+          \end{center}
     \section{Von Privilegien, Rollen, Prinzipalen und Securables}
       \subsection{Privilegien}
         \subsubsection{Zuweisen, Entziehen und Verweigern}

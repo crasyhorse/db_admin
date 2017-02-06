@@ -16,6 +16,20 @@
   {}
 \endgroup
 
+\entry{ff929071}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ff9}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Eigenständige Datenbanken}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx
+  \endverb
+\endentry
+
 \lossort
 \endlossort
 

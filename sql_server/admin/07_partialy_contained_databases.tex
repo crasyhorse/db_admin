@@ -17,29 +17,117 @@
       macht es schwierig eine Datenbank auf einen anderen Server / in eine
       andere Instanz zu migrieren. Mit Hilfe des Konzeptes der
       \enquote{Teilweise eigenständigen Datenbank} (engl. Partially contained
-      databases).
-      \subsection{Die Idee dahinter}
-        In einer Partially contained database werden verschiedene Metadaten
-        in der Datenbank selbst und nicht in der \identifier{master}-Datenbank
-        gespeichert.
+      databases) versucht Microsoft diesem Problem entgegen zu treten.
+
+      In einer Partially contained database werden verschiedene Metadaten
+      in der Datenbank selbst und nicht in der \identifier{master}-Datenbank
+      gespeichert. Der Fachbegriff dafür, dass bestimmte Objekte ohne
+      Verbindung zur Instanz oder zu einer anderen Datenbank existieren können
+      lautet \enquote{Kapselung}
+      \begin{merke}
+        Von großer Bedeutung ist das Wort \enquote{Partially}, da nicht alle
+        Metadaten in der Datenbank selbst abgelegt werden. Diese Art von
+        Datenbank ist tatsächlich nur zu einem gewissen Teil unabhängig.
+      \end{merke}
+      \subsection{Was genau bedeutet Kapselung?}
+        Bei der Kapselung geht es darum, dass Objekte in einer Datenbank
+        keinerleie Bezüge/Verknüpfungen nach außen haben dürfen. Ein Beispiel
+        hierfür ist die Systemview \identifier{sys.tables}. Die Basisobjekte,
+        auf welche sich diese View bezieht, befinden sich alle in der
+        betroffenen Datenbank selbst. Ein Gegenbeispiel wäre ein Objekt, wie
+        z. B. ein SQL-Benutzer mit Anmeldename. Ein solches Benutzerkonto
+        bezieht sich auf ein Windows-Login und dieses Login liegt in der
+        \identifier{master}-Datenbank. Somit existiert ein Bezug nach außen.
+        
+        Man kann somit zwei Arten von Objekten unterscheiden:
+        \begin{itemize}
+          \item \textbf{Contained entities}: Ein Objekt wird dann als
+          \enquote{vollständig enthalten} bezeichnet, wenn es die
+          Datenbankbegrenzung nie überschreitet, sich also nur auf Funktionen
+          stützt, welche in der Datenbank enthalten sind.
+          \item \textbf{Uncontained entities}: Ein Objekt, welches die
+          Datenbankgrenze überschreitet wird als \enquote{nicht enthalten}
+          bezeichnet, da es Verknüpfungen zu Objekten außerhalb seiner eigenen
+          Datenbank hat.
+        \end{itemize}
         \begin{merke}
-          Von großer Bedeutung ist das Wort \enquote{Partially}, da nicht alle
-          Metadaten in der Datenbank selbst abgelegt werden. Diese Art von
-          Datenbank ist tatsächlich nur zu einem gewissen Teil unabhängig.
+          Als \enquote{Datenbankbegrenzung} wird die Grenze zwischen einer
+          Datenbank und der Instanz bzw. die Grenze zwischen zwei Datenbanken
+          bezeichnet. Sie ist eine eindeutig definierbare Trennlinie zwischen
+          den Funktionen der Datenbank (dem Datenmodell) und den Funktionen
+          der Instanz (dem Verwaltungsmodell).
         \end{merke}
-        \subsubsection{Welche Probleme werden gelöst?}
+        \subsection{Welche Probleme werden gelöst?}
           \begin{itemize}
             \item Die Datenbank übernimmt die Authentifizierung von Benutzern
             komplett. Es sind keine Logins mehr von Nöten.
             \item Weitere Metadaten, z. B. eine Liste der Datenbanken, von denen
             die Partially contained database abhängig ist und weitere
-            Systemeinstellungen, die zum Betrieb der Datenban notwendig
+            Systemeinstellungen, die zum Betrieb der Datenbank notwendig
             sind, werden in der Datenbank selbst gespeichert.
             \item Temporäre Tabellen werden direkt im Kontext der Partially
             contained database gespeichert, so dass es keine Konflikte mehr bei
             Sortierreihenfolgen zwischen der \identifier{tempdb} und der
             Datenbank selbst gibt.
           \end{itemize}
+        \subsection{Einschränkungen für Partially contained databases}
+          Das Konzept der teilweise eigenständigen Datenbanken bringt nicht nur
+          Vorteile mit sich, es existieren auch Einschränkungen. Beispielsweise
+          unterstützen diese Datenbank weder das Feature der Replikation noch
+          das Change-Data-Capture. Eine vollständige Liste mit allen
+          Einschränkungen ist in der MSDN enthalten.
+          \begin{literaturinternet}
+            \item \cite{ff929071}
+          \end{literaturinternet}
+      \section{Partially contained databases erzeugen}
+        \subsection{Konfigurieren der Instanz}
+          Bevor Partially contained databases erstellt werden können muss zuerst
+          die Authentifizierung für eigenständige Datenbanken eingeschaltet
+          werden. Dies wird durch eine einfache Instanzeinstellung vorgenommen.
+          \bild{Eigen\-stän\-dige Daten\-banken aktivieren}{pcd_activate}{1.2}
+          \begin{lstlisting}[language=ms_sql,caption={Eigen\-stän\-dige Daten\-banken
+          aktivieren},label=sql20_01]
+USE [master]
+GO
+
+EXEC §sp_configure§ 'contained database authentication', 1
+RECONFIGURE
+GO          
+          \end{lstlisting}
+        \subsection{Erstellen der Datenbank}
+          \subsubsection{Eine neue Partially contained database erstellen}
+            Eine teilweise eigenständige Datenbank wird mit Hilfe des
+            \languagemssql{CREATE DATABASE}-Statements und dem Zusatz
+            \languagemssql{CONTAINMENT = PARTIAL} erzeugt. Wahlweise kann dies
+            aber auch im SSMS geschehen.
+            \bild{Erzeugen einer teilweise eigen\-stän\-digen Daten\-bank}{create_pcd}{1.2}
+            \begin{lstlisting}[language=ms_sql,caption={Erstellen einer teilweise eigen\-stän\-digen Daten\-bank},label=sql20_02]
+USE [master]
+GO
+
+CREATE DATABASE [Bank_PCD]
+  CONTAINMENT = PARTIAL
+  ON  PRIMARY (
+  NAME = N'Bank_PCD',
+  FILENAME = N'D:\120\bank_pcd\data\Bank_pcd.mdf',
+  SIZE = 10GB,
+  MAXSIZE = 20GB,
+  FILEGROWTH = 512MB
+  )
+  LOG ON (
+  NAME = N'Bank_PCD_Log',
+  FILENAME = N'D:\120\bank_pcd\log\Bank_pcd.ldf',
+  SIZE = 100M,
+  MAXSIZE = 2GB,
+  FILEGROWTH = 10%
+  )
+GO
+            \end{lstlisting}
+          \subsubsection{Den Containmenttype einer Datenbank ändern}
           
+          \subsubsection{Identifizieren der Datenbankkapselung}
+          %https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx#Identifizieren%20der%20Datenbankkapselung
+        \subsection{Contained logins verwalten}
           \subsubsection{Das Passwort eines Benutzerkontos ändern}
-%https://msdn.microsoft.com/de-de/library/ms176060.aspx?f=255&MSPPError=-2147217396
+
+        \subsection{Collations}
