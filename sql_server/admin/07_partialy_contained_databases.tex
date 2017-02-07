@@ -107,27 +107,94 @@ GO
 
 CREATE DATABASE [Bank_PCD]
   CONTAINMENT = PARTIAL
-  ON  PRIMARY (
-  NAME = N'Bank_PCD',
+  ON  PRIMARY ( NAME = N'Bank_PCD',
   FILENAME = N'D:\120\bank_pcd\data\Bank_pcd.mdf',
-  SIZE = 10GB,
-  MAXSIZE = 20GB,
-  FILEGROWTH = 512MB
-  )
-  LOG ON (
-  NAME = N'Bank_PCD_Log',
+  SIZE = 10GB, MAXSIZE = 20GB,
+  FILEGROWTH = 512MB)
+  LOG ON ( NAME = N'Bank_PCD_Log',
   FILENAME = N'D:\120\bank_pcd\log\Bank_pcd.ldf',
-  SIZE = 100M,
-  MAXSIZE = 2GB,
-  FILEGROWTH = 10%
-  )
+  SIZE = 100M, MAXSIZE = 2GB,
+  FILEGROWTH = 10%)
 GO
             \end{lstlisting}
           \subsubsection{Den Containmenttype einer Datenbank ändern}
-          
+            Soll eines bestehende Datenbank in eine Partially contained
+            database migriert werden, so geschieht dies mit dem
+            \languagemssql{ALTER DATABASE}-Statement.
+            \begin{lstlisting}[language=ms_sql,caption={Migration einer Datenbank in eine teilweise eigen\-stän\-dige Daten\-bank},label=sql20_03]
+USE [master]
+GO
+
+ALTER DATABASE [Bank_PCD] SET CONTAINMENT = PARTIAL;
+GO
+            \end{lstlisting}
+            \bild{Migration einer Datenbank in eine teilweise eigen\-stän\-dige
+            Daten\-bank}{migrate_to_pcd}{1.3}
+            \begin{literaturinternet}
+              \item \cite{hh534404}
+            \end{literaturinternet}
           \subsubsection{Identifizieren der Datenbankkapselung}
-          %https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx#Identifizieren%20der%20Datenbankkapselung
-        \subsection{Contained logins verwalten}
+            Wurde eine Datenbank in eine Partially contained database migriert,
+            stellt sich trotz Migration die Frage, ob wirklich alle Objekte
+            innerhalb der datenbank die Datenbankbegrenzung einhalten. Um dies
+            herauszufinden, gibt es zwei Mechanismen:
+            \begin{itemize}
+              \item Die View \identifier{sys.dm\_db\_uncontained\_entities}
+              zeigt alle Objekte an, die möglicherweise die Datenbankbegrenzung
+              überschreiten.
+              \item Das Extended Event \identifier{database\_uncontained\_usage}
+              wird immer dann ausgelöst, wenn zur Laufzeit eines Programms eine
+              uncontained Entity gefunden wird.
+            \end{itemize}
+            \begin{merke}
+              Die View \identifier{sys.dm\_db\_uncontained\_entities} kann
+              Entitäten, welche dynamisches SQL enthalten nicht korrekt
+              auswerten und deshalb auch nicht feststellen, ob solche Objekte
+              die Datenbankbegrenzung verletzen oder nicht.
+            \end{merke}
+            \begin{literaturinternet}
+              \item \cite{ff929071}
+            \end{literaturinternet}
+        \subsection{Contained users verwalten}
+          Grundsätzlich sind die \enquote{enthaltenen Benutzerkonten} bzw.
+          Contained Users mit den normalen Benutzerkonten identisch, bis auf
+          eine Ausnahme: Es wird kein Login für einen Contained user erstellt.
+          Die Metadaten eines Contained users werden in der datenbank selbst und
+          nicht in der \identifier{master}-Datenbank abgelegt.
+          
+          Es gibt zwei Arten Contained users:
+          \begin{itemize}
+            \item \textbf{SQL Benutzer ohne Anmeldename}: Diese Art von
+            Benutzerkonto ist das pont dont zur Kombination \enquote{SQL
+            Benutzer mit Anmeldename und Login mit SQL
+            Server-Authentifizierung}. Der Unterschied besteht darin, dass kein
+            Login für ihn angelegt wird. Das Passwort für ein solches
+            Benutzerkonto wird in der Datenbank selbst verwaltet.
+            \item \textbf{Windows-Benutzer}: Der Windows Benutzer ist mit
+            der Kombination \enquote{SQL Benutzer mit Anmeldename und Login mit
+            Windows-Authentifizierung} vergleichbar.
+          \end{itemize}
+          
+          Zu beachten ist, dass das Authentifizierungsverfahren bei beiden
+          Benutzertypen unterschiedlich abläuft. Meldet sich ein Benutzer mit
+          einem Windows-Account an, wird zuerst nach einem Login mit
+          Windows-Authentifzierung gesucht und erst wenn kein passendes Login
+          gefunden wird, wird nach einem Windows-Benutzer gesucht. D. h. die
+          Authentifizierung wird zuerst auf Instanzebene und dann auf
+          Datenbankebene versucht.
+          
+          Bei einer Anmeldung mit einem SQL Server-Account, wird zuerst nach
+          einem SQL Benutzer ohne Anmeldename und dann nach einem Login mit SQL
+          Server-Authentifizierung gesucht. Hier wird also zuerst auf
+          Datenbankebene und dann auf Instanzebene authentifiziert.
+          \subsubsection{Contained users erstellen}
+          
+          \subsubsection{Login an einer Partially contained database}
+          
           \subsubsection{Das Passwort eines Benutzerkontos ändern}
 
+          \subsubsection{Benutzerkonten migrieren}
+            \begin{literaturinternet}
+              \item \cite{ff929139}
+            \end{literaturinternet}
         \subsection{Collations}

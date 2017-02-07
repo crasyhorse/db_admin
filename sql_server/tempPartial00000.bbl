@@ -22,11 +22,41 @@
   }
   \keyw{SQLServerAdmin}
   \field{labelalpha}{Ff9}
+  \field{extraalpha}{1}
   \field{sortinit}{F}
   \field{edition}{SQL Server 2014}
   \field{title}{Eigenständige Datenbanken}
   \verb{url}
   \verb https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ff929139}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{2}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Migrate to a Partially Contained Database}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ff929139(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{hh534404}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Hh5}
+  \field{sortinit}{H}
+  \field{edition}{SQL Server 2012}
+  \field{title}{SQL Server 2012: Sometimes Partial Is Preferable}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/hh534404.aspx
   \endverb
 \endentry
 
