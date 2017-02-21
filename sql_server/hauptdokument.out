@@ -410,4 +410,16 @@
 \BOOKMARK [2][-]{subsection.19.8.3}{Konfigurieren der clientseitigen Verschl\374sselung}{section.19.8}% 410
 \BOOKMARK [2][-]{subsection.19.8.4}{Ist die Verbindung auch wirklich verschl\374sselt?}{section.19.8}% 411
 \BOOKMARK [2][-]{subsection.19.8.5}{Nutzen der Option "Erweiterter Schutz"}{section.19.8}% 412
-\BOOKMARK [-1][-]{part.4}{Appendix}{}% 413
+\BOOKMARK [0][-]{chapter.20}{Partially contained databases}{part.3}% 413
+\BOOKMARK [1][-]{section.20.1}{Partially contained databases - Teilweise eigenst\344ndige Datenbanken}{chapter.20}% 414
+\BOOKMARK [2][-]{subsection.20.1.1}{Was genau bedeutet Kapselung?}{section.20.1}% 415
+\BOOKMARK [2][-]{subsection.20.1.2}{Welche Probleme werden gel\366st?}{section.20.1}% 416
+\BOOKMARK [2][-]{subsection.20.1.3}{Einschr\344nkungen f\374r Partially contained databases}{section.20.1}% 417
+\BOOKMARK [1][-]{section.20.2}{Partially contained databases erzeugen}{chapter.20}% 418
+\BOOKMARK [2][-]{subsection.20.2.1}{Konfigurieren der Instanz}{section.20.2}% 419
+\BOOKMARK [2][-]{subsection.20.2.2}{Erstellen der Datenbank}{section.20.2}% 420
+\BOOKMARK [2][-]{subsection.20.2.3}{Contained users verwalten}{section.20.2}% 421
+\BOOKMARK [0][-]{chapter.21}{Auditing}{part.3}% 422
+\BOOKMARK [1][-]{section.21.1}{Auditing im SQL Server}{chapter.21}% 423
+\BOOKMARK [2][-]{subsection.21.1.1}{Bestandteile des SQL Server Auditings}{section.21.1}% 424
+\BOOKMARK [-1][-]{part.4}{Appendix}{}% 425

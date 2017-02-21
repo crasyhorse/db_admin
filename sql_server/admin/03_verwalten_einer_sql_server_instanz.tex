@@ -828,8 +828,9 @@ EXEC §sp_configure§ 'backup compression default', '0'
         \begin{small}
           \changefont{pcr}{m}{n}
           \begin{mssql}
-Die Konfigurationsoption 'backup compression default' wurde von 1 in 0 geändert.
-Führen Sie zum Installieren die RECONFIGURE-Anweisung aus.
+Die Konfigurationsoption 'backup compression default' wurde von 1 in
+0 geändert. Führen Sie zum Installieren die RECONFIGURE-Anweisung
+aus.
             \end{mssql}
         \end{small}
         Für jede Konfigurationseinstellung gibt es zwei Werte:
@@ -1238,14 +1239,13 @@ LOG ON (
           \begin{scriptsize}
             \changefont{pcr}{m}{n}
             \tablefirsthead {
-              \multicolumn{1}{>{\centering}p{1.15cm}}{\textbf{Logischer Name}}&
+              \multicolumn{1}{>{\centering}p{1.6cm}}{\textbf{Logischer Name}}&
               \multicolumn{1}{c}{\textbf{Dateityp}} &
-              \multicolumn{1}{>{\centering}p{1.15cm}}{\textbf{Datei- gruppe}}&
-              \multicolumn{1}{>{\centering}p{1.15cm}}{\textbf{Anfangs- größe
+              \multicolumn{1}{>{\centering}p{1.35cm}}{\textbf{Datei- gruppe}}&
+              \multicolumn{1}{>{\centering}p{1.35cm}}{\textbf{Anfangs- größe
               (MB)}} & 
-              \multicolumn{1}{>{\centering}p{2cm}}{\textbf{Automatische Vergrößerung}} &
-              \multicolumn{1}{c}{\textbf{Pfad}} &
-              \multicolumn{1}{c}{\textbf{Dateiname}} \\
+              \multicolumn{1}{>{\centering}p{2.5cm}}{\textbf{Automatische
+              Vergrößerung}} & \multicolumn{1}{c}{\textbf{Pfad + Dateiname}} \\
               \hline
               }
             \tablehead{}
@@ -1253,31 +1253,27 @@ LOG ON (
             }
             \tablelasttail {
             }
-            \begin{supertabular}{llll>{\centering}p{2cm}ll}
+            \begin{supertabular}{llll>{\centering}p{2.5cm}p{3.75cm}}
               \identifier{primary} & Zeilendaten & \identifier{primary} & 100 & Um 100 MB,
               auf 2048 MB & \oscommand{D:\textbackslash u01\textbackslash
-              demo\_grafisch}\textbackslash data & \oscommand{primary\_01.mdf}
+              demo\_grafisch\textbackslash data} \oscommand{primary\_01.mdf}
               \\
               \hline
               \identifier{crm} & Zeilendaten & \identifier{crm} & 500 & Um 100 MB, auf 4096
               MB & \oscommand{D:\textbackslash u01\textbackslash
-              demo\_grafisch\textbackslash data} &
-              \oscommand{crm01.ndf} \\
+              demo\_grafisch\textbackslash data} \oscommand{crm01.ndf} \\
               \hline
               \identifier{sales01} & Zeilendaten & \identifier{sales} & 500 &
               Um 100 MB, auf 4096 MB & \oscommand{D:\textbackslash u01\textbackslash
-              demo\_grafisch\textbackslash data} &
-              \oscommand{sales01.ndf} \\
+              demo\_grafisch\textbackslash data} \oscommand{sales01.ndf} \\
               \hline
               \identifier{sales02} & Zeilendaten & \identifier{sales} & 500 &
               Um 100 MB, auf 4096 MB & \oscommand{D:\textbackslash u01\textbackslash
-              demo\_grafisch\textbackslash data} &
-              \oscommand{sales02.ndf} \\
+              demo\_grafisch\textbackslash data} \oscommand{sales02.ndf} \\
               \hline
               \identifier{logfile} & Protokoll & --- & 1 & Um 10 \%, auf
               2097152 MB & \oscommand{D:\textbackslash u01\textbackslash
-              demo\_grafisch\textbackslash data} &
-              \oscommand{demo\_grafisch\_log.ldf} \\
+              demo\_grafisch\textbackslash data} \oscommand{demo\_grafisch\_log.ldf} \\
             \end{supertabular}
           \end{scriptsize}
         \end{center}
@@ -1981,9 +1977,9 @@ DBCC §SHRINKDATABASE§
             \item \textbf{TRUNCATEONLY}: Der gesamte am Ende einer
             Datei befindliche Speicherplatz wird freigegeben/abgeschnitten.
             Dateien werden somit verkleinert, es findet jedoch keine
-            Defragmentierung innerhalb einer Datei statt. Durch die Angabe von
-            \languagemssql{TRUNCATEONLY} wirkt sich \languagemssql{?DBCC?
-            SHRINKDATABASE} auch auf die Protokolldatei aus.
+            Defragmentierung innerhalb einer Datei statt. Durch die Angabe des
+            Schlüsselwortes \languagemssql{TRUNCATEONLY} wirkt sich
+            \languagemssql{?DBCC? SHRINKDATABASE} auch auf die Protokolldatei aus.
             \item \textbf{target\_percent}: Menge an freiem Speicher, der nach
             der Verkleinerung in der Datendatei enthalten sein soll.
           \end{itemize}
@@ -2085,9 +2081,9 @@ DBCC §SHRINKFILE§
             \item \textbf{TRUNCATEONLY}: Der gesamte, am Ende einer
             Datei befindliche Speicherplatz wird freigegeben/abgeschnitten.
             Dateien werden somit verkleinert, es findet jedoch keine
-            Defragmentierung innerhalb einer Datei statt. Durch die Angabe von
-            \languagemssql{TRUNCATEONLY} wirkt sich \languagemssql{?DBCC?
-            SHRINKDATABASE} auch auf die Protokolldatei aus.
+            Defragmentierung innerhalb einer Datei statt. Durch die Angabe
+            des Schlüsselwortes \languagemssql{TRUNCATEONLY} wirkt sich
+            \languagemssql{?DBCC? SHRINKDATABASE} auch auf die Protokolldatei aus.
             \item \textbf{target\_size}: Größe der Datei nach der
             Verkleinerung.
           \end{itemize}

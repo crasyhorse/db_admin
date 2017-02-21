@@ -16,47 +16,34 @@
   {}
 \endgroup
 
-\entry{ff929071}{manual}{}
+\entry{cc280525}{manual}{}
   \list{organization}{1}{%
     {Microsoft Corporation Inc.}%
   }
   \keyw{SQLServerAdmin}
-  \field{labelalpha}{Ff9}
+  \field{labelalpha}{Cc2}
   \field{extraalpha}{1}
-  \field{sortinit}{F}
+  \field{sortinit}{C}
   \field{edition}{SQL Server 2014}
-  \field{title}{Eigenständige Datenbanken}
+  \field{title}{Erstellen einer Serverüberwachung und einer
+  Serverüberwachungsspezifikation}
   \verb{url}
-  \verb https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx
+  \verb https://msdn.microsoft.com/de-de/library/cc280525(v=sql.120).aspx
   \endverb
 \endentry
 
-\entry{ff929139}{manual}{}
-  \list{organization}{1}{%
-    {Microsoft Corporation Inc.}%
-  }
-  \keyw{TSQLReference}
-  \field{labelalpha}{Ff9}
-  \field{extraalpha}{2}
-  \field{sortinit}{F}
-  \field{edition}{SQL Server 2014}
-  \field{title}{Migrate to a Partially Contained Database}
-  \verb{url}
-  \verb https://msdn.microsoft.com/en-us/library/ff929139(v=sql.120).aspx
-  \endverb
-\endentry
-
-\entry{hh534404}{manual}{}
+\entry{cc280663}{manual}{}
   \list{organization}{1}{%
     {Microsoft Corporation Inc.}%
   }
   \keyw{SQLServerAdmin}
-  \field{labelalpha}{Hh5}
-  \field{sortinit}{H}
-  \field{edition}{SQL Server 2012}
-  \field{title}{SQL Server 2012: Sometimes Partial Is Preferable}
+  \field{labelalpha}{Cc2}
+  \field{extraalpha}{2}
+  \field{sortinit}{C}
+  \field{edition}{SQL Server 2014}
+  \field{title}{SQL Server Audit-Aktionsgruppen und -Aktionen}
   \verb{url}
-  \verb https://technet.microsoft.com/en-us/library/hh534404.aspx
+  \verb https://msdn.microsoft.com/de-de/library/cc280663(v=sql.120).aspx
   \endverb
 \endentry
 

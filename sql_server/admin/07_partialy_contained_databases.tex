@@ -109,11 +109,11 @@ CREATE DATABASE [Bank_PCD]
   CONTAINMENT = PARTIAL
   ON  PRIMARY ( NAME = N'Bank_PCD',
   FILENAME = N'D:\120\bank_pcd\data\Bank_pcd.mdf',
-  SIZE = 10GB, MAXSIZE = 20GB,
+  SIZE = 1GB, MAXSIZE = 2GB,
   FILEGROWTH = 512MB)
   LOG ON ( NAME = N'Bank_PCD_Log',
   FILENAME = N'D:\120\bank_pcd\log\Bank_pcd.ldf',
-  SIZE = 100M, MAXSIZE = 2GB,
+  SIZE = 100MB, MAXSIZE = 2GB,
   FILEGROWTH = 10%)
 GO
             \end{lstlisting}
@@ -164,7 +164,7 @@ GO
           
           Es gibt zwei Arten Contained users:
           \begin{itemize}
-            \item \textbf{SQL Benutzer ohne Anmeldename}: Diese Art von
+            \item \textbf{SQL Benutzer mit Kennwort}: Diese Art von
             Benutzerkonto ist das pont dont zur Kombination \enquote{SQL
             Benutzer mit Anmeldename und Login mit SQL
             Server-Authentifizierung}. Der Unterschied besteht darin, dass kein
@@ -173,8 +173,7 @@ GO
             \item \textbf{Windows-Benutzer}: Der Windows Benutzer ist mit
             der Kombination \enquote{SQL Benutzer mit Anmeldename und Login mit
             Windows-Authentifizierung} vergleichbar.
-          \end{itemize}
-          
+          \end{itemize}          
           Zu beachten ist, dass das Authentifizierungsverfahren bei beiden
           Benutzertypen unterschiedlich abläuft. Meldet sich ein Benutzer mit
           einem Windows-Account an, wird zuerst nach einem Login mit
@@ -184,17 +183,155 @@ GO
           Datenbankebene versucht.
           
           Bei einer Anmeldung mit einem SQL Server-Account, wird zuerst nach
-          einem SQL Benutzer ohne Anmeldename und dann nach einem Login mit SQL
+          einem SQL Benutzer mit Kennwort und dann nach einem Login mit SQL
           Server-Authentifizierung gesucht. Hier wird also zuerst auf
           Datenbankebene und dann auf Instanzebene authentifiziert.
           \subsubsection{Contained users erstellen}
-          
-          \subsubsection{Login an einer Partially contained database}
-          
-          \subsubsection{Das Passwort eines Benutzerkontos ändern}
+            Contained Users können wie bereits in
+            \ref{administer_database_users} gezeigt, mit Hilfe des SSMS oder mit
+            SQL-Kommandos erstellt werden. Die beiden folgenden Statements
+            zeigen wie ein SQL Benutzer ohne Anmeldename und ein
+            Windows-Benutzer erstellt werden.
+            \begin{lstlisting}[language=ms_sql,caption={Erstellen
+            eines SQL Benutzers mit Kennwort},label=sql20_04]
+USE [Bank_PCD]
+GO
 
+CREATE USER [sql_user_without_login]
+WITH PASSWORD = 'P@ssw0rd'
+GO
+            \end{lstlisting}
+            
+            \begin{lstlisting}[language=ms_sql,caption={Erstellen
+            eines Windows-Benutzers},label=sql20_05]
+USE [Bank_PCD]
+GO
+
+CREATE USER [ORA-B-IX-62\sqluser]
+GO
+            \end{lstlisting}
+            Contained users können nur innerhalb einer eigenständigen Datenbank
+            erstellt werden. Versucht man einen contained user in einer nicht
+            eigenständigen Datenbank zu erstellen antwortet SQL Server mit den
+            folgenden Fehlermeldung.
+            \begin{lstlisting}[language=ms_sql,caption={Fehler beim Erstellen
+            eines SQL Benutzers mit Kennwort in einer nicht
+            eigenständigen Datenbank},label=sql20_06]
+USE [Bank]
+GO
+
+CREATE USER [sql_user_without_login]
+WITH PASSWORD = 'P@ssw0rd'
+GO
+
+Meldung 33233, Ebene 16, Status 1, Zeile 3
+Sie können nur einen Benutzer mit einem Kennwort in einer eigenständigen 
+Datenbank erstellen.
+            \end{lstlisting}
+          \subsubsection{Login an einer Partially contained database}
+            Für die Anmeldung an einer Partially contained database muss in den
+            Verbindungseigenschaften der Name der gewünschten Datenbank
+            angegeben werden.
+            \bild{Login an einer Partially contained database}{connection_properties_login_to_pcd}{1.3}
+            Alternativ zur Anmeldung mittels SSMS kann auch mit Hilfe des
+            SQLCMD-Tools eine Verbindung zu einer Contained database hergestellt
+            werden.
+            \begin{lstlisting}[language=terminal,caption={Login an einer
+            Partially contained database mit dem SQLCMD-Tool},label=sql20_07]
+sqlcmd -S FEA11-119SRV12\MSSQLSERVER -U sql_user_without_login -P P@ssw0rd
+-d Bank_PCD
+            \end{lstlisting}
+            \begin{literaturinternet}
+              \item \cite{bmmcspb202ss2pcdp1}
+              \item \cite{hh534404}
+            \end{literaturinternet}
+          \subsubsection{Sicherheitsrelevante Einstellungen}  
+            Bei der Benutzung von eigenständigen Benutzerkonten gibt es einige
+            kritische Punkte, die man in seine Überlegungen mit einbeziehen
+            sollte. Darunter fallen die Datenbankeigenschaft
+            \identifier{auto\_close} und das Systemprivileg \privileg{alter any
+            user}.
+            
+            Durch das Setzen der Datenbankeigenschaft \identifier{auto\_close}
+            wird eine Datenbank geschlossen, sobald sich der letzte Benutzer von
+            ihr abgemeldet hat. Da bei einer eigenständigen Datenbank die
+            Authentifizierung nicht durch die Instanz, sondern durch die
+            Datenbank selbst gemacht wird, bedeutet dies, dass nach dem
+            Schließen der Datenbank zusätzliche Resourcen aufgewandt werden
+            müssen, um sie wieder zu öffnen. Wenn sich nun ein einziger Benutzer
+            an der Datenbank wiederholt an- und abmeldet, kann dem Server daraus
+            eine große Belastung entstehen, was sich letzten endes wie eine
+            Denial of Service Attacke auswirkt.
+            
+            Das Systemprivileg \privileg{alter any user} stellt in einer nicht
+            eigenständigen Datenbank kein allzu großes Risiko dar, weil die
+            Authentifizierung auf Instanzebene abläuft. In einer eigenständigen
+            Datenbank jedoch, kann mit Hilfe dieses Privileges einem Benutzer
+            Zugang zu einer Datenbank verschafft bzw. ein neuer Benutzer
+            erstellt werden. Daher sollten dieses Privileg und die beiden Rollen
+            \identifier{db\_owner} und \identifier{db\_securityadmin}, welche in
+            Besitz dieses Privileges sind, mit größter Vorsicht gehandhabt werden.
+            \begin{merke}
+              Wenn in einer Datenbank das Gast-Konto aktiviert ist, besteht
+              zusätzlich die Gefahr, dass sich die \enquote{illegal erstellten}
+              Benutzerkonto Zugang zu dieser Datenbank verschaffen.
+            \end{merke}
+            Eine ähnliche Gefahrt droht von den beiden Systemprivilegien
+            \privileg{alter any database} (fixed server role
+            \privileg{dbcreateor}) und \privileg{control database} (fixed
+            server role \privileg{db\_owner}). Wenn ein Benutzer eines der
+            beiden Privilegien besitzt, kann er den status einer Datenbank auf
+            \enquote{teilweise eigenständig} setzen. Daraus resultiert wiederum
+            das soeben beschriebene Problem mit eigenständigen Benutzerkonten,
+            die sich illegal Zugang zu anderen Datenbanken verschaffen können.
+            \begin{literaturinternet}
+              \item \cite{ff929055}
+            \end{literaturinternet}
+          \subsubsection{Das Passwort eines eigenständigen Benutzerkontos ändern}
+            \begin{lstlisting}[language=ms_sql,caption={Ändern des
+            Passwortes eines eigenständigen Benutzers},label=sql20_08]
+USE [Bank_PCD]
+GO
+
+ALTER USER [sql_user_without_login] 
+WITH 
+  PASSWORD = 'Pa$$w0rd'
+  OLD_PASSWORD = 'P@ssw0rd';
+GO
+            \end{lstlisting}
           \subsubsection{Benutzerkonten migrieren}
+            Um alle Benutzerkonten des Types \enquote{SQL Benutzer mit
+            Anmeldename}, die auf einem Login mit Passwort-Authentifizierung
+            basieren in einen \enquote{SQL Benutzer mit Passwort} zu
+            konvertieren, stellt Microsoft eigens die Stored Procedure
+            \languagemssql{sp_migrate_user_to_contained} zur Verfügung. Das
+            folgende Beispiel ist der MSDN (\parencite{ff929139}) entnommen und
+            zeigt, wie ein solcher Vorgang für eine Partially contained database
+            abläuft.
+\clearpage
+            \begin{lstlisting}[language=ms_sql,caption={Benutzerkonten
+            migrieren},label=sql20_09]
+DECLARE @username sysname;  
+DECLARE user_cursor CURSOR  
+    FOR   
+        SELECT dp.name   
+        FROM sys.database_principals AS dp  
+        JOIN sys.server_principals AS sp  
+        ON dp.sid = sp.sid  
+        WHERE dp.authentication_type = 1 AND sp.is_disabled = 0;  
+OPEN user_cursor  
+FETCH NEXT FROM user_cursor INTO @username  
+    WHILE @@FETCH_STATUS = 0  
+    BEGIN  
+        EXECUTE sp_migrate_user_to_contained   
+        @username = @username,  
+        @rename = N'keep_name',
+        @disablelogin = N'disable_login';  
+    FETCH NEXT FROM user_cursor INTO @username  
+    END  
+CLOSE user_cursor;  
+DEALLOCATE user_cursor;              
+            \end{lstlisting}
             \begin{literaturinternet}
               \item \cite{ff929139}
             \end{literaturinternet}
-        \subsection{Collations}

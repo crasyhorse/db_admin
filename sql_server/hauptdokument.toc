@@ -1606,6 +1606,56 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Den Erweiterten Schutz f\IeC {\"u}r SQL Server aktivieren}{19-85}{section*.386}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\numberline {IV}Appendix}{89}{part.4}
+\contentsline {chapter}{\numberline {20}Partially contained databases}{20-1}{chapter.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {xpart}{Appendix}{91}{part.4}
+\contentsline {section}{\numberline {20.1}Partially contained databases - Teilweise eigenst\IeC {\"a}ndige Datenbanken}{20-2}{section.20.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.1}Was genau bedeutet Kapselung?}{20-2}{subsection.20.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.2}Welche Probleme werden gel\IeC {\"o}st?}{20-3}{subsection.20.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1.3}Einschr\IeC {\"a}nkungen f\IeC {\"u}r Partially contained databases}{20-3}{subsection.20.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.2}Partially contained databases erzeugen}{20-3}{section.20.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.1}Konfigurieren der Instanz}{20-3}{subsection.20.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.2}Erstellen der Datenbank}{20-4}{subsection.20.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Eine neue Partially contained database erstellen}{20-4}{section*.387}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Den Containmenttype einer Datenbank \IeC {\"a}ndern}{20-5}{section*.388}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Identifizieren der Datenbankkapselung}{20-6}{section*.389}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.3}Contained users verwalten}{20-6}{subsection.20.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Contained users erstellen}{20-7}{section*.390}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Login an einer Partially contained database}{20-8}{section*.391}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Sicherheitsrelevante Einstellungen}{20-8}{section*.392}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Das Passwort eines eigenst\IeC {\"a}ndigen Benutzerkontos \IeC {\"a}ndern}{20-9}{section*.393}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Benutzerkonten migrieren}{20-9}{section*.394}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {21}Auditing}{21-1}{chapter.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.1}Auditing im SQL Server}{21-2}{section.21.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.1.1}Bestandteile des SQL Server Auditings}{21-2}{subsection.21.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline \IeC {\"U}berwachungen}{21-2}{section*.395}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Server\IeC {\"u}berwachungsspezifikationen}{21-3}{section*.396}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Datenbank\IeC {\"u}berwachugnsspezifikationen}{21-3}{section*.397}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline \IeC {\"U}berwachungsaktionen und \IeC {\"U}berwachungsaktionsgruppen}{21-3}{section*.398}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline \IeC {\"U}berwachungsziele}{21-3}{section*.399}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\numberline {IV}Appendix}{5}{part.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {xpart}{Appendix}{7}{part.4}

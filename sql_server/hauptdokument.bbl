@@ -208,6 +208,22 @@
   \endverb
 \endentry
 
+\entry{bmmcspb202ss2pcdp1}{manual}{}
+  \list{organization}{1}{%
+    {Lisa Gardner – SQL Premier Field Engineer}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Bmm}
+  \field{sortinit}{B}
+  \field{edition}{February 26, 2013}
+  \field{title}{SQL Server 2012 Partially Contained Databases Part 1 –
+  Contained Logins}
+  \verb{url}
+  \verb https://blogs.msdn.microsoft.com/sql_pfe_blog/2013/02/26/sql-server-201
+  \verb 2-partially-contained-databases-part-1-contained-logins/
+  \endverb
+\endentry
+
 \entry{btmcm210tsnilwutrs}{manual}{}
   \list{organization}{1}{%
     {Degremont Michel on blogs.technet.microsoft.com}%
@@ -585,13 +601,58 @@
   \endverb
 \endentry
 
+\entry{ff929071}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{1}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Eigenständige Datenbanken}
+  \verb{url}
+  \verb https://msdn.microsoft.com/de-de/library/ff929071(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ff929139}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{TSQLReference}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{2}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Migrate to a Partially Contained Database}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ff929139(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{ff929055}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Ff9}
+  \field{extraalpha}{3}
+  \field{sortinit}{F}
+  \field{edition}{SQL Server 2014}
+  \field{title}{Security Best Practices with Contained Databases}
+  \verb{url}
+  \verb https://msdn.microsoft.com/en-us/library/ff929055(v=sql.120).aspx
+  \endverb
+\endentry
+
 \entry{ff929106}{manual}{}
   \list{organization}{1}{%
     {Microsoft Corporation Inc.}%
   }
   \keyw{TSQLReference}
   \field{labelalpha}{Ff9}
-  \field{extraalpha}{1}
+  \field{extraalpha}{4}
   \field{sortinit}{F}
   \field{edition}{SQL Server 2014}
   \field{title}{sp\_kill\_filestream\_non\_transacted\_handles (Transact-SQL)}
@@ -606,7 +667,7 @@
   }
   \keyw{TSQLReference}
   \field{labelalpha}{Ff9}
-  \field{extraalpha}{2}
+  \field{extraalpha}{5}
   \field{sortinit}{F}
   \field{edition}{SQL Server 2014}
   \field{title}{sys.dm\_filestream\_non\_transacted\_handles (Transact-SQL)}
@@ -729,6 +790,20 @@
   \field{title}{SSIS-Katalog}
   \verb{url}
   \verb https://msdn.microsoft.com/de-de/library/hh479588(v=sql.120).aspx
+  \endverb
+\endentry
+
+\entry{hh534404}{manual}{}
+  \list{organization}{1}{%
+    {Microsoft Corporation Inc.}%
+  }
+  \keyw{SQLServerAdmin}
+  \field{labelalpha}{Hh5}
+  \field{sortinit}{H}
+  \field{edition}{SQL Server 2012}
+  \field{title}{SQL Server 2012: Sometimes Partial Is Preferable}
+  \verb{url}
+  \verb https://technet.microsoft.com/en-us/library/hh534404.aspx
   \endverb
 \endentry
 

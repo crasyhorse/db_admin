@@ -1305,6 +1305,7 @@ GO
               \item \cite{somarskoggranperm}
             \end{literaturinternet}
         \subsection{Datenbankbenutzer verwalten}
+          \label{administer_database_users}
           \subsubsection{SQL-Benutzer mit Anmeldename erstellen}
             \begin{enumerate}
               \item Wählen Sie im Objekt-Explorer den Ordner
@@ -1363,8 +1364,8 @@ GO
               bereits existierenden Windows-Benutzeraccounts an. Achten Sier
               hierbei auf die korrekte Schreibweise:
               [Rechnername]\textbackslash [Benutzername] bzw.
-              [Domäne]\textbackslash [Benutzername], z. B.
-              \enquote{ORA-B-IX-62\textbackslash SQLUser}.
+              [Domäne]\textbackslash [Benutzername]. Ein Beispiel wäre der
+              Benutzername \enquote{ORA-B-IX-62\textbackslash SQLUser}.
               \item Geben Sie im Feld \identifier{Anmeldename} den Namen eines
               existierenden Logins an oder klicken Sie auf die Schaltfläche
               rechts neben dem Feld, um ein Login auszuwählen.
@@ -1547,7 +1548,7 @@ GO
           \end{center}
           Um dem Benutzerkonto \identifier{SQLLooser} ein neues Login
           zuzuweisen sollte das \languagemssql{ALTER USER}-Statement genutzt
-          werden, so wie es in \beispiel{admin19_08e} zu sehen ist.
+          werden, so wie es in \beispiel{admin19_15} zu sehen ist.
           \begin{literaturinternet}
             \item \cite{ms175475}
             \item \cite{ms174378}
@@ -1709,7 +1710,7 @@ GO
           das \privileg{control}-Privileg erhalten und trotzdem nicht die
           Identität des betroffenen Benutzerkontos übernehmen kann. Dies
           funktioniert, in dem ihm das \privileg{control}-Privileg erteilt und
-          das \privileg{impersonate}-Privileg verweigert wird.
+          im Gegemzug das \privileg{impersonate}-Privileg verweigert wird.
           \begin{literaturinternet}
             \item \cite{ms188396}
             \item \cite{ms187728}
@@ -2470,7 +2471,7 @@ GO
             Anforderung: \enquote{(Keine Vorlage) Legacyschlüssel} und als
             Anforderungsformat \enquote{PKCS\#10}. Klicken Sie auf
             \enquote{Weiter}.
-            \bild{Anforderungsvorlage und -format auswählen}{certmgr_3}{1.2}
+            \bild{Anforder\-ungs\-vorlage und -format auswählen}{certmgr_3}{1.2}
             \item Klicken Sie im Schritt \enquote{Zertifikatsinformationen}
             auf \enquote{Details} und anschließend auf die
             Schaltfläche \enquote{Eigenschaften}. Es öffnet sich der Dialog
