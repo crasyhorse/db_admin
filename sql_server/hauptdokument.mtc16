@@ -1,0 +1,100 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.1}Die Windows Dienste des SQL Servers}{\reset@font\mtcSfont 16-2}{section.16.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.1.1}SQL Server}{\reset@font\mtcSSfont 16-2}{subsection.16.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Namensgebung}{\reset@font\mtcSSSfont 16-2}{section*.214}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Startparameter}{\reset@font\mtcSSSfont 16-2}{section*.215}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Startmodus und Recovery-Startmodus ausw\IeC {\"a}hlen}{\reset@font\mtcSSSfont 16-4}{section*.216}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.1.2}SQL Server-Agent}{\reset@font\mtcSSfont 16-5}{subsection.16.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.1.3}SQL Server-Browser}{\reset@font\mtcSSfont 16-6}{subsection.16.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.1.4}SQL Server Integration Services 12.0}{\reset@font\mtcSSfont 16-6}{subsection.16.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.1.5}Der SQL Server VSS Writer}{\reset@font\mtcSSfont 16-6}{subsection.16.1.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.2}Das SQL Server Management Studio}{\reset@font\mtcSfont 16-7}{section.16.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.2.1}Login mit dem Management Studio}{\reset@font\mtcSSfont 16-7}{subsection.16.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Servertypes und Servername}{\reset@font\mtcSSSfont 16-7}{section*.217}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Authentifizierung}{\reset@font\mtcSSSfont 16-8}{section*.218}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.2.2}Der Aufbau des SSMS - Objekt-Explorer}{\reset@font\mtcSSfont 16-9}{subsection.16.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Wenn der Objekt-Explorer einmal nicht da ist}{\reset@font\mtcSSSfont 16-10}{section*.219}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Verbindung mit einer Instanz herstellen}{\reset@font\mtcSSSfont 16-10}{section*.220}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Verbindungen trennen}{\reset@font\mtcSSSfont 16-11}{section*.221}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.2.3}Der Aufbau des SSMS - Der Abfrageeditor}{\reset@font\mtcSSfont 16-11}{subsection.16.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.2.4}Aufbau des SSMS - Der Projektmappen-Explorer}{\reset@font\mtcSSfont 16-12}{subsection.16.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Den Projektmappen-Explorer einblenden}{\reset@font\mtcSSSfont 16-12}{section*.222}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aufbau des Projektmappen-Explorers}{\reset@font\mtcSSSfont 16-12}{section*.223}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einsatzzweck des Projektmappen-Explorers}{\reset@font\mtcSSSfont 16-13}{section*.224}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.3}Die SQL Server Systemdatenbanken}{\reset@font\mtcSfont 16-13}{section.16.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.1}Die MASTER-Datenbank}{\reset@font\mtcSSfont 16-13}{subsection.16.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Physikalische Eingeschaften}{\reset@font\mtcSSSfont 16-13}{section*.225}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen bei der Administration}{\reset@font\mtcSSSfont 16-14}{section*.226}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Empfehlungen}{\reset@font\mtcSSSfont 16-14}{section*.227}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.2}Die MSDB-Datenbank}{\reset@font\mtcSSfont 16-14}{subsection.16.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Physikalische Eingeschaften}{\reset@font\mtcSSSfont 16-14}{section*.228}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen bei der Administration}{\reset@font\mtcSSSfont 16-15}{section*.229}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.3}Die MODEL-Datenbank}{\reset@font\mtcSSfont 16-15}{subsection.16.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Physikalische Eingeschaften}{\reset@font\mtcSSSfont 16-15}{section*.230}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen bei der Administration}{\reset@font\mtcSSSfont 16-16}{section*.231}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.4}Die TEMP-Datenbank}{\reset@font\mtcSSfont 16-16}{subsection.16.3.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Physikalische Eingeschaften}{\reset@font\mtcSSSfont 16-16}{section*.232}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen bei Administration und Nutzung}{\reset@font\mtcSSSfont 16-17}{section*.233}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.5}Die DISTRIBUTION-Datenbank}{\reset@font\mtcSSfont 16-17}{subsection.16.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.6}Die MSSQLSYSTEMRESOURCE-Datenbank}{\reset@font\mtcSSfont 16-18}{subsection.16.3.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Physikalische Eingeschaften}{\reset@font\mtcSSSfont 16-18}{section*.234}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.3.7}Der Integration Services Katalog - SSISDB}{\reset@font\mtcSSfont 16-18}{subsection.16.3.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.4}Konfigurieren der Servereigenschaften}{\reset@font\mtcSfont 16-19}{section.16.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.1}Die Grundeinstellungen}{\reset@font\mtcSSfont 16-19}{subsection.16.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.2}Konfiguration des Arbeitsspeichers}{\reset@font\mtcSSfont 16-20}{subsection.16.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.3}Die Prozessoreinstellungen}{\reset@font\mtcSSfont 16-21}{subsection.16.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.4}Sicherheitseinstellungen}{\reset@font\mtcSSfont 16-23}{subsection.16.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.5}Verbingungseinstellungen}{\reset@font\mtcSSfont 16-23}{subsection.16.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.6}Datenbankeinstellungen}{\reset@font\mtcSSfont 16-24}{subsection.16.4.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.7}Erweiterte Einstellungen}{\reset@font\mtcSSfont 16-25}{subsection.16.4.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.4.8}Berechtigungen}{\reset@font\mtcSSfont 16-26}{subsection.16.4.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.5}Die gespeicherte Systemprozedur sp\_configure}{\reset@font\mtcSfont 16-26}{section.16.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.5.1}Basisoptionen und erweiterte Optionen}{\reset@font\mtcSSfont 16-26}{subsection.16.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.5.2}\IeC {\"A}ndern der Konfiguration mit sp\_configure}{\reset@font\mtcSSfont 16-27}{subsection.16.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.5.3}Basiskonfigurationseinstellungen anzeigen}{\reset@font\mtcSSfont 16-28}{subsection.16.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.5.4}Erweiterte Konfigurationseinstellungen abfragen}{\reset@font\mtcSSfont 16-29}{subsection.16.5.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.6}Datengewinnung - Systemsichten}{\reset@font\mtcSfont 16-29}{section.16.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.6.1}Katalogsichten}{\reset@font\mtcSSfont 16-29}{subsection.16.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.6.2}Informationsschemasichten}{\reset@font\mtcSSfont 16-30}{subsection.16.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.6.3}Kompatibilit\IeC {\"a}tssichten}{\reset@font\mtcSSfont 16-30}{subsection.16.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.6.4}Dynamische Verwaltungssichten und -funktionen}{\reset@font\mtcSSfont 16-31}{subsection.16.6.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.7}Datenbanken erstellen}{\reset@font\mtcSfont 16-31}{section.16.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.7.1}Anlegen einer Datenbank mit dem SSMS}{\reset@font\mtcSSfont 16-32}{subsection.16.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.7.2}Anlegen einer Datenbank mittels T-SQL (CREATE DATABASE)}{\reset@font\mtcSSfont 16-35}{subsection.16.7.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.8}Datenbanken bearbeiten und l\IeC {\"o}schen}{\reset@font\mtcSfont 16-37}{section.16.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.1}Die Datenbank demo\_grafisch}{\reset@font\mtcSSfont 16-37}{subsection.16.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.2}Die Eigenschaften einer Datenbank ver\IeC {\"a}ndern}{\reset@font\mtcSSfont 16-38}{subsection.16.8.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Umbenennen einer Datendatei}{\reset@font\mtcSSSfont 16-38}{section*.235}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hinzuf\IeC {\"u}gen einer neuen Dateigruppe}{\reset@font\mtcSSSfont 16-39}{section*.236}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Hinzuf\IeC {\"u}gen einer Datendatei}{\reset@font\mtcSSSfont 16-39}{section*.237}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline \IeC {\"A}ndern der Standarddateigruppe}{\reset@font\mtcSSSfont 16-39}{section*.238}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.3}Datenbankoptionen ver\IeC {\"a}ndern}{\reset@font\mtcSSfont 16-40}{subsection.16.8.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Option ANSI\_WARNINGS}{\reset@font\mtcSSSfont 16-40}{section*.239}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Option ARITHABORT}{\reset@font\mtcSSSfont 16-40}{section*.240}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Option CONCAT\_NULL\_YIELDS\_NULL}{\reset@font\mtcSSSfont 16-41}{section*.241}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Das Kompatibilit\IeC {\"a}tslevel der Datenbank \IeC {\"a}ndern}{\reset@font\mtcSSSfont 16-41}{section*.242}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.4}Vergr\IeC {\"o}\IeC {\ss }ern und schrumpfen einer Datenbank}{\reset@font\mtcSSfont 16-42}{subsection.16.8.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Automatisches Wachstum und manuelles Vergr\IeC {\"o}\IeC {\ss }ern}{\reset@font\mtcSSSfont 16-42}{section*.243}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Schrumpfen der gesamten Datenbank}{\reset@font\mtcSSSfont 16-42}{section*.244}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Schrumpfen einzelner Datendateien}{\reset@font\mtcSSSfont 16-43}{section*.245}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.5}Datenbanken trennen und einh\IeC {\"a}ngen}{\reset@font\mtcSSfont 16-44}{subsection.16.8.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Datenbanken trennen}{\reset@font\mtcSSSfont 16-44}{section*.246}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Datenbanken anf\IeC {\"u}gen}{\reset@font\mtcSSSfont 16-45}{section*.247}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.6}Systemdatenbanken verschieben}{\reset@font\mtcSSfont 16-46}{subsection.16.8.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Verschieben Systemdatenbanken}{\reset@font\mtcSSSfont 16-46}{section*.248}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Verschieben der Master-Datenbank}{\reset@font\mtcSSSfont 16-47}{section*.249}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.8.7}Datenbanken l\IeC {\"o}schen}{\reset@font\mtcSSfont 16-48}{subsection.16.8.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline L\IeC {\"o}schen von Datenbanken und Snapshots}{\reset@font\mtcSSSfont 16-48}{section*.250}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen beim L\IeC {\"o}schen von Datenbanken und Snapshots}{\reset@font\mtcSSSfont 16-48}{section*.251}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.9}Der DBCC - Database Console Commands}{\reset@font\mtcSfont 16-49}{section.16.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.9.1}\IeC {\"U}berpr\IeC {\"u}fungskommandos}{\reset@font\mtcSSfont 16-50}{subsection.16.9.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Konsistenzpr\IeC {\"u}fung der Datenbank mit CHECKDB}{\reset@font\mtcSSSfont 16-50}{section*.252}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Konsistenzpr\IeC {\"u}fung einer einzelnen Dateigruppe}{\reset@font\mtcSSSfont 16-52}{section*.253}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einzelne Tabellen \IeC {\"u}berpr\IeC {\"u}fen}{\reset@font\mtcSSSfont 16-53}{section*.254}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.9.2}Verwaltungsanweisungen}{\reset@font\mtcSSfont 16-54}{subsection.16.9.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Schrumpfen der Datenbank}{\reset@font\mtcSSSfont 16-54}{section*.255}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Schrumpfen einer Datendatei}{\reset@font\mtcSSSfont 16-56}{section*.256}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.9.3}Informationsanweisungen}{\reset@font\mtcSSfont 16-57}{subsection.16.9.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Auslastung des Transaktionsprotokolls anzeigen}{\reset@font\mtcSSSfont 16-57}{section*.257}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {16.9.4}Sonstige Anweisungen}{\reset@font\mtcSSfont 16-58}{subsection.16.9.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.10}\"Ubungen - Verwalten einer SQL Server-Instanz}{\reset@font\mtcSfont 16-60}{section.16.10}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {16.11}L\IeC {\"o}sungen - Verwalten einer SQL Server-Instanz}{\reset@font\mtcSfont 16-63}{section.16.11}}

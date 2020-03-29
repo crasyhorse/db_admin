@@ -1,0 +1,55 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.1}Heap Organized Tables}{\reset@font\mtcSfont 18-2}{section.18.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.1.1}Partitionen}{\reset@font\mtcSSfont 18-3}{subsection.18.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.1.2}Allocation Units}{\reset@font\mtcSSfont 18-3}{subsection.18.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.1.3}Index Allocation Maps}{\reset@font\mtcSSfont 18-4}{subsection.18.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.1.4}Die Zeilen ID - RID}{\reset@font\mtcSSfont 18-7}{subsection.18.1.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.2}Speicheroptimierte Tabellen (SOT)}{\reset@font\mtcSfont 18-7}{section.18.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.2.1}Das Konzept der Speicheroptimierten Tabellen}{\reset@font\mtcSSfont 18-8}{subsection.18.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aufbau und Erstellung}{\reset@font\mtcSSSfont 18-8}{section*.274}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Best\IeC {\"a}ndigkeit der Daten - Persistenz}{\reset@font\mtcSSSfont 18-10}{section*.275}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Einschr\IeC {\"a}nkungen bei der Benutzung}{\reset@font\mtcSSSfont 18-11}{section*.276}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorteile Speicheroptimierter Tabellen}{\reset@font\mtcSSSfont 18-11}{section*.277}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.2.2}Systeminterne Kompilierung}{\reset@font\mtcSSfont 18-12}{subsection.18.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Was ist interpretierter TSQL-Code?}{\reset@font\mtcSSSfont 18-12}{section*.278}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Was versteht man unter nativ kompiliert?}{\reset@font\mtcSSSfont 18-12}{section*.279}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.2.3}Systemintern kompilierte Tabellen und Prozeduren}{\reset@font\mtcSSfont 18-12}{subsection.18.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Systemintern kompilierte Tabellen}{\reset@font\mtcSSSfont 18-12}{section*.280}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline \IeC {\"A}ndern von systemintern kompilierten Tabellen}{\reset@font\mtcSSSfont 18-13}{section*.281}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Systemintern kompilierte gespeicherte Prozeduren}{\reset@font\mtcSSSfont 18-13}{section*.282}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.3}B\"aume in der Informatik}{\reset@font\mtcSfont 18-13}{section.18.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.3.1}Wichtige Eigenschaften von B\"aumen}{\reset@font\mtcSSfont 18-14}{subsection.18.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Von Knoten, Kanten und Ebenen}{\reset@font\mtcSSSfont 18-15}{section*.283}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Elemente und H\"ohe des Bin\"arbaumes}{\reset@font\mtcSSSfont 18-16}{section*.284}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline B\"aume als Hilfsmittel zur Suche von Datens\"atzen}{\reset@font\mtcSSSfont 18-17}{section*.285}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.3.2}B*-Baum Indizes}{\reset@font\mtcSSfont 18-18}{subsection.18.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.4}Indexentwurf im SQL Server}{\reset@font\mtcSfont 18-19}{section.18.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.4.1}Allgemeine Hilfestellungen f\IeC {\"u}r den Indexentwurf}{\reset@font\mtcSSfont 18-19}{subsection.18.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Welche Merkmale hat die Datenbank?}{\reset@font\mtcSSSfont 18-20}{section*.286}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Indizes in einer OLTP-Datenbank}{\reset@font\mtcSSSfont 18-20}{section*.287}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Indizes in einer DSS-Datenbank}{\reset@font\mtcSSSfont 18-21}{section*.288}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.4.2}Die Sortierreihenfolge von Indizes festlegen}{\reset@font\mtcSSfont 18-21}{subsection.18.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.5}Die verschiedenen Indextypen und deren Merkmale}{\reset@font\mtcSfont 18-22}{section.18.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.5.1}Gruppierte Indizes - Clustered Indexes}{\reset@font\mtcSSfont 18-22}{subsection.18.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.5.2}Nicht gruppierte Indizes - Nonclustered Indexes}{\reset@font\mtcSSfont 18-23}{subsection.18.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Datenspalten in einen Index einschlie\IeC {\ss }en}{\reset@font\mtcSSSfont 18-25}{section*.289}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.5.3}Eigenschaften von Indizes}{\reset@font\mtcSSfont 18-27}{subsection.18.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Eindeutigkeit}{\reset@font\mtcSSSfont 18-27}{section*.290}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Filterung}{\reset@font\mtcSSSfont 18-28}{section*.291}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.5.4}Der Columnstore-Index}{\reset@font\mtcSSfont 18-29}{subsection.18.5.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.6}Administrative T\IeC {\"a}tigkeiten an Indizes}{\reset@font\mtcSfont 18-29}{section.18.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.6.1}Indizes reorganisieren}{\reset@font\mtcSSfont 18-29}{subsection.18.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Indexfragmentierung erkennen}{\reset@font\mtcSSSfont 18-30}{section*.292}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Fragmentierung sehr kleiner Indizes}{\reset@font\mtcSSSfont 18-30}{section*.293}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Neuorganisieren}{\reset@font\mtcSSSfont 18-31}{section*.294}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Neuerstellen eines Indexes}{\reset@font\mtcSSSfont 18-32}{section*.295}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.6.2}Deaktivieren von Indizes}{\reset@font\mtcSSfont 18-33}{subsection.18.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Deaktivieren von gruppierten Indizes}{\reset@font\mtcSSSfont 18-33}{section*.296}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Deaktivieren von nicht gruppierten Indizes}{\reset@font\mtcSSSfont 18-33}{section*.297}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Indizes mit TSQL deaktivieren}{\reset@font\mtcSSSfont 18-34}{section*.298}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.6.3}Aktivieren von Indizes}{\reset@font\mtcSSfont 18-34}{subsection.18.6.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Auswirkungen auf Constraints}{\reset@font\mtcSSSfont 18-34}{section*.299}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Auswirkungen auf gruppierte Indizes}{\reset@font\mtcSSSfont 18-35}{section*.300}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Auswirkungen auf nicht gruppierten Indizes}{\reset@font\mtcSSSfont 18-35}{section*.301}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {18.6.4}Verschieben eines Indexes in eine andere Dateigruppe}{\reset@font\mtcSSfont 18-35}{subsection.18.6.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.7}\"Ubungen - Schemaobjekte verwalten}{\reset@font\mtcSfont 18-37}{section.18.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {18.8}L\IeC {\"o}sungen - Schemaobjekte verwalten}{\reset@font\mtcSfont 18-39}{section.18.8}}

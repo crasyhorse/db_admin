@@ -1,0 +1,31 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Benennung, Optionalit\"at und Kardinalit\"at}{\reset@font\mtcSfont 2-3}{section.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}Benennung}{\reset@font\mtcSSfont 2-3}{subsection.2.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}Optionalit\"at}{\reset@font\mtcSSfont 2-3}{subsection.2.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.3}Kardinalit\"at}{\reset@font\mtcSSfont 2-3}{subsection.2.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.4}Darstellung im Modell}{\reset@font\mtcSSfont 2-4}{subsection.2.1.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Notationen f\"ur Kardinalit\"aten}{\reset@font\mtcSfont 2-5}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Die Chen-Notation}{\reset@font\mtcSSfont 2-5}{subsection.2.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}(Min,Max)-Notation}{\reset@font\mtcSSfont 2-6}{subsection.2.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Schreib-/Leseweise der Kardinalit\"aten}{\reset@font\mtcSSfont 2-6}{subsection.2.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}Referentielle Integrit\"at}{\reset@font\mtcSSfont 2-7}{subsection.2.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Redundante Beziehungstypen}{\reset@font\mtcSfont 2-7}{section.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Parallele Beziehungstypen}{\reset@font\mtcSfont 2-10}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Mehrfachbeziehungen}{\reset@font\mtcSfont 2-10}{section.2.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Eigenschaften von Beziehungstypen}{\reset@font\mtcSfont 2-11}{section.2.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Begriffe}{\reset@font\mtcSfont 2-12}{section.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.8}\"Ubungen - Einfache ER-Modellierung}{\reset@font\mtcSfont 2-13}{section.2.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.8.1}\"Ubungsaufgabe Sportverein}{\reset@font\mtcSSfont 2-13}{subsection.2.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.8.2}\"Ubungsaufgabe IT-Helpdesk}{\reset@font\mtcSSfont 2-14}{subsection.2.8.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 2-14}{section*.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgabe}{\reset@font\mtcSSSfont 2-14}{section*.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.8.3}\"Ubungsaufgabe Unternehmensberatung}{\reset@font\mtcSSfont 2-15}{subsection.2.8.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.9}L\"osungen - Einfache ER-Modellierung}{\reset@font\mtcSfont 2-16}{section.2.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.1}\"Ubungsaufgabe Sportverein}{\reset@font\mtcSSfont 2-16}{subsection.2.9.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 2-16}{section*.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.2}\"Ubungsaufgabe IT-Helpdesk}{\reset@font\mtcSSfont 2-17}{subsection.2.9.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 2-17}{section*.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 2-17}{section*.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgabe}{\reset@font\mtcSSSfont 2-18}{section*.11}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 2-18}{section*.12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.9.3}\"Ubungsaufgabe Unternehmensberatung}{\reset@font\mtcSSfont 2-19}{subsection.2.9.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 2-19}{section*.13}}

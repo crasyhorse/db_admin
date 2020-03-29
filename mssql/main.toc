@@ -1,0 +1,439 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\numberline {I}SQL}{1}{part.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einstieg in SQL}{1-1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Einführung}{1-2}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Grundlegende Operationen in SQL}{1-4}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Mengenoperationen}{1-4}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Vereinigung}{1-4}{section*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Schnittmenge}{1-5}{section*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Differenz}{1-5}{section*.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Die Projektion}{1-6}{subsection.1.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}Die Selektion}{1-6}{subsection.1.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}Kartesisches Produkt}{1-7}{subsection.1.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.5}Die Join-Operation im Allgemeinen}{1-7}{subsection.1.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.6}Inner-Joins}{1-8}{subsection.1.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Equi-Join}{1-8}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Non-Equi-Join}{1-9}{section*.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.7}Outer-Joins}{1-10}{subsection.1.2.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Auswahlabfragen mit SQL}{1-10}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Schema einer Auswahlabfrage}{1-10}{subsection.1.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Der * als Joker}{1-12}{subsection.1.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.3}Arithmetische Ausdrücke}{1-13}{subsection.1.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.4}NULL Werte}{1-14}{subsection.1.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.5}Verkettung von Zeichenketten}{1-16}{subsection.1.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.6}Spaltenaliasnamen}{1-17}{subsection.1.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Einige Konventionen zu SQL}{1-18}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Selektieren und Sortieren}{2-1}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Selektieren von Zeilen: Die WHERE-Klausel}{2-2}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Relationale Operatoren}{2-3}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Numerische Werte vergleichen}{2-3}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Zeichenketten vergleichen}{2-5}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Zeichenketten vergleichen mit LIKE}{2-6}{section*.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Vergleiche mit NULL-Werten}{2-7}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Logische Verknüpfung von Ausdrücken}{2-8}{subsection.2.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Logische Verknüpfungen mit AND}{2-8}{section*.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Logische Verknüpfungen mit OR}{2-9}{section*.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Aussagen mit NOT umkehren}{2-9}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Festlegen einer Sortierung}{2-10}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Die ORDER BY Klausel}{2-10}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Auf- und absteigendes Sortieren}{2-12}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Übungen - Selektieren und Sortieren}{2-13}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Lösungen - Selektieren und sortieren}{2-17}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Funktionen}{3-1}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Der Begriff der Funktion}{3-2}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Zeichenkettenfunktionen}{3-3}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Groß- oder Kleinschreibung - UPPER, LOWER, INITCAP}{3-3}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Zeichenketten bearbeiten}{3-5}{subsection.3.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline SUBSTR, LENGTH und INSTR in Oracle}{3-5}{section*.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline SUBSTRING, LEN und CHARINDEX in MS SQL Server}{3-8}{section*.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Arithmetische Funktionen}{3-11}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}FROM oder nicht FROM, das ist hier die Frage}{3-11}{subsection.3.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Arithmetische Funktionen anwenden}{3-12}{subsection.3.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Datumsfunktionen}{3-15}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Datumswerte}{3-15}{subsection.3.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Datumsarithmetik in Oracle}{3-16}{subsection.3.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Intervall-Literale (Oracle)}{3-16}{section*.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Datumsarithmetik in MS SQL Server}{3-19}{subsection.3.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Funktion DATEADD - Datumswerte addieren}{3-19}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Funktion DATEDIFF - Eine Differenz bilden}{3-20}{section*.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Funktionen DATEPART/DATENAME - Teile eines Datums extrahieren}{3-20}{section*.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Sonstige Funktionen}{3-20}{section.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Datentypen}{3-22}{section.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.1}Numerische Datentypen}{3-23}{subsection.3.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Aufbau}{3-23}{section*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Präzision und Skalarität}{3-23}{section*.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.2}Zeichendatentypen}{3-24}{subsection.3.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Typen fester Länge}{3-24}{section*.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Typen variabler Länge}{3-24}{section*.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.3}Datums- und Zeittypen}{3-24}{subsection.3.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Oracle - DATE und TIMESTAMP}{3-25}{section*.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline SQL Server - DATETIME2}{3-25}{section*.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Konvertierung von Datentypen}{3-25}{section.3.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.1}Implizite Datentypkonvertierung}{3-25}{subsection.3.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.2}Explizite Datentypkonvertierung}{3-28}{subsection.3.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Explizite Datentypkonvertierung in Oracle}{3-28}{section*.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Explizite Datentypkonvertierung in Microsoft SQL Server}{3-30}{section*.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.8}Übungen - Funktionen}{3-33}{section.3.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.9}Lösungen - Funktionen}{3-36}{section.3.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Erweiterte Datenselektion}{4-1}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Der Inner Join}{4-2}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Die ON-Klausel}{4-2}{subsection.4.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Tabellenaliasnamen}{4-3}{subsection.4.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.3}Die USING-Klausel (Nur Oracle)}{4-4}{subsection.4.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.4}Der Natural-Join (Nur Oracle)}{4-5}{subsection.4.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.5}Die Theta-Style Syntax}{4-6}{subsection.4.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.6}Mehr als zwei Tabellen verknüpfen}{4-7}{subsection.4.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Outer Joins}{4-8}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Left- und Right-Outer-Join}{4-8}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Der Left-Outer-Join}{4-9}{section*.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Der Right-Outer-Join}{4-11}{section*.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Der Full Outer Join}{4-12}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Spezielle Joins}{4-12}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Der Self-Join}{4-12}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Quelltabelle aufspalten}{4-13}{section*.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die richtige Join-Bedingung finden}{4-14}{section*.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Non-Equi-Joins}{4-16}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Mengenoperationen}{4-16}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Voraussetzungen zur Nutzung der SET-Operatoren}{4-17}{subsection.4.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Die SET-Operatoren}{4-17}{subsection.4.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline UNION und UNION ALL}{4-17}{section*.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline INTERSECT}{4-20}{section*.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline MINUS / EXCEPT}{4-21}{section*.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Übungen - Erweiterte Datenselektion}{4-22}{section.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Lösungen - Erweiterte Datenselektion}{4-27}{section.4.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Gruppenfunktionen}{5-1}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Die GROUP BY-Klausel}{5-2}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Die Aggregatfunktionen}{5-3}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Die Funktion COUNT}{5-4}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Die Funktion SUM}{5-5}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Die Funktion AVG}{5-5}{subsection.5.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.4}Die Funktionen MIN und MAX}{5-7}{subsection.5.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.5}Gruppierungen mit mehreren Ebenen}{5-8}{subsection.5.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Gruppierte Abfragen filtern}{5-8}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Die WHERE-Klausel}{5-8}{subsection.5.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Die HAVING-Klausel}{5-9}{subsection.5.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Die Abarbeitungsreihenfolge des SELECT-Statements}{5-11}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Übungen - Gruppenfunktionen}{5-12}{section.5.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}Lösungen - Gruppenfunktionen}{5-15}{section.5.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Unterabfragen (Subqueries)}{6-1}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Grundsätzliches zu Unterabfragen}{6-2}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Was sind Unterabfragen?}{6-2}{subsection.6.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Wann sind Unterabfragen notwendig?}{6-2}{subsection.6.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.3}Regeln für Unterabfragen}{6-4}{subsection.6.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.4}Arten von Unterabfragen}{6-4}{subsection.6.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Skalare Unterabfragen (Scalar Subqueries)}{6-5}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Wo können skalare Unterabfragen stehen?}{6-5}{subsection.6.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Skalare Unterabfragen in der SELECT-Klausel}{6-5}{section*.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Skalare Unterabfragen in der WHERE-Klausel}{6-5}{section*.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Skalare Unterabfragen in der Having-Klausel}{6-6}{section*.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Fehlerquellen in skalaren Unterabfragen}{6-6}{subsection.6.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Einspaltige Unterabfragen}{6-7}{section.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Einspaltige Unterabfragen in WHERE- und HAVING-Klausel}{6-7}{subsection.6.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Existenzprüfungen}{6-8}{subsection.6.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Der EXISTS-Operator}{6-8}{section*.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Der NOT EXISTS-Operator}{6-9}{section*.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Inlineviews / Derived Tables}{6-10}{section.6.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Top N Analysen}{6-11}{section.6.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.1}Die Top N Analyse in Oracle}{6-11}{subsection.6.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Pseudospalte Rownum}{6-11}{section*.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Durchführung der Top N Analyse}{6-13}{section*.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.2}Die Top N Analyse in MS SQL Server}{6-14}{subsection.6.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.6}Pivot-Tabellen}{6-14}{section.6.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.6.1}Der PIVOT-Operator (Oracle)}{6-14}{subsection.6.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Syntax des PIVOT-Operators}{6-15}{section*.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Spaltenaliase in der FOR-Klausel}{6-16}{section*.49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Zusätzliche Spalten zum Pivoting}{6-16}{section*.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.6.2}Der PIVOT-Operator (MS SQL Server)}{6-18}{subsection.6.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Syntax des PIVOT-Operators}{6-19}{section*.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Zusätzliche Spalten zum Pivoting}{6-20}{section*.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.7}Übungen - Unterabfragen}{6-21}{section.6.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.8}Lösungen - Unterabfragen}{6-25}{section.6.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Data Manipulation Language (DML)}{7-1}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Die DML-Anweisungen}{7-2}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Datensätze einfügen - Die INSERT-Anweisung}{7-2}{subsection.7.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die INSERT-Anweisung und NULL-Werte}{7-3}{section*.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Standardwerte}{7-4}{section*.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die INSERT-Anweisung und Unterabfragen}{7-4}{section*.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}Datensätze ändern - Die UPDATE-Anweisung}{7-5}{subsection.7.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline UPDATE mit Unterabfrage}{7-7}{section*.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.3}Datensätze löschen - Die DELETE-Anweisung}{7-8}{subsection.7.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline DELETE mit Unterabfrage}{7-9}{section*.58}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Das Transaktionskonzept - COMMIT und ROLLBACK}{7-9}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Beginn und Ende einer Transaktion}{7-10}{subsection.7.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Wann beginnt eine Transaktion?}{7-10}{section*.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Wann endet eine Transaktion?}{7-11}{section*.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Eine Transaktion erfolgreich abschließen}{7-11}{subsection.7.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Das COMMIT-Kommando}{7-11}{section*.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline COMMIT in Microsoft SQL Server}{7-14}{section*.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Eine Transaktion rückgängig machen}{7-14}{subsection.7.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Das ROLLBACK-Kommando}{7-14}{section*.63}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline ROLLBACK in Microsoft SQL Server}{7-16}{section*.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Data Definition Language}{8-1}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Tabellen erstellen und verwalten}{8-2}{section.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.1}Namenskonventionen und Einschränkungen}{8-2}{subsection.8.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.2}CREATE TABLE - Tabellen erstellen}{8-4}{subsection.8.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.3}CREATE TABLE AS... (CTAS)}{8-5}{subsection.8.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.4}ALTER TABLE - Tabellen verändern}{8-6}{subsection.8.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Eine neue Spalte an eine Tabelle anfügen}{8-6}{section*.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Spalten vergrößern und verkleinern}{8-8}{section*.67}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Ändern des Datentyps}{8-9}{section*.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Einen Defaultvalue hinzufügen}{8-9}{section*.69}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Tabellenspalten umbenennen}{8-10}{section*.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Tabellenspalten löschen}{8-10}{section*.71}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.5}DROP TABLE - Tabellen löschen}{8-11}{subsection.8.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.6}TRUNCATE TABLE - Tabellen leeren}{8-11}{subsection.8.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Den Tabelleninhalt mit DELETE löschen}{8-12}{section*.72}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Tabelle löschen und neu erstellen}{8-12}{section*.73}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Eine Tabelle mit TRUNCATE leeren}{8-12}{section*.74}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Views erstellen verwalten}{8-13}{section.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.1}Was sind Views?}{8-13}{subsection.8.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.2}Views erstellen}{8-13}{subsection.8.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.3}Views und DML}{8-18}{subsection.8.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Einschränkung WITH CHECK OPTION}{8-19}{section*.75}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Die Einschränkung WITH READ ONLY - Oracle}{8-20}{section*.76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.4}Views ändern}{8-21}{subsection.8.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.5}Views löschen}{8-22}{subsection.8.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Übungen - Erstellen von Views}{8-23}{section.8.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Lösungen - Erstellen von Views}{8-25}{section.8.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Constraints}{9-1}{chapter.9}%
+\defcounter {refsection}{0}\relax 
+\etoc@startlocaltoc {10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Was sind Constraints}{9-2}{section.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Die Constraints}{9-2}{section.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.1}Das CHECK-Constraint}{9-3}{subsection.9.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.2}Das NOT NULL-Constraint}{9-4}{subsection.9.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.3}Das UNIQUE-Constraint}{9-5}{subsection.9.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.4}Das PRIMARY KEY-Constraint}{9-6}{subsection.9.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.5}Das FOREIGN KEY-Constraint}{9-7}{subsection.9.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.6}Das SQL Server DEFAULT-Constraint}{9-10}{subsection.9.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}Constraints umbenennen und löschen}{9-10}{section.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.1}Constraints umbenennen}{9-10}{subsection.9.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.2}Constraints löschen}{9-11}{subsection.9.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.3}Standardwerte in SQL Server löschen}{9-11}{subsection.9.3.3}%

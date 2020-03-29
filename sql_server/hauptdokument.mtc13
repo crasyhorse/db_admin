@@ -1,0 +1,12 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.1}Was sind Constraints}{\reset@font\mtcSfont 13-2}{section.13.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.2}Die Constraints}{\reset@font\mtcSfont 13-2}{section.13.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.1}Das CHECK-Constraint}{\reset@font\mtcSSfont 13-3}{subsection.13.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.2}Das NOT NULL-Constraint}{\reset@font\mtcSSfont 13-4}{subsection.13.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.3}Das UNIQUE-Constraint}{\reset@font\mtcSSfont 13-5}{subsection.13.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.4}Das PRIMARY KEY-Constraint}{\reset@font\mtcSSfont 13-6}{subsection.13.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.5}Das FOREIGN KEY-Constraint}{\reset@font\mtcSSfont 13-7}{subsection.13.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.6}Das SQL Server DEFAULT-Constraint}{\reset@font\mtcSSfont 13-10}{subsection.13.2.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.3}Constraints umbenennen und l\"oschen}{\reset@font\mtcSfont 13-10}{section.13.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.3.1}Constraints umbenennen}{\reset@font\mtcSSfont 13-10}{subsection.13.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.3.2}Constraints l\"oschen}{\reset@font\mtcSSfont 13-10}{subsection.13.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.3.3}Standardwerte in SQL Server l\"oschen}{\reset@font\mtcSSfont 13-11}{subsection.13.3.3}}

@@ -1,0 +1,13 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.1}Die GROUP BY-Klausel}{\reset@font\mtcSfont 9-2}{section.9.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.2}Die Aggregatfunktionen}{\reset@font\mtcSfont 9-3}{section.9.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.2.1}Die Funktion COUNT}{\reset@font\mtcSSfont 9-4}{subsection.9.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.2.2}Die Funktion SUM}{\reset@font\mtcSSfont 9-5}{subsection.9.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.2.3}Die Funktion AVG}{\reset@font\mtcSSfont 9-5}{subsection.9.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.2.4}Die Funktionen MIN und MAX}{\reset@font\mtcSSfont 9-8}{subsection.9.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.2.5}Gruppierungen mit mehreren Ebenen}{\reset@font\mtcSSfont 9-8}{subsection.9.2.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.3}Gruppierte Abfragen filtern}{\reset@font\mtcSfont 9-9}{section.9.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.3.1}Die WHERE-Klausel}{\reset@font\mtcSSfont 9-9}{subsection.9.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {9.3.2}Die HAVING-Klausel}{\reset@font\mtcSSfont 9-10}{subsection.9.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.4}Die Abarbeitungsreihenfolge des SELECT-Statements}{\reset@font\mtcSfont 9-12}{section.9.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.5}\"Ubungen - Gruppenfunktionen}{\reset@font\mtcSfont 9-13}{section.9.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {9.6}L\"osungen - Gruppenfunktionen}{\reset@font\mtcSfont 9-16}{section.9.6}}

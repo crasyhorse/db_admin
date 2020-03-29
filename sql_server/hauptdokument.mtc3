@@ -1,0 +1,58 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Rekursive Beziehungen}{\reset@font\mtcSfont 3-2}{section.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Definition eines rekursiven Beziehungstyps}{\reset@font\mtcSSfont 3-2}{subsection.3.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}Syntaxregeln f\"ur rekursive Beziehungstypen}{\reset@font\mtcSSfont 3-2}{subsection.3.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Anwendung rekursiver Beziehungstypen}{\reset@font\mtcSfont 3-4}{section.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}Version A}{\reset@font\mtcSSfont 3-5}{subsection.3.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Was sagt die Version aus?}{\reset@font\mtcSSSfont 3-5}{section*.14}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Wird die Realit\"at richtig abgebildet?}{\reset@font\mtcSSSfont 3-5}{section*.15}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Kann man sie realisieren?}{\reset@font\mtcSSSfont 3-5}{section*.16}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Version B}{\reset@font\mtcSSfont 3-6}{subsection.3.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Was sagt die Version aus?}{\reset@font\mtcSSSfont 3-6}{section*.17}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Wird die Realit\"at richtig abgebildet?}{\reset@font\mtcSSSfont 3-6}{section*.18}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Kann man sie realisieren?}{\reset@font\mtcSSSfont 3-6}{section*.19}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Spezialisierung}{\reset@font\mtcSfont 3-6}{section.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Definitionen}{\reset@font\mtcSSfont 3-7}{subsection.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Disjunkt}{\reset@font\mtcSSSfont 3-7}{section*.20}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vollst\"andige \"Uberdeckung}{\reset@font\mtcSSSfont 3-7}{section*.21}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Kombinationen}{\reset@font\mtcSSfont 3-7}{subsection.3.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Vollst\"andige \"Uberdeckung und Disjunkt}{\reset@font\mtcSSfont 3-8}{subsection.3.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Vollst\"andige \"Uberdeckung und nicht Disjunkt}{\reset@font\mtcSSfont 3-10}{subsection.3.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.5}Nicht vollst\"andige \"Uberdeckung und Disjunkt}{\reset@font\mtcSSfont 3-11}{subsection.3.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.6}Nicht vollst\"andige \"Uberdeckung und nicht Disjunkt}{\reset@font\mtcSSfont 3-13}{subsection.3.3.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Generalisierung}{\reset@font\mtcSfont 3-15}{section.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Beispiel f\"ur die Generalisierung}{\reset@font\mtcSSfont 3-15}{subsection.3.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}\"Ubungen - Erweiterte ER-Modellierung}{\reset@font\mtcSfont 3-17}{section.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.1}\"Ubungsaufgabe Schwimmbad}{\reset@font\mtcSSfont 3-17}{subsection.3.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-17}{section*.22}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgaben}{\reset@font\mtcSSSfont 3-18}{section*.23}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.2}\"Ubungsaufgabe Kindergarten}{\reset@font\mtcSSfont 3-19}{subsection.3.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.3}\"Ubungsaufgabe Bank}{\reset@font\mtcSSfont 3-20}{subsection.3.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.4}\"Ubungsaufgabe Autoh\"andler}{\reset@font\mtcSSfont 3-22}{subsection.3.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.5}\"Ubungsaufgabe Universit\"at}{\reset@font\mtcSSfont 3-24}{subsection.3.5.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.6}\"Ubungsaufgabe Diensthundeschule}{\reset@font\mtcSSfont 3-25}{subsection.3.5.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}L\"osungen - Erweiterte ER-Modellierung}{\reset@font\mtcSfont 3-27}{section.3.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.1}\"Ubungsaufgabe Schwimmbad}{\reset@font\mtcSSfont 3-27}{subsection.3.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-27}{section*.24}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 3-27}{section*.25}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgabe 1}{\reset@font\mtcSSSfont 3-28}{section*.26}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation Zusatzaufgabe 1}{\reset@font\mtcSSSfont 3-28}{section*.27}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgabe 2}{\reset@font\mtcSSSfont 3-29}{section*.28}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation Zusatzaufgabe 2}{\reset@font\mtcSSSfont 3-29}{section*.29}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusatzaufgabe 3}{\reset@font\mtcSSSfont 3-30}{section*.30}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation Zusatzaufgabe 3}{\reset@font\mtcSSSfont 3-30}{section*.31}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.2}\"Ubungsaufgabe Kindergarten}{\reset@font\mtcSSfont 3-31}{subsection.3.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-31}{section*.32}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 3-31}{section*.33}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.3}\"Ubungsaufgabe Bank}{\reset@font\mtcSSfont 3-32}{subsection.3.6.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-32}{section*.34}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation Variante 1}{\reset@font\mtcSSSfont 3-33}{section*.35}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation Variante 2}{\reset@font\mtcSSSfont 3-33}{section*.36}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.4}\"Ubungsaufgabe Autoh\"andler}{\reset@font\mtcSSfont 3-34}{subsection.3.6.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-34}{section*.37}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 3-34}{section*.38}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.5}\"Ubungsaufgabe Universit\"at}{\reset@font\mtcSSfont 3-35}{subsection.3.6.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-35}{section*.39}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 3-36}{section*.40}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.6}\"Ubungsaufgabe Diensthundeschule}{\reset@font\mtcSSfont 3-37}{subsection.3.6.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vorgaben}{\reset@font\mtcSSSfont 3-37}{section*.41}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation}{\reset@font\mtcSSSfont 3-38}{section*.42}}

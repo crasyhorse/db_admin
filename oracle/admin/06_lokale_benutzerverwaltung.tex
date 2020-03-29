@@ -1,11 +1,11 @@
- \chapter{Lokale Benutzerverwaltung}
-    \setcounter{page}{1}\kapitelnummer{chapter}
-    \minitoc
-\newpage
-    \section{Lokale Nutzer erstellen und verwalten}
-      Lokale Nutzerkonten werden direkt in der Datenbank gespeichert und die Datenbank h\"alt auch den Authentifizierungsmechanismus bereit. Diese Form der Nutzerverwaltung wird sehr h\"aufig genutzt, ist jedoch nicht die Sicherste, da z. B. erst seit Oracle 11g die Passw\"orter case-sensitiv gespeichert werden.
+\chapter{Lokale Benutzerverwaltung}
+\chaptertoc{}
+\cleardoubleevenpage
 
-      Ein Datenbanknutzerkonto wird in SQL mit dem Kommando \languageorasql{CREATE USER} erstellt. F\"ur diesen Vorgang wird das Systemprivileg \privileg{CREATE USER} ben\"otigt.
+    \section{Lokale Nutzer erstellen und verwalten}
+      Lokale Nutzerkonten werden direkt in der Datenbank gespeichert und die Datenbank hält auch den Authentifizierungsmechanismus bereit. Diese Form der Nutzerverwaltung wird sehr häufig genutzt, ist jedoch nicht die Sicherste, da z. B. erst seit Oracle 11g die Passwörter case-sensitiv gespeichert werden.
+
+      Ein Datenbanknutzerkonto wird in SQL mit dem Kommando \languageorasql{CREATE USER} erstellt. Für diesen Vorgang wird das Systemprivileg \privileg{CREATE USER} benötigt.
       \subsection{Nutzer in SQL erstellen}
         \label{createuser}
         \beispiel{admin200} zeigt, wie ein Nutzer in SQL erstellt wird.
@@ -25,7 +25,7 @@ SQL> GRANT create session TO oracle;
           Ein neuer Nutzer wird ohne jegliche Privilegien erstellt, was bedeutet, dass er sich noch nicht einmal an der Datenbank anmelden kann. Es muss ihm erst das \privileg{CREATE SESSION} Privileg zugewiesen werden.
         \end{merke}
         \subsubsection{Nutzernamen vergeben}
-          Der Name eines Datenbanknutzers muss innerhalb der Datenbank eindeutig sein. Der Name des Nutzerkontos wird in der \languageorasql{CREATE USER}-Klausel festgelegt. Zu jedem Nutzer wird auch ein gleichnamiges Schema angelegt, welches die Objekte des Nutzers enth\"alt.
+          Der Name eines Datenbanknutzers muss innerhalb der Datenbank eindeutig sein. Der Name des Nutzerkontos wird in der \languageorasql{CREATE USER}-Klausel festgelegt. Zu jedem Nutzer wird auch ein gleichnamiges Schema angelegt, welches die Objekte des Nutzers enthält.
 
           \bild{Nutzer und Schema}{nutzer_schema}{1.5}
 
@@ -33,19 +33,19 @@ SQL> GRANT create session TO oracle;
             Ein Schema stellt einen Namensraum dar, innerhalb dem die Objekte eines Nutzers existieren. Jedes Nutzerkonto ist Besitzer eines gleichnamigen Schemas und somit Besitzer der Objekte im Schema.
           \end{merke}
         \subsubsection{Nutzer authentifizieren}
-          In \beispiel{admin200} wird der Nutzer \enquote{oracle} durch sein Passwort authentifiziert. Die  Passwortzuweisung geschieht in der \languageorasql{IDENTIFIED BY}-Klausel. F\"ur Passw\"orter gelten folgende Regeln:
+          In \beispiel{admin200} wird der Nutzer \enquote{oracle} durch sein Passwort authentifiziert. Die  Passwortzuweisung geschieht in der \languageorasql{IDENTIFIED BY}-Klausel. Für Passwörter gelten folgende Regeln:
           \begin{itemize}
-            \item Passw\"orter sollten zwischen 12 und 30 Zeichen lang sein.
-            \item Es sollten mindestens ein Gro\ss{}buchstabe, ein Kleinbuchstabe, eine Ziffer und ein Sonderzeichen darin vorkommen.
-            \item Passw\"orter die mit einer Ziffer oder einem Sonderzeichen beginnen, bzw. die ein Sonderzeichen enthalten, m\"ussen in Anf\"uhrungszeichen eingeschlossen werden.
+            \item Passwörter sollten zwischen 12 und 30 Zeichen lang sein.
+            \item Es sollten mindestens ein Großbuchstabe, ein Kleinbuchstabe, eine Ziffer und ein Sonderzeichen darin vorkommen.
+            \item Passwörter die mit einer Ziffer oder einem Sonderzeichen beginnen, bzw. die ein Sonderzeichen enthalten, müssen in Anführungszeichen eingeschlossen werden.
           \end{itemize}
-          Da in \beispiel{admin200} die Klausel \languageorasql{PASSWORD EXPIRE} angegeben wurde, muss der Nutzer bei seiner ersten Anmeldung das abgelaufene Passwort \"andern.
+          Da in \beispiel{admin200} die Klausel \languageorasql{PASSWORD EXPIRE} angegeben wurde, muss der Nutzer bei seiner ersten Anmeldung das abgelaufene Passwort ändern.
         \subsubsection{Der Default Tablespace}
           Wenn ein Nutzer neue Datenbankobjekte, wie z. B. Tabellen und Indizes erstellt, werden diese im Default Tablespace des Nutzers angelegt.Die Zuweisung eines Default Tablespace geschieht mit Hilfe der Klausel \languageorasql{DEFAULT TABLESPACE}.
           \begin{merke}
-            Ein Tablespace der einem Nutzer als Default Tablespace zugewiesen wurde, kann erst gel\"oscht werden, wenn den betroffenen Nutzern ein anderer Default Tablespace zugewiesen wurde.
+            Ein Tablespace der einem Nutzer als Default Tablespace zugewiesen wurde, kann erst gelöscht werden, wenn den betroffenen Nutzern ein anderer Default Tablespace zugewiesen wurde.
           \end{merke}
-          Wurde einem Nutzer kein Default Tablespace zugewiesen, gilt f\"ur ihn der Default Permanent Tablespace. Die View \identifier{database\_properties} enth\"alt den Namen dieses Tablespaces.
+          Wurde einem Nutzer kein Default Tablespace zugewiesen, gilt für ihn der Default Permanent Tablespace. Die View \identifier{database\_properties} enthält den Namen dieses Tablespaces.
           \begin{lstlisting}[caption={Der Default Permanent
           Tablespace},label=admin201,language=oracle_sql]
 SQL> SELECT property_name, property_value
@@ -55,40 +55,40 @@ SQL> SELECT property_name, property_value
           \begin{merke}
             Wird bei der Erstellung der Datenbank kein Standard festgelegt, wird automatisch der \identifier{System}-Tablespace zum Default Tablespace eines jeden Nutzers.
           \end{merke}
-          Die Begriffe Schema und Tablespaces sollten nicht verwechselt werden. W\"ahrend Schemas die Besitzver\"altnisse innerhalb der Datenbank regeln, regeln Tablespaces die physische Ablage der Daten in den Datendateien. Die Daten eines Nutzers geh\"oren immer zu genau einem Schema, k\"onnen aber \"uber mehrere Tablespaces verteilt gespeichert sein.
+          Die Begriffe Schema und Tablespaces sollten nicht verwechselt werden. Während Schemas die Besitzverältnisse innerhalb der Datenbank regeln, regeln Tablespaces die physische Ablage der Daten in den Datendateien. Die Daten eines Nutzers gehören immer zu genau einem Schema, können aber über mehrere Tablespaces verteilt gespeichert sein.
         \subsubsection{Speicherbegrenzung - Tablespace Quotas}
-          Quotas erm\"oglichen es, den Nutzern einer Oracle-Datenbank Speicher zuzuweisen. W\"ahrend in Systemen, wie z. B. Windows Server 2003 Quotas den Platz einschr\"anken, den ein Nutzerkonto zur Verf\"ugung hat, stellen Quotas in Oracle eine Zuweisung von Ressourcen dar. Ohne Quotas hat ein Nutzerkonto in einer Oracle-Datenbank keinen Speicherplatz.
+          Quotas ermöglichen es, den Nutzern einer Oracle-Datenbank Speicher zuzuweisen. Während in Systemen, wie z. B. Windows Server 2003 Quotas den Platz einschränken, den ein Nutzerkonto zur Verfügung hat, stellen Quotas in Oracle eine Zuweisung von Ressourcen dar. Ohne Quotas hat ein Nutzerkonto in einer Oracle-Datenbank keinen Speicherplatz.
 
-          Quotas werden Nutzern auf Tablespace-Ebene zugewiesen. D. h. einem Nutzerkonto kann f\"ur jeden Tablespace eine eigene Quota eingerichtet werden, so dass die Speicherplatzmengen, die dem Nutzer zur Verf\"ugung stehen, in jedem Tablespace anders sind.
+          Quotas werden Nutzern auf Tablespace-Ebene zugewiesen. D. h. einem Nutzerkonto kann für jeden Tablespace eine eigene Quota eingerichtet werden, so dass die Speicherplatzmengen, die dem Nutzer zur Verfügung stehen, in jedem Tablespace anders sind.
 
           In \beispiel{admin200} wurde dem Nutzer \enquote{oracle} eine Quota von 100 Megabyte auf dem Tablespace \identifier{users} zugewiesen.
           \begin{merke}
-            Es ist auch m\"oglich, einem Nutzer die volle Menge Speicherplatz eines Tablespaces zuzuweisen. Dies geschieht mit der Anweisung: \languageorasql{QUOTA UNLIMITED ON users}
+            Es ist auch möglich, einem Nutzer die volle Menge Speicherplatz eines Tablespaces zuzuweisen. Dies geschieht mit der Anweisung: \languageorasql{QUOTA UNLIMITED ON users}
           \end{merke}
 
-          Quotas k\"onnen bei der Erstellung eines Nutzers oder sp\"ater zugewiesen werden. Bei einer \"Anderung der Quotas im Nachhinein auf einen kleineren Wert passiert folgendes:
+          Quotas können bei der Erstellung eines Nutzers oder später zugewiesen werden. Bei einer Änderung der Quotas im Nachhinein auf einen kleineren Wert passiert folgendes:
           \begin{itemize}
-            \item \"Uberschreiten die Objekte des Nutzers die neue Speichermenge bereits, k\"onnen sie nicht mehr wachsen.
-            \item Ist die neu zugewiesene Speichermenge noch nicht \"uberschritten, ist ein Wachstum bis zu dieser neuen Grenze m\"oglich.
+            \item Überschreiten die Objekte des Nutzers die neue Speichermenge bereits, können sie nicht mehr wachsen.
+            \item Ist die neu zugewiesene Speichermenge noch nicht überschritten, ist ein Wachstum bis zu dieser neuen Grenze möglich.
           \end{itemize}
-          Besitzt ein Nutzer Objekte in einem Tablespace und seine Quota wird auf 0 MB herabgesetzt, bleiben seine Objekte erhalten, k\"onnen jedoch nicht mehr wachsen. Es k\"onnen dann auch keine neuen Objekte durch diesen Nutzer in diesem Tablespace angelegt werden.
+          Besitzt ein Nutzer Objekte in einem Tablespace und seine Quota wird auf 0 MB herabgesetzt, bleiben seine Objekte erhalten, können jedoch nicht mehr wachsen. Es können dann auch keine neuen Objekte durch diesen Nutzer in diesem Tablespace angelegt werden.
 
           Soll einem Nutzer aus einem bestimmten Grund die unbegrenzte Speicherplatzausnutzung in der Datenbank erlaubt werden, geschieht dies mit Hilfe des Privileges \privileg{UNLIMITED TABLESPACE}.
           \begin{merke}
-            Dieses Privileg \"uberschreibt alle expliziten Quotas eines Nutzers. Wird dem Nutzer dieses Privileg wieder entzogen, greifen wieder die expliziten Zuweisungen.
+            Dieses Privileg überschreibt alle expliziten Quotas eines Nutzers. Wird dem Nutzer dieses Privileg wieder entzogen, greifen wieder die expliziten Zuweisungen.
           \end{merke}
           Vor der Zuweisung dieses Privilegs an einen Nutzer sollte folgendes bedacht werden:
           \begin{itemize}
-            \item \textbf{Vorteil}: Durch ein einziges Statement, hat ein Nutzer unbegrenzten Speicherplatz in der gesamten Datenbank zur Verf\"ugung.
-            \item \textbf{Nachteil}: Es werden alle expliziten  Quota-Zuweisungen an den Nutzer \"uberschrieben und es kann nicht selektiert werden, auf welche Tablespaces sich das Privileg \privileg{UNLIMITED TABLESPACE} beziehen soll.
+            \item \textbf{Vorteil}: Durch ein einziges Statement, hat ein Nutzer unbegrenzten Speicherplatz in der gesamten Datenbank zur Verfügung.
+            \item \textbf{Nachteil}: Es werden alle expliziten  Quota-Zuweisungen an den Nutzer überschrieben und es kann nicht selektiert werden, auf welche Tablespaces sich das Privileg \privileg{UNLIMITED TABLESPACE} beziehen soll.
           \end{itemize}
-        \subsubsection{Zuweisung eines tempor\"aren Tablespaces}
-          Wird einem Nutzer nicht explizit ein tempor\"arer Tablespace zugewiesen, geschieht folgendes:
+        \subsubsection{Zuweisung eines temporären Tablespaces}
+          Wird einem Nutzer nicht explizit ein temporärer Tablespace zugewiesen, geschieht folgendes:
           \begin{itemize}
-            \item Wurde bei der Datenbankerstellung ein tempor\"arer Tablespace als Standard festgelegt wird dieser benutzt.
-            \item Wurde bei der Datenbankerstellung kein tempor\"arer Tablespace als Standard festgelegt, wird der \identifier{System}-Tablespace als tempor\"arer Tablespace benutzt.
+            \item Wurde bei der Datenbankerstellung ein temporärer Tablespace als Standard festgelegt wird dieser benutzt.
+            \item Wurde bei der Datenbankerstellung kein temporärer Tablespace als Standard festgelegt, wird der \identifier{System}-Tablespace als temporärer Tablespace benutzt.
           \end{itemize}
-          Um einen tempor\"aren Tablespace zuzuweisen, kennt das SQL-Kommando \languageorasql{CREATE USER} die Klausel \languageorasql{TEMPORARY TABLESPACE}. Auch f\"ur den Default temporary Tablespace gibt es einen Datenbankstandard.
+          Um einen temporären Tablespace zuzuweisen, kennt das SQL-Kommando \languageorasql{CREATE USER} die Klausel \languageorasql{TEMPORARY TABLESPACE}. Auch für den Default temporary Tablespace gibt es einen Datenbankstandard.
           \begin{lstlisting}[caption={Der Default Temporary
           Tablespace},label=admin202,language=oracle_sql]
 SQL> SELECT property_name, property_value
@@ -101,12 +101,12 @@ SQL> SELECT property_name, property_value
           \begin{literaturinternet}
             \item \cite{BABGIFFE}
           \end{literaturinternet}
-      \subsection{Nutzerkonten ver\"andern}
-        Ein Nutzer kann an seinem Nutzerkonto keinerlei Ver\"anderungen, mit Ausnahme des Passworts vornehmen. Um andere Parameter eines Nutzerkontos ver\"andern zu k\"onnen bedarf der Nutzer des \privileg{ALTER USER} Privilegs. Dieses Privileg l\"asst jedoch Ver\"anderungen an jedem Nutzerkonto zu.
+      \subsection{Nutzerkonten verändern}
+        Ein Nutzer kann an seinem Nutzerkonto keinerlei Veränderungen, mit Ausnahme des Passworts vornehmen. Um andere Parameter eines Nutzerkontos verändern zu können bedarf der Nutzer des \privileg{ALTER USER} Privilegs. Dieses Privileg lässt jedoch Veränderungen an jedem Nutzerkonto zu.
         \begin{merke}
-          Ver\"anderungen, die an einem Nutzerkonto vorgenommen werden, betreffen nur zuk\"unftige Sessions, aber nicht die aktuelle.
+          Veränderungen, die an einem Nutzerkonto vorgenommen werden, betreffen nur zukünftige Sessions, aber nicht die aktuelle.
         \end{merke}
-        Im folgenden Beispiel wird der Nutzer oracle ver\"andert.
+        Im folgenden Beispiel wird der Nutzer oracle verändert.
         \begin{lstlisting}[caption={Das ALTER USER
         Statement},label=admin203,language=oracle_sql]
 SQL> ALTER USER           oracle
@@ -116,32 +116,32 @@ SQL> ALTER USER           oracle
   5  QUOTA                  0 M ON users
   6  PROFILE              entwickler;
         \end{lstlisting}
-        Die vorgenommenen \"Anderungen sind:
+        Die vorgenommenen Änderungen sind:
         \begin{itemize}
-          \item Das Passwort wird auf \enquote{dr0wss@P} ge\"andert.
+          \item Das Passwort wird auf \enquote{dr0wss@P} geändert.
           \item Als Default Tablespace wird der Tablespace \identifier{example} festgelegt.
-          \item Der Nutzer oracle erh\"alt 100 M Speicherplatz im Tablespace \identifier{example}.
+          \item Der Nutzer oracle erhält 100 M Speicherplatz im Tablespace \identifier{example}.
           \item Der Speicherplatz im Tablespace \identifier{users} wird auf 0 M reduziert.
           \item Er bekommt ein neues Profil zugewiesen.
         \end{itemize}
-        \subsubsection{Das Passwort eines Nutzers \"andern}
-          Das Passwort eines Nutzerkontos kann durch den Datenbankadministrator, ohne Kenntnis des aktuellen ge\"andert werden.
+        \subsubsection{Das Passwort eines Nutzers ändern}
+          Das Passwort eines Nutzerkontos kann durch den Datenbankadministrator, ohne Kenntnis des aktuellen geändert werden.
           \begin{lstlisting}[caption={Das Passwort eines Nutzers
-          \"andern},label=admin203a,language=oracle_sql]
+          ändern},label=admin203a,language=oracle_sql]
 SQL> ALTER USER    hr
   2  IDENTIFIED BY hr;
           \end{lstlisting}
         \subsubsection{Nutzerkonten sperren und entsperren}
-          Der DBA kann Nutzerkonten jederzeit manuell sperren und wieder entsperren. Hierf\"ur wird die \languageorasql{ACCOUNT LOCK}- bzw. \languageorasql{ACCOUNT UNLOCK}-Klausel des \languageorasql{ALTER USER}-Kommandos benutzt.
+          Der DBA kann Nutzerkonten jederzeit manuell sperren und wieder entsperren. Hierfür wird die \languageorasql{ACCOUNT LOCK}- bzw. \languageorasql{ACCOUNT UNLOCK}-Klausel des \languageorasql{ALTER USER}-Kommandos benutzt.
           \begin{merke}
-            Die Beispiel-Nutzerkonten, wie z. B. \identifier{hr} oder \identifier{sh} sind nach der Datenbankinstallation gesperrt und m\"ussen manuell entsperrt werden!
+            Die Beispiel-Nutzerkonten, wie z. B. \identifier{hr} oder \identifier{sh} sind nach der Datenbankinstallation gesperrt und müssen manuell entsperrt werden!
           \end{merke}
           \begin{lstlisting}[caption={Ein Nutzerkonto manuell
           entsperren},label=admin203b,language=oracle_sql] 
 SQL> ALTER USER hr
      ACCOUNT UNLOCK;
           \end{lstlisting}
-          Soll das Konto \identifier{hr} aus Sicherheits\-gr\"unden wieder gesperrt werden, wird die \languageorasql{ACCOUNT LOCK}-Klausel benutzt.
+          Soll das Konto \identifier{hr} aus Sicherheits\-gründen wieder gesperrt werden, wird die \languageorasql{ACCOUNT LOCK}-Klausel benutzt.
           \begin{lstlisting}[caption={Ein Nutzerkonto manuell
           sperren},label=admin203c,language=oracle_sql] 
 SQL> ALTER USER hr
@@ -165,15 +165,15 @@ Warning: You are not longer connected to ORACLE.
           \begin{literaturinternet}
             \item \cite{BABHBDBE}
           \end{literaturinternet}
-      \subsection{Nutzerkonten l\"oschen}
-        Beim L\"oschen eines Nutzerkontos wird das Schema aus dem Data
-        Dictionary entfernt und alle Objekte des Nutzers gel\"oscht. Um einen
-        Nutzer l\"oschen zu k\"onnen, m\"ussen zwei Bedingungen erf\"ullt
+      \subsection{Nutzerkonten löschen}
+        Beim Löschen eines Nutzerkontos wird das Schema aus dem Data
+        Dictionary entfernt und alle Objekte des Nutzers gelöscht. Um einen
+        Nutzer löschen zu können, müssen zwei Bedingungen erfüllt
         werden:
 \clearpage
           \begin{itemize}
-            \item Es wird das \privileg{DROP USER} Privileg ben\"otigt.
-            \item Der zu l\"oschende Nutzer darf nicht mehr angemeldet sein.
+            \item Es wird das \privileg{DROP USER} Privileg benötigt.
+            \item Der zu löschende Nutzer darf nicht mehr angemeldet sein.
           \end{itemize}
           Ist der betreffende Nutzer noch an der Datenbank angemeldet, muss erst seine Session beendet werden.
         \subsubsection{Beenden einer Nutzersession}
@@ -204,8 +204,8 @@ SQL> ALTER SYSTEM DISCONNECT SESSION '141,259' IMMEDIATE;
           \begin{literaturinternet}
             \item \cite{sthref938}
           \end{literaturinternet}
-        \subsubsection{Das Benutzerkonto l\"oschen}
-          Ein Benutzerkonto wird mit dem Kommando \languageorasql{DROP USER} gel\"oscht. Enth\"alt das Schema des zu l\"oschenden Nutzers noch Objekte, muss zus\"atzlich die \languageorasql{CASCADE}-Klausel angegeben werden, um diese Objekte ebenfalls zu l\"oschen.
+        \subsubsection{Das Benutzerkonto löschen}
+          Ein Benutzerkonto wird mit dem Kommando \languageorasql{DROP USER} gelöscht. Enthält das Schema des zu löschenden Nutzers noch Objekte, muss zusätzlich die \languageorasql{CASCADE}-Klausel angegeben werden, um diese Objekte ebenfalls zu löschen.
           \begin{lstlisting}[caption={Das DROP USER
           Statement},label=admin206,language=oracle_sql]
 SQL> DROP USER oracle CASCADE;
@@ -214,9 +214,9 @@ SQL> DROP USER oracle CASCADE;
             \item \cite{DBSEG99791}
         \end{literaturinternet}
     \section{Authentifizierung}
-      Unter dem Begriff \enquote{Authentifizierung} versteht man, die Identit\"at einer Person, einer Anwendung oder eines Ge\-r\"a\-tes festzustellen. Es wird damit festgelegt, ob die Person, die Anwendung oder das Objekt vertrauensw\"urdig ist oder nicht.
+      Unter dem Begriff \enquote{Authentifizierung} versteht man, die Identität einer Person, einer Anwendung oder eines Ge\-rä\-tes festzustellen. Es wird damit festgelegt, ob die Person, die Anwendung oder das Objekt vertrauenswürdig ist oder nicht.
 
-      Oracle kennt verschiedene Authentifizierungsformen und es ist jeder Instanz erlaubt alle Arten gemischt zu verwenden. F\"ur Datenbankadministratoren wird eine eigene Form der Authentifizierung verwendet, da dieser Personenkreis \"uber besondere Berechtigungen in der Datenbank verf\"ugt.
+      Oracle kennt verschiedene Authentifizierungsformen und es ist jeder Instanz erlaubt alle Arten gemischt zu verwenden. Für Datenbankadministratoren wird eine eigene Form der Authentifizierung verwendet, da dieser Personenkreis über besondere Berechtigungen in der Datenbank verfügt.
 
       Folgende Formen der Authentifizierung kennt Oracle: Authentifizierung durch...
       \begin{itemize}
@@ -233,7 +233,7 @@ SQL> DROP USER oracle CASCADE;
         Dies ist die einfachste Form der Authentifizierung, da kein zusätzlicher
         Authentifizierungsdienst konfiguriert werden muss.
         \subsubsection{Passwort-Hashes in Oracle 10g und 11g}
-        Die Abfrage in \beispiel{admin207} zeigt, welche Informationen \"uber
+        Die Abfrage in \beispiel{admin207} zeigt, welche Informationen über
         die Nutzerkonten in der Datenbank gespeichert sind.
 
         Die Spalte \identifier{AUTHENTICATION\_TYPE} zeigt an, wie der Nutzer
@@ -262,12 +262,12 @@ BANK                      10G 11G  &PASSWORD&
         \end{lstlisting}
         Die beiden Werte \enquote{10G} und \enquote{11G} in der Spalte
         \identifier{PASSWORD} geben an, mit welchem Hashing-Verfahren die
-        Passw\"orter der Nutzer verschl\"usselt wurden. Oracle 10g verwendet das
-        case-insensitive 3DES (Triple-DES) Verfahren, w\"ahrend ab Oracle 11g R1
-        Passw\"orter case-sensitive mit dem SHA-1 Algorithmus verschl\"usselt
-        werden k\"onnen.
+        Passwörter der Nutzer verschlüsselt wurden. Oracle 10g verwendet das
+        case-insensitive 3DES (Triple-DES) Verfahren, während ab Oracle 11g R1
+        Passwörter case-sensitive mit dem SHA-1 Algorithmus verschlüsselt
+        werden können.
 
-        Werden beide Werte, \enquote{10G} und \enquote{11G} angezeigt, bedeutet das, dass f\"ur jeden Nutzer zwei Passwort-Hashes gespeichert sind, die Oracle 10g konforme Variante und der neue SHA-1 Hash von Oracle 11g.
+        Werden beide Werte, \enquote{10G} und \enquote{11G} angezeigt, bedeutet das, dass für jeden Nutzer zwei Passwort-Hashes gespeichert sind, die Oracle 10g konforme Variante und der neue SHA-1 Hash von Oracle 11g.
         \begin{lstlisting}[caption={Einblicke in das Data Dictionary -
         Passwordhashes},label=admin208,language=oracle_sql,alsolanguage=sqlplus]
 SQL> col name format a6
@@ -286,40 +286,40 @@ SYS    268915ED849BECA9 S:BAEAB7196AC176EF8A42927DA297CE10B784982522420C31035E5
 &SYSTEM&  2D594E86F93B17A1 S:E35D71785B8AC9596335215AF88BAF660ABD72F257EE1BBBAEE39
 HR     6399F3B38EDF3288 S:33567EF031F4A8BF5C9F79CB1CC910D1DB86E4C02E0C9E0DBB18A
         \end{lstlisting}
-        \beispiel{admin208} zeigt die beiden Passworthashes direkt nebeneinander (der SHA-1 Hash wurde aus Platzgr\"unden um sieben Stellen gek\"urzt).
+        \beispiel{admin208} zeigt die beiden Passworthashes direkt nebeneinander (der SHA-1 Hash wurde aus Platzgründen um sieben Stellen gekürzt).
         \begin{merke}
-          Oracle sorgt automatisch daf\"ur, das Passw\"orter transparent f\"ur die \"Ubertragung im Netzwerk verschl\"usselt werden. Hierf\"ur wird der AES-Standard (Advanced Encryption Standard) verwendet.
+          Oracle sorgt automatisch dafür, das Passwörter transparent für die Übertragung im Netzwerk verschlüsselt werden. Hierfür wird der AES-Standard (Advanced Encryption Standard) verwendet.
         \end{merke}
       \subsection{Authentifizierung der Datenbankadministratoren mit Passwortdatei}
-        Oracle bietet f\"ur DBAs die Nutzung zwei Authentifizierungsformen an.
+        Oracle bietet für DBAs die Nutzung zwei Authentifizierungsformen an.
         Eine Betriebssystemauthentifizierung und die Nutzung einer Passwortdatei.
-        Die Passwortdatei ist eine kleine, verschl\"usselte Datei, die Angaben
-        zu allen Datenbankadministratorkonten speichert. DBAs ben\"otigen sie, um
-        sich remote an der Datenbank anmelden zu k\"onnen. Da die Passwortdatei
-        au\ss{}erhalb der Datenbank liegt, k\"onnen sich DBAs auch dann
+        Die Passwortdatei ist eine kleine, verschlüsselte Datei, die Angaben
+        zu allen Datenbankadministratorkonten speichert. DBAs benötigen sie, um
+        sich remote an der Datenbank anmelden zu können. Da die Passwortdatei
+        außerhalb der Datenbank liegt, können sich DBAs auch dann
         anmelden, wenn die Instanz heruntergefahren ist. Dies ist zum
         Hochfahren der Instanz notwendig.
         \subsubsection{SYSDBA und SYSOPER}
           Die Privilegien \privileg{sysdba} und \privileg{sysoper} sind die
           beiden umfassensten Privilegien, welche die Oracle-Datenbank kennt.
           Ein Nutzer, der das \privileg{sysdba}-Privileg besitzt, kann alles mit
-          der Datenbank machen. Ohne zus\"atzliche Software (Oracle Database
-          Vault) kann er in seiner Handlungsweise nicht eingeschr\"ankt werden.
+          der Datenbank machen. Ohne zusätzliche Software (Oracle Database
+          Vault) kann er in seiner Handlungsweise nicht eingeschränkt werden.
           \privileg{sysoper} dagegen ist nur ein minimal abgestuftes Privileg,
-          das in der Praxis faktisch keine Anwendung findet, da f\"ur alle
+          das in der Praxis faktisch keine Anwendung findet, da für alle
           wesentlichen administrativen Tätigkeiten, wie z. B. Backup and
-          Recovery das \privileg{sysdba}-Privileg ben\"otigt wird.
+          Recovery das \privileg{sysdba}-Privileg benötigt wird.
 
           \begin{merke}
-            Da die Kontrolle \"uber diese beiden Privilegien au\ss{}erhalb der
+            Da die Kontrolle über diese beiden Privilegien außerhalb der
             Datenbank liegt, muss ein Administrator bei der Anmeldung angeben,
-            das er das \privileg{sysdba}-Privileg nutzen m\"ochte.
+            das er das \privileg{sysdba}-Privileg nutzen möchte.
           \end{merke}
         \subsubsection{Das SYSASM-Privileg}
           Mit Oracle 11g kam ein neues \privileg{sys}-Privileg hinzu:
-          \privileg{sysasm}. Dieses Privileg ist ausschlie\ss{}lich f\"ur die
+          \privileg{sysasm}. Dieses Privileg ist ausschließlich für die
           Administration einer Oracle \enquote{Automatic Storage
-          Management}-Instanz zust\"andig.
+          Management}-Instanz zuständig.
         \subsubsection{Nutzung einer Passwortdatei vorbereiten}
           Folgende Schritte sind notwendig, um eine Passwortdatei einzurichten:
           \begin{itemize}
@@ -332,7 +332,7 @@ HR     6399F3B38EDF3288 S:33567EF031F4A8BF5C9F79CB1CC910D1DB86E4C02E0C9E0DBB18A
           \begin{merke}
             Durch die Vergabe des \privileg{sysdba} oder des \privileg{sysoper} Privilegs, wird der Nutzer in die Passwort\-datei aufgenommen und kann sich als Administrator an der Datenbank anmelden.
           \end{merke}
-          F\"ur die Erstellung einer Passwortdatei h\"alt Oracle das Tool \oscommand{orapwd} bereit. Wird dieses Tool ohne die Angabe von Parametern aufgerufen, erscheint folgende Bildschirmmeldung:
+          Für die Erstellung einer Passwortdatei hält Oracle das Tool \oscommand{orapwd} bereit. Wird dieses Tool ohne die Angabe von Parametern aufgerufen, erscheint folgende Bildschirmmeldung:
           \begin{lstlisting}[caption={Das Tool
           ORAPWD},label=admin209,language=terminal]
 [oracle@FEA11-119SRV ~]$
@@ -349,7 +349,7 @@ HR     6399F3B38EDF3288 S:33567EF031F4A8BF5C9F79CB1CC910D1DB86E4C02E0C9E0DBB18A
 
   There must be no spaces around the equal-to (=) character.
           \end{lstlisting}
-          In \beispiel{admin210} wird eine neue Passwortdatei namens \identifier{orapworcl} erstellt, die bis zu f\"unf Eintr\"age aufnehmen kann. Das Passwort des Nutzers \identifier{sys} muss seit Oracle 11g nicht mehr im Klartext eingegeben werden, das \oscommand{orapwd}-Tool fragt interaktiv nach dem Passwort.
+          In \beispiel{admin210} wird eine neue Passwortdatei namens \identifier{orapworcl} erstellt, die bis zu fünf Einträge aufnehmen kann. Das Passwort des Nutzers \identifier{sys} muss seit Oracle 11g nicht mehr im Klartext eingegeben werden, das \oscommand{orapwd}-Tool fragt interaktiv nach dem Passwort.
           \begin{lstlisting}[caption={Erstellen einer Passwortdatei mit
           ORAPWD},label=admin210,language=terminal]
 orapwd file=$ORACLE_HOME/dbs/orapworcl entries=5 ignorecase=n
@@ -357,30 +357,30 @@ orapwd file=$ORACLE_HOME/dbs/orapworcl entries=5 ignorecase=n
           Die Parameter des Kommandos \oscommand{orapwd} haben folgende Bedeutung:
           \begin{itemize}
             \item \textbf{FILE}: Dieser Parameter gibt den Namen der
-            Passwortdatei an. Es muss eine voll\-st\"an\-dige Angabe aus Pfad
+            Passwortdatei an. Es muss eine voll\-stän\-dige Angabe aus Pfad
             und Dateiname gemacht werden. Die Angabe dieses Parameters ist
             zwingend Vorgeschrieben.
-            \item \textbf{ENTRIES}: Gibt die maximale Anzahl der m\"oglichen
-            Eintr\"age in der Passwortdatei vor. Ist eine            
-            Passwortdatei zu klein, muss eine neue, gr\"o\ss ere erstellt werden
+            \item \textbf{ENTRIES}: Gibt die maximale Anzahl der möglichen
+            Einträge in der Passwortdatei vor. Ist eine            
+            Passwortdatei zu klein, muss eine neue, größere erstellt werden
             und die Zuweisungen der \privileg{sysdba}/\privileg{sysoper}
             Privilegien an alle betroffenen Nutzer muss neu gemacht werden.
-            \item \textbf{IGNORECASE}: Mit ignorecase=n wird daf\"ur gesorgt, dass die Passw\"orter der Administratoren case-sensitiv gespeichert werden.
+            \item \textbf{IGNORECASE}: Mit ignorecase=n wird dafür gesorgt, dass die Passwörter der Administratoren case-sensitiv gespeichert werden.
           \end{itemize}
           \begin{merke}
             Damit eine Oracle-Datenbank ihre Passwortdatei findet, muss der Name sich aus \oscommand{orapw} und der SID der Datenbank zusammensetzen, z. B. \oscommand{orapworcl}.
           \end{merke}
         \subsubsection{Die Passwortdatei zur Authentifizierung benutzen}
-          Wenn sich ein Administrator mit Hilfe von SQL*Plus an seiner lokalen oder einer Remotedatenbank anmelden m\"ochte, tut er dies mit seinem Nutzernamen und dem Zusatz \oscommand{as sysdba} oder \oscommand{as sysoper}. Wurde beispielsweise dem Nutzer \identifier{hr} das Privileg \privileg{sysdba} zugewiesen, kann er sich wie folgt anmelden:
+          Wenn sich ein Administrator mit Hilfe von SQL*Plus an seiner lokalen oder einer Remotedatenbank anmelden möchte, tut er dies mit seinem Nutzernamen und dem Zusatz \oscommand{as sysdba} oder \oscommand{as sysoper}. Wurde beispielsweise dem Nutzer \identifier{hr} das Privileg \privileg{sysdba} zugewiesen, kann er sich wie folgt anmelden:
           \begin{lstlisting}[caption={Anmelden mit dem
           \privileg{sysdba}-Privileg},label=admin211,language=terminal]
 [oracle@FEA11-119SRV ~]$ sqlplus hr/hr as sysdba
           \end{lstlisting}
-          Die Anmeldung mit dem Zusatz \oscommand{as sysoper} schl\"agt jedoch fehl, da dem Nutzer \identifier{hr} nur das \privileg{sysdba}, aber nicht das \privileg{sysoper} Privileg erteilt wurde.
+          Die Anmeldung mit dem Zusatz \oscommand{as sysoper} schlägt jedoch fehl, da dem Nutzer \identifier{hr} nur das \privileg{sysdba}, aber nicht das \privileg{sysoper} Privileg erteilt wurde.
           \begin{merke}
-            Ein Nutzer, der sich mit \privileg{sysdba} oder \privileg{sysoper} Privilegien anmeldet, wird nicht mit seinem normalen Schema, sondern mit einem Standardschema verbunden. F\"ur das \privileg{sysdba} Privileg ist dies das Schema des Nutzers \identifier{sys}. F\"ur \privileg{sysoper} ist es das Schema \identifier{public}.
+            Ein Nutzer, der sich mit \privileg{sysdba} oder \privileg{sysoper} Privilegien anmeldet, wird nicht mit seinem normalen Schema, sondern mit einem Standardschema verbunden. Für das \privileg{sysdba} Privileg ist dies das Schema des Nutzers \identifier{sys}. Für \privileg{sysoper} ist es das Schema \identifier{public}.
           \end{merke}
-          Das folgende Beispiel zeigt was passiert, wenn sich ein Nutzer normal bzw. mit administrativen Privilegien anmeldet. Dem Benutzer \identifier{hr} wird das \privileg{hr}-Privileg zugeteilt. Anschlie\ss{}end meldet sich dieser einmal mit dem Zusatz \oscommand{as sysdba} und einmal ohne diesen an.
+          Das folgende Beispiel zeigt was passiert, wenn sich ein Nutzer normal bzw. mit administrativen Privilegien anmeldet. Dem Benutzer \identifier{hr} wird das \privileg{hr}-Privileg zugeteilt. Anschließend meldet sich dieser einmal mit dem Zusatz \oscommand{as sysdba} und einmal ohne diesen an.
 
           \begin{lstlisting}[caption={Anmeldung mit und ohne administrativen
           Privilegien},label=admin212,language=oracle_sql,alsolanguage=sqlplus]
@@ -420,7 +420,7 @@ USERNAME                       SYSDBA SYSOPER SYSASM
 SYS                            TRUE   TRUE    FALSE
 HR                             TRUE   FALSE   FALSE
           \end{lstlisting}
-          Um einen Nutzer wieder aus der Passwortdatei zu entfernen, m\"ussen ihm nur die \privileg{sys}-Privilegien \privileg{sysdba}, \privileg{sysoper} oder \privileg{sysasm} entzogen werden.
+          Um einen Nutzer wieder aus der Passwortdatei zu entfernen, müssen ihm nur die \privileg{sys}-Privilegien \privileg{sysdba}, \privileg{sysoper} oder \privileg{sysasm} entzogen werden.
           \begin{lstlisting}[caption={Einen Nutzer aus der Passwortdatei
           entfernen},label=admin214,language=oracle_sql,alsolanguage=sqlplus]
 SQL> connect / as sysdba
@@ -436,20 +436,20 @@ SYS                            TRUE   TRUE    FALSE
             \item \cite{ADMIN10241}
           \end{literaturinternet}
         \subsubsection{Der Parameter REMOTE\_LOGIN\_PASSWORDFILE}
-          Zus\"atzlich zur Erstellung der Passwortdatei, muss der Initialisierungsparameter \parameter{REMOTE\_LOGIN\_PASSWORDFILE} richtig gesetzt werden. Folgende Werte sind m\"oglich:
+          Zusätzlich zur Erstellung der Passwortdatei, muss der Initialisierungsparameter \parameter{REMOTE\_LOGIN\_PASSWORDFILE} richtig gesetzt werden. Folgende Werte sind möglich:
           \begin{itemize}
-            \item \textbf{NONE}: Dieser Wert bringt Oracle dazu eine Passwortdatei zu ignorieren. Das hei\ss t, es ist keine Remoteanmeldung mit administrativen Privilegien m\"oglich.
-            \item \textbf{EXCLUSIVE}: Eine als exklusiv gekennzeichnete Passwortdatei kann nur von einer Instanz genutzt werden. Um eine Passwortdatei modifizieren zu k\"onnen, muss der Parameter \parameter{REMOTE\_LOGIN\_PASSWORDFILE} auf \textit{EXCLUSIVE} gestellt werden.
-            \item \textbf{SHARED}: Steht der Parameter auf \textit{SHARED}, kann die Passwortdatei von mehreren Instanzen auf dem gleichen Rechner genutzt werden. Eine als shared gekennzeichnete Passwortdatei kann nicht ver\"andert werden. D. h. es kann keinem weiteren Nutzer eines der Privilegien \privileg{sysdba} oder \privileg{sysoper} zugewiesen werden und es kann auch kein Nutzer mit einem dieser beiden Privilegien sein Passwort \"andern.
+            \item \textbf{NONE}: Dieser Wert bringt Oracle dazu eine Passwortdatei zu ignorieren. Das heißt, es ist keine Remoteanmeldung mit administrativen Privilegien möglich.
+            \item \textbf{EXCLUSIVE}: Eine als exklusiv gekennzeichnete Passwortdatei kann nur von einer Instanz genutzt werden. Um eine Passwortdatei modifizieren zu können, muss der Parameter \parameter{REMOTE\_LOGIN\_PASSWORDFILE} auf \textit{EXCLUSIVE} gestellt werden.
+            \item \textbf{SHARED}: Steht der Parameter auf \textit{SHARED}, kann die Passwortdatei von mehreren Instanzen auf dem gleichen Rechner genutzt werden. Eine als shared gekennzeichnete Passwortdatei kann nicht verändert werden. D. h. es kann keinem weiteren Nutzer eines der Privilegien \privileg{sysdba} oder \privileg{sysoper} zugewiesen werden und es kann auch kein Nutzer mit einem dieser beiden Privilegien sein Passwort ändern.
           \end{itemize}
-      \subsection{Betriebssystemauthentifizierung f\"ur Administratoren}
-        Die externe Authentifizierung durch das Betriebssystem wird f\"ur Administratoren durch eine spezielle Betriebssystemgruppe realisiert. Die Zugeh\"origkeit des Betriebssystemnutzerkontos zu dieser Betriebssystemgruppe verleiht dem Administrator automatisch \privileg{sysdba}-Privilegien in der Datenbank. Die Bezeichnung dieser Gruppe ist von Betriebssystem zu Betriebssystem unterschiedlich (Linux: \enquote{dba}, Windows: \enquote{ora\_dba}).
+      \subsection{Betriebssystemauthentifizierung für Administratoren}
+        Die externe Authentifizierung durch das Betriebssystem wird für Administratoren durch eine spezielle Betriebssystemgruppe realisiert. Die Zugehörigkeit des Betriebssystemnutzerkontos zu dieser Betriebssystemgruppe verleiht dem Administrator automatisch \privileg{sysdba}-Privilegien in der Datenbank. Die Bezeichnung dieser Gruppe ist von Betriebssystem zu Betriebssystem unterschiedlich (Linux: \enquote{dba}, Windows: \enquote{ora\_dba}).
         \begin{merke}
-          Die externe Authentifizierung mittels Betriebssystemgruppe \enquote{dba} hat Vorrang vor der Authentifizierung durch eine Passwortdatei. Wenn jemand ein Betriebssystemnutzerkonto hat, das Mitglied in der Betriebssystemgruppe dba oder sysoper ist, kann er sich mit einem der beiden Zus\"atze as sysdba oder as sysoper anmelden, auch wenn er nicht in der Passwortdatei aufgef\"uhrt ist. Die Authentifizierung mit administrativen Privilegien schl\"agt nur dann fehl, wenn jemand nicht in der Passwortdatei aufgef\"uhrt ist und nicht Mitglied in den betreffenden Betriebssystemgruppen ist.
+          Die externe Authentifizierung mittels Betriebssystemgruppe \enquote{dba} hat Vorrang vor der Authentifizierung durch eine Passwortdatei. Wenn jemand ein Betriebssystemnutzerkonto hat, das Mitglied in der Betriebssystemgruppe dba oder sysoper ist, kann er sich mit einem der beiden Zusätze as sysdba oder as sysoper anmelden, auch wenn er nicht in der Passwortdatei aufgeführt ist. Die Authentifizierung mit administrativen Privilegien schlägt nur dann fehl, wenn jemand nicht in der Passwortdatei aufgeführt ist und nicht Mitglied in den betreffenden Betriebssystemgruppen ist.
         \end{merke}
         Mittels der Betriebssystemauthentifizierung kann sich ein Administrator ohne die Angabe von Nutzername und Passwort an der Datenbank anmelden, da diese darauf \enquote{vertraut}, dass der DBA durch das Betriebssystem authentifiziert wurde. In \beispiel{admin215} ist der Nutzer oracle an seinem Rechner angemeldet. Er ist Mitglied in der Betriebssystemgruppe \enquote{dba}, weshalb die Authentifizierung mit dem Zusatz \oscommand{as sysdba} bei jedem beliebigen Datenbankaccount funktioniert .
 
-          \begin{lstlisting}[caption={Die Betriebssystemauthentifizierung f\"ur
+          \begin{lstlisting}[caption={Die Betriebssystemauthentifizierung für
           Administratoren},label=admin215,language=oracle_sql,alsolanguage=sqlplus]
 [oracle@FEA11-119SRV ~]$ sqlplus / as sysdba
 
@@ -470,14 +470,14 @@ SQL> show user
           \end{literaturinternet}
     \section{Benutzerprofile}
       \label{userprofiles}
-      Ein Benutzerprofil ist ein Satz von Parametern f\"ur Ressourcenverwaltung
-      und Passwortmanagement. Seit der Einf\"uhrung des \enquote{Resource
-      Manager} in Oracle 10g, sollten jedoch die Parameter f\"ur die
+      Ein Benutzerprofil ist ein Satz von Parametern für Ressourcenverwaltung
+      und Passwortmanagement. Seit der Einführung des \enquote{Resource
+      Manager} in Oracle 10g, sollten jedoch die Parameter für die
       Ressourcenverwaltung nicht mehr genutzt werden, weshalb diese hier auch
-      nicht n\"aher beschrieben werden. Das Anlegen eines Benutzerprofils
+      nicht näher beschrieben werden. Das Anlegen eines Benutzerprofils
       geschieht mittels des SQL-Kommandos \languageorasql{CREATE PROFILE},
-      gefolgt von einem Profilnamen und dem Schl\"usselwort
-      \languageorasql{LIMIT} werden dann die gew\"unschten Parameter
+      gefolgt von einem Profilnamen und dem Schlüsselwort
+      \languageorasql{LIMIT} werden dann die gewünschten Parameter
       aufgelistet.
         \begin{lstlisting}[caption={Anzahl fehlerhafter Anmeldeversuche
         konfigurieren},label=admin216,language=oracle_sql]
@@ -491,9 +491,9 @@ SQL> CREATE PROFILE <name>
   8    PASSWORD_REUSE_MAX n
   9    PASSWORD_VERIFY_FUNCTION <plsql_function>;
         \end{lstlisting}
-        \beispiel{admin216} zeigt alle vorhandenen Passwortmanagement-Parameter. \enquote{n} steht jeweils f\"ur eine Zahl. In den folgenden Abschnitten wird gezeigt, welche Passwortmanagement-Parameter es gibt und wie sie eingesetzt werden.
+        \beispiel{admin216} zeigt alle vorhandenen Passwortmanagement-Parameter. \enquote{n} steht jeweils für eine Zahl. In den folgenden Abschnitten wird gezeigt, welche Passwortmanagement-Parameter es gibt und wie sie eingesetzt werden.
       \subsection{Sperrung von Nutzerkonten}
-        Oracle kann Nutzerkonten nach einer festgelegten Anzahl fehlerhafter Anmeldeversuche sperren. Die Entsperrung kann nach einer bestimmten Zeit automatisch geschehen oder aber der Administrator muss dies \"ubernehmen. Die manuelle Sperrung eines Accounts durch den Administrator ist ebenfalls m\"oglich.
+        Oracle kann Nutzerkonten nach einer festgelegten Anzahl fehlerhafter Anmeldeversuche sperren. Die Entsperrung kann nach einer bestimmten Zeit automatisch geschehen oder aber der Administrator muss dies übernehmen. Die manuelle Sperrung eines Accounts durch den Administrator ist ebenfalls möglich.
 
         Das folgende Beispielprofil wird so erstellt, dass die Anzahl fehlerhafter Anmeldeversuche bei 4 und die Anzahl der Tage, die das Nutzerkonto gesperrt bleibt bei 30 liegt.
         \begin{lstlisting}[caption={Anzahl fehlerhafter Anmeldeversuche
@@ -503,7 +503,7 @@ SQL> CREATE PROFILE employee
   3    FAILED_LOGIN_ATTEMPTS 4
   4    PASSWORD_LOCK_TIME    30;
         \end{lstlisting}
-        Der Parameter \languageorasql{PASSWORD_LOCK_TIME} erwartet eine Zahl, die er als \enquote{Anzahl von Tagen} interpretiert. Trotzdem ist es m\"oglich die Sperrdauer des Passwortes auch auf Stunden oder Minuten zu begrenzen. Soll das Passwort nur f\"ur 45 Minuten gesperrt werden, muss ein Dezimalbruch angegeben werden: 1 Tag / 24 Stunden / 60 Minuten * 45 Minuten = (1 * 45) Tage / 24 Stunden / 60 Minuten.
+        Der Parameter \languageorasql{PASSWORD_LOCK_TIME} erwartet eine Zahl, die er als \enquote{Anzahl von Tagen} interpretiert. Trotzdem ist es möglich die Sperrdauer des Passwortes auch auf Stunden oder Minuten zu begrenzen. Soll das Passwort nur für 45 Minuten gesperrt werden, muss ein Dezimalbruch angegeben werden: 1 Tag / 24 Stunden / 60 Minuten * 45 Minuten = (1 * 45) Tage / 24 Stunden / 60 Minuten.
         \begin{lstlisting}[caption={Anzahl fehlerhafter Anmeldeversuche
         konfigurieren und das Passwort 45 Minuten sperren},label=admin218,language=oracle_sql]
 SQL> CREATE PROFILE employee
@@ -512,12 +512,12 @@ SQL> CREATE PROFILE employee
   4    PASSWORD_LOCK_TIME    45 / 24 / 60;
         \end{lstlisting}
         \begin{merke}
-          Wird f\"ur den Parameter \languageorasql{PASSWORD_LOCK_TIME} kein Wert angegeben, wird der Standardwert \enquote{1} herangezogen. Wird der Wert \enquote{unlimited} f\"ur \languageorasql{PASSWORD_LOCK_TIME} gesetzt, muss der Administrator das Nutzerkonto manuell
+          Wird für den Parameter \languageorasql{PASSWORD_LOCK_TIME} kein Wert angegeben, wird der Standardwert \enquote{1} herangezogen. Wird der Wert \enquote{unlimited} für \languageorasql{PASSWORD_LOCK_TIME} gesetzt, muss der Administrator das Nutzerkonto manuell
           entsperren.
         \end{merke}
-        Nach einem erfolgreichen Anmeldeversuch, wird die Anzahl der fehlerhaften Anmeldeversuche auf 0 zur\"uckgesetzt.
+        Nach einem erfolgreichen Anmeldeversuch, wird die Anzahl der fehlerhaften Anmeldeversuche auf 0 zurückgesetzt.
       \subsection{Passwortalterung und Ablauf des Passworts}
-        Mit Hilfe des Profilparameters \languageorasql{PASSWORD_LIFE_TIME} kann eine maximale Lebensdauer f\"ur Pass\-w\"or\-ter festgelegt werden. Wenn die angegebene Frist verstrichen ist, muss der DBA oder der Nutzer das Passwort \"andern, um sich wieder anmelden zu k\"onnen. Im folgenden Beispiel wird im Profile \identifier{employee} eine maximale Lebensdauer von 90 Tagen f\"ur die Passw\"orter festgelegt.
+        Mit Hilfe des Profilparameters \languageorasql{PASSWORD_LIFE_TIME} kann eine maximale Lebensdauer für Pass\-wör\-ter festgelegt werden. Wenn die angegebene Frist verstrichen ist, muss der DBA oder der Nutzer das Passwort ändern, um sich wieder anmelden zu können. Im folgenden Beispiel wird im Profile \identifier{employee} eine maximale Lebensdauer von 90 Tagen für die Passwörter festgelegt.
         \begin{lstlisting}[caption={Passwortlebensdauer},label=admin219,language=oracle_sql]
 SQL> CREATE PROFILE employee
   2  LIMIT
@@ -525,11 +525,11 @@ SQL> CREATE PROFILE employee
   4    PASSWORD_LOCK_TIME    30 / 24 / 60
   5    PASSWORD_LIFE_TIME    90;
         \end{lstlisting}
-        Zus\"atzlich zur Lebensdauer kann auch noch eine \enquote{Gnadenfrist} eingerichtet werden, innerhalb derer der Nutzer vor jeder Anmeldung dazu aufgefordert wird, sein Passwort zu \"andern. L\"auft auch diese zus\"atzliche Frist ab, wird das Nutzerkonto gesperrt und der Nutzer ist gezwungen sein Passwort auf ein neues zu \"andern, um wieder Zugang zu seinem Konto zu erhalten.
+        Zusätzlich zur Lebensdauer kann auch noch eine \enquote{Gnadenfrist} eingerichtet werden, innerhalb derer der Nutzer vor jeder Anmeldung dazu aufgefordert wird, sein Passwort zu ändern. Läuft auch diese zusätzliche Frist ab, wird das Nutzerkonto gesperrt und der Nutzer ist gezwungen sein Passwort auf ein neues zu ändern, um wieder Zugang zu seinem Konto zu erhalten.
 
         \bild{Lebensdauer und Gnaden\-frist eines Passworts}{password_life_and_gracetime}{1}
 
-        Im folgenden Beispiel wird das Benutzerprofil \identifier{employee} angelegt, das eine Gnadenfrist von 3 Tagen vorsieht. Diese beginnt zu laufen, nachdem sich der Benutzer nach Ablauf der \identifier{PASSWORD\_LIFE\_TIME} versucht anzumelden. Wird das Profile wie in \beispiel{admin220} eingerichtet, l\"auft die Gnadenfrist fr\"uhestens nach 90 Tagen. Meldet sich ein Nutzer erst nach 100 Tage wieder am System an, beginnt die Gnadenfrist erst dann zu laufen.
+        Im folgenden Beispiel wird das Benutzerprofil \identifier{employee} angelegt, das eine Gnadenfrist von 3 Tagen vorsieht. Diese beginnt zu laufen, nachdem sich der Benutzer nach Ablauf der \identifier{PASSWORD\_LIFE\_TIME} versucht anzumelden. Wird das Profile wie in \beispiel{admin220} eingerichtet, läuft die Gnadenfrist frühestens nach 90 Tagen. Meldet sich ein Nutzer erst nach 100 Tage wieder am System an, beginnt die Gnadenfrist erst dann zu laufen.
         \begin{lstlisting}[caption={Passwortlebensdauer und
         Gnadenfrist},label=admin220,language=oracle_sql]
 SQL> CREATE PROFILE employee
@@ -540,21 +540,21 @@ SQL> CREATE PROFILE employee
   6    PASSWORD_GRACE_TIME   3;
         \end{lstlisting}
       \subsection{Passwort History}
-        Eine Passwort History sorgt daf\"ur, dass jeder Nutzer eine bestimmte
-        Menge Passw\"orter benutzen muss und nicht immer nur ein einziges oder
+        Eine Passwort History sorgt dafür, dass jeder Nutzer eine bestimmte
+        Menge Passwörter benutzen muss und nicht immer nur ein einziges oder
         einige wenige. Mit den beiden Parametern
         \languageorasql{PASSWORD\_REUSE\_TIME} und
         \languageorasql{PASSWORD\_REUSE\_MAX} kann eine solche History aufgebaut
         werden.
         \begin{merke}
           Es sollte immer mindestens einer der beiden Parameter angegeben
-          werden, da Passw\"orter sonst beliebig oft und beliebig lang benutzt
-          werden k\"onnen. Wird f\"ur einen der beiden Parameter der Wert
+          werden, da Passwörter sonst beliebig oft und beliebig lang benutzt
+          werden können. Wird für einen der beiden Parameter der Wert
           \enquote{unlimited} gesetzt, kann der Nutzer kein Passwort wieder
           verwenden. Werden beide Parameter auf den Wert \enquote{unlimited}
           gesetzt ignoriert Oracle diese Einstellungen.
         \end{merke}
-        Das folgende Profil sorgt mit Hilfe des Parameters \languageorasql{PASSWORD\_REUSE\_TIME} daf\"ur, dass ein Zeitraum von 30 Tagen verstreichen muss, ehe ein Nutzer ein bereits benutztes Passwort erneut verwenden kann.
+        Das folgende Profil sorgt mit Hilfe des Parameters \languageorasql{PASSWORD\_REUSE\_TIME} dafür, dass ein Zeitraum von 30 Tagen verstreichen muss, ehe ein Nutzer ein bereits benutztes Passwort erneut verwenden kann.
         \begin{lstlisting}[caption={Wiederverwendung eines
         Passworts},label=admin221,language=oracle_sql]
 SQL> CREATE PROFILE employee
@@ -565,7 +565,7 @@ SQL> CREATE PROFILE employee
   6    PASSWORD_GRACE_TIME   3
   7    PASSWORD_REUSE_TIME   30;
         \end{lstlisting}
-        Eine Alternative hierzu bietet der \identifier{PASSWORD\_REUSE\_MAX} Parameter. Mit ihm wird es m\"oglich, dem Nutzer die Verwendung der n letzten Passw\"orter zu verbieten.
+        Eine Alternative hierzu bietet der \identifier{PASSWORD\_REUSE\_MAX} Parameter. Mit ihm wird es möglich, dem Nutzer die Verwendung der n letzten Passwörter zu verbieten.
         \begin{lstlisting}[caption={Wiederverwendung eines
         Passworts},label=admin222,language=oracle_sql]
 SQL> CREATE PROFILE employee
@@ -576,7 +576,7 @@ SQL> CREATE PROFILE employee
   6    PASSWORD_GRACE_TIME   3
   7    PASSWORD_REUSE_MAX    13;
         \end{lstlisting}
-        In \beispiel{admin222} wird das Profil so konfiguriert, dass die letzten 13 Passw\"orter nicht erneut verwendet werden k\"onnen. Der Benutzer muss also mindestens 14 verschiedene Passw\"orter benutzen.
+        In \beispiel{admin222} wird das Profil so konfiguriert, dass die letzten 13 Passwörter nicht erneut verwendet werden können. Der Benutzer muss also mindestens 14 verschiedene Passwörter benutzen.
         \begin{lstlisting}[caption={Wiederverwendung eines
         Passworts},label=admin223,language=oracle_sql]
 SQL> CREATE PROFILE employee
@@ -588,9 +588,9 @@ SQL> CREATE PROFILE employee
   7    PASSWORD_REUSE_MAX    13
   8    PASSWORD_REUSE_TIME   30;
         \end{lstlisting}
-        Werden beide Parameter kombiniert, m\"ussen auch beide Bedingungen erf\"ullt sein, bevor ein Passwort wiederverwendet werden kann. Gem\"a\ss{} \beispiel{admin223} muss ein Passwort \"alter als 30 Tage sein und es darf nicht in der Liste der letzten 13 Passw\"orter vorkommen.
-      \subsection{Komplexit\"atspr\"ufung von Passw\"ortern}
-        Oracle hat die F\"ahigkeit, ein Passwort auf seine Komplexit\"at hin zu \"uberpr\"ufen. F\"ur diese Aufgabe wird eine PL/SQL Routine verwendet. Es existiert bereits eine Standardroutine, die dem Skript \oscommand{UTLPWDMG.SQL} entnommen werden kann. Der Administrator hat die M\"oglichkeit, diese Routine beizubehalten, sie zu ver\"andern oder eine eigene zu entwerfen.
+        Werden beide Parameter kombiniert, müssen auch beide Bedingungen erfüllt sein, bevor ein Passwort wiederverwendet werden kann. Gemäß \beispiel{admin223} muss ein Passwort älter als 30 Tage sein und es darf nicht in der Liste der letzten 13 Passwörter vorkommen.
+      \subsection{Komplexitätsprüfung von Passwörtern}
+        Oracle hat die Fähigkeit, ein Passwort auf seine Komplexität hin zu überprüfen. Für diese Aufgabe wird eine PL/SQL Routine verwendet. Es existiert bereits eine Standardroutine, die dem Skript \oscommand{UTLPWDMG.SQL} entnommen werden kann. Der Administrator hat die Möglichkeit, diese Routine beizubehalten, sie zu verändern oder eine eigene zu entwerfen.
 
         Falls eine eigene Routine entworfen werden soll, muss sie die folgende Signatur aufweisen:
         \begin{lstlisting}[caption={Format der Passwortroutine},label=admin224,language=plsql]
@@ -601,8 +601,8 @@ routinen_name
   old_password IN VARCHAR2
 ) RETURN BOOLEAN
         \end{lstlisting}
-        Das folgende Statement zeigt ein Beispiel f\"ur eine Komplexit\"atspr\"ufung.
-        \begin{lstlisting}[caption={Beispielkomplexit\"atsroutine},label=admin225, language=plsql]
+        Das folgende Statement zeigt ein Beispiel für eine Komplexitätsprüfung.
+        \begin{lstlisting}[caption={Beispielkomplexitätsroutine},label=admin225, language=plsql]
 SQL> CREATE OR REPLACE FUNCTION password_verify_fkt (
   2    username     VARCHAR2,
   3    password     VARCHAR2,
@@ -627,46 +627,46 @@ SQL> ALTER PROFILE angestellter
         \begin{merke}
           Der Nutzer \identifier{sys} muss der Besitzer der Passwortroutine sein.
         \end{merke}
-        Damit ein normaler Nutzer sein Passwort \"andern kann, muss er das
+        Damit ein normaler Nutzer sein Passwort ändern kann, muss er das
         \languageorasql{ALTER USER}-Statement verwenden.
-        \begin{lstlisting}[caption={Ein Nutzer \"andert sein Passwort}, label=admin227, language=oracle_sql]
+        \begin{lstlisting}[caption={Ein Nutzer ändert sein Passwort}, label=admin227, language=oracle_sql]
 SQL> ALTER USER oracle IDENTIFIED BY hallo REPLACE oracle;
         \end{lstlisting}
-        Durch die \languageorasql{REPLACE}-Klausel wird sichergestellt, das der Nutzer auch das alte Passwort wissen muss, um eine \"Anderung durchf\"uhren zu k\"onnen.
-      \subsection{Benutzerprofile l\"oschen}
-        Ein Benutzerprofil wird mit dem Kommando \languageorasql{DROP PROFILE} gel\"oscht. Ist das betreffende Profil zum Zeitpunkt des L\"oschens noch einem Nutzerkonto zugewiesen, muss zus\"atzlich die Klausel \languageorasql{CASCADE} verwendet werden. Den Nutzerkonten wird dann automatisch das Profil \identifier{default} zugewiesen.
+        Durch die \languageorasql{REPLACE}-Klausel wird sichergestellt, das der Nutzer auch das alte Passwort wissen muss, um eine Änderung durchführen zu können.
+      \subsection{Benutzerprofile löschen}
+        Ein Benutzerprofil wird mit dem Kommando \languageorasql{DROP PROFILE} gelöscht. Ist das betreffende Profil zum Zeitpunkt des Löschens noch einem Nutzerkonto zugewiesen, muss zusätzlich die Klausel \languageorasql{CASCADE} verwendet werden. Den Nutzerkonten wird dann automatisch das Profil \identifier{default} zugewiesen.
         \begin{literaturinternet}
           \item \cite{i1006575}
         \end{literaturinternet}
     \section{Privilegien}
       \begin{merke}
         Ein Privileg ist in einer Oracle-Datenbank das Recht, eine bestimmte
-        Aktion auszuf\"uhren oder Zugriff auf ein Objekt eines anderen
+        Aktion auszuführen oder Zugriff auf ein Objekt eines anderen
         Nutzers zu erhalten.
       \end{merke}
-      Einige Beispiele hierf\"ur sind:
+      Einige Beispiele hierfür sind:
       \begin{itemize}
         \item Anmelden an der Datenbank
         \item Erstellen einer Tabelle
         \item Erstellen von Views
         \item Verwalten von Benutzern
         \item Zeilen aus einer Tabelle eines anderen Nutzers selektieren
-        \item Gespeicherte Prozeduren eines anderen Nutzers ausf\"uhren
+        \item Gespeicherte Prozeduren eines anderen Nutzers ausführen
       \end{itemize}
       Nutzern werden  Privilegien erteilt, damit sie ihre Arbeit verrichten
-      k\"onnen. Sie sollten jedoch nur dann vergeben werden, wenn ein Nutzer sie
-      auch wirklich ben\"otigt, da die Vergabe nicht ben\"otigter Privilegien
-      die Sicherheit der Datenbank gef\"ahrden kann.
+      können. Sie sollten jedoch nur dann vergeben werden, wenn ein Nutzer sie
+      auch wirklich benötigt, da die Vergabe nicht benötigter Privilegien
+      die Sicherheit der Datenbank gefährden kann.
       
-      Nutzer k\"onnen Privilegien auf zwei verschiedenen Wegen erhalten:
+      Nutzer können Privilegien auf zwei verschiedenen Wegen erhalten:
       \begin{itemize}
         \item Ein Privileg kann einem Nutzer direkt erteilt werden
-        \item Privilegien k\"onnen zu \enquote{Rollen} zusammengefasst werden, die dann einem Nutzer zugewiesen werden.
+        \item Privilegien können zu \enquote{Rollen} zusammengefasst werden, die dann einem Nutzer zugewiesen werden.
       \end{itemize}
-      Rollen werden an sp\"aterer Stelle in dieser Unterlage behandelt.
+      Rollen werden an späterer Stelle in dieser Unterlage behandelt.
       \subsection{Systemprivilegien}
         Ein Systemprivileg ist das Recht, eine bestimmte Aktion innerhalb der
-        Datenbank aus\-f\"uh\-ren zu d\"urfen. Beispielsweise sind die Rechte,
+        Datenbank aus\-füh\-ren zu dürfen. Beispielsweise sind die Rechte,
         sich an der Datenbank anzumelden oder eine Tabelle zu erstellen beides
         Systemprivilegien. Es gibt insgesamt mehr als 100 einzelne
         Systemprivilegien.
@@ -676,11 +676,11 @@ SQL> ALTER USER oracle IDENTIFIED BY hallo REPLACE oracle;
         bildet das Privileg sich an der Datenbank anmelden zu dürfen, da dies
         jeder Nutzer benötigt.
         \subsubsection{Systemprivilegien vergeben}
-          Nur drei Nutzerarten k\"onnen Systemprivilegien erteilen und auch wieder entziehen:
+          Nur drei Nutzerarten können Systemprivilegien erteilen und auch wieder entziehen:
           \begin{itemize}
             \item Nutzer die das Privileg \privileg{sysdba} besitzen.
             \item Nutzer die das Privileg \privileg{GRANT ANY PRIVILEGE} besitzen.
-            \item Nutzer die ein Privileg mit der \enquote{ADMIN OPTION} \"ubergeben bekommen haben.
+            \item Nutzer die ein Privileg mit der \enquote{ADMIN OPTION} übergeben bekommen haben.
           \end{itemize}
           Das \beispiel{admin228} zeigt, wie dem Nutzer \identifier{hr} das Privileg \privileg{create session}, mit Hilfe des SQL-Kommandos \languageorasql{GRANT} erteilt wird.
           \begin{lstlisting}[caption={Zuweisen des \privileg{create
@@ -693,7 +693,7 @@ SQL> GRANT create session
           \begin{merke}
             Die Vergabe eines System Privilegs wirkt sich augenblicklich aus.
           \end{merke}
-          Es ist auch m\"oglich, mehrere Privilegien auf einmal zu erteilen. Soll dem Nutzer \identifier{hr} gleichzeitig auch die Erstellung von Tabellen erm\"oglicht werden, geschieht dies wie folgt:
+          Es ist auch möglich, mehrere Privilegien auf einmal zu erteilen. Soll dem Nutzer \identifier{hr} gleichzeitig auch die Erstellung von Tabellen ermöglicht werden, geschieht dies wie folgt:
           \begin{lstlisting}[caption={Zuweisen mehrerer Privilegien
           gleichzeitig},label=admin229,language=oracle_sql]
 SQL> GRANT create session, create table
@@ -701,8 +701,8 @@ SQL> GRANT create session, create table
           \end{lstlisting}
         \subsubsection{Die Admin Option}
           \begin{merke}
-            Nutzer welche ein Systemprivileg mit der Admin Option \"ubergeben
-            bekommen haben, haben die M\"oglichkeit dieses Privileg an andere
+            Nutzer welche ein Systemprivileg mit der Admin Option übergeben
+            bekommen haben, haben die Möglichkeit dieses Privileg an andere
             Nutzer weiterzugeben oder es den Anderen wieder zu entziehen. Daher
             wird dringend empfohlen, diese Option nur an äußerst sorgfälltig
             ausgewähltes Administrationspersonal auszugeben.
@@ -741,26 +741,26 @@ SQL> REVOKE create session
 Revoke succeeded.
           \end{lstlisting}
           Man sieht wie der Nutzer \identifier{hr} das \privileg{create
-          session}-Privileg mit der Admin Option \"ubergeben bekommt und dieses
+          session}-Privileg mit der Admin Option übergeben bekommt und dieses
           an den Nutzer \identifier{sh} weiter gibt. Da er dies ohne Admin
           Option tut, kann \identifier{sh} seinerseits das Privileg nicht
           weitergeben. \identifier{hr} ist jedoch in der Lage, dem Nutzer
           \identifier{sh} das Privileg wieder zu entziehen.
-        \subsubsection{Die Nutzung von Systemprivilegien einschr\"anken}
+        \subsubsection{Die Nutzung von Systemprivilegien einschränken}
           Einige Systemprivilegien tragen das Wort \enquote{ANY} in ihrem Namen,
           wie z. B. das Privileg \privileg{create any table}. Der Unterschied
           zwischen \privileg{create table} und \privileg{create any table} ist,
           dass das \privileg{create table}-Privileg den Nutzer dazu berechtigt,
-          in seinem eigenen Schema Tabellen anzulegen, w\"ahrend das
-          \privileg{create any table}-Privileg ihm die M\"oglichkeit gibt, in
+          in seinem eigenen Schema Tabellen anzulegen, während das
+          \privileg{create any table}-Privileg ihm die Möglichkeit gibt, in
           jedem beliebigen Schema Tabellen anzulegen.
 
           Ein anderes Beispiel ist das \privileg{select any table}-Privileg. Es
-          erm\"oglicht einem Nutzer das Lesen aller Tabellen in allen Schemata
+          ermöglicht einem Nutzer das Lesen aller Tabellen in allen Schemata
           der gesamten Datenbank. Die einzige Ausnahme bildet hier das Data
           Dictionary. Dies wird durch den Initialisierungsparameter
           \parameter{O7\_DICTIONARY\_ACCESSIBILITY} (das erste Zeichen ist ein
-          gro\ss{}es O) vor solchen Zugriffen gesch\"utzt.
+          großes O) vor solchen Zugriffen geschützt.
           \begin{lstlisting}[caption={Die Auswirkungen des \privileg{select any
           table}-Privilegs},label=admin231,language=oracle_sql,alsolanguage=sqlplus]
 connect hr/hr
@@ -806,11 +806,11 @@ SQL> SELECT *
 SQL> REVOKE create any table
   2  FROM   hr;
           \end{lstlisting}
-          Hiermit wird auch eine evtl. vergebene Admin Option entzogen. Ein explizites Entziehen der Admin Option, ohne das dazugeh\"orende Privileg ist nicht m\"oglich. Direkt nach diesem \languageorasql{REVOKE}-Statement kann der Nutzer \identifier{hr} keine Tabellen mehr in fremden Schemata erstellen.
+          Hiermit wird auch eine evtl. vergebene Admin Option entzogen. Ein explizites Entziehen der Admin Option, ohne das dazugehörende Privileg ist nicht möglich. Direkt nach diesem \languageorasql{REVOKE}-Statement kann der Nutzer \identifier{hr} keine Tabellen mehr in fremden Schemata erstellen.
           \begin{merke}
             Das Entziehen eines Systemprivilegs wirkt sich augenblicklich aus.
           \end{merke}
-          Es k\"onnen auch mehrere Privilegien auf einmal entzogen werden:
+          Es können auch mehrere Privilegien auf einmal entzogen werden:
           \begin{lstlisting}[caption={Entziehen mehrerer
           Privilegien},label=admin234,language=oracle_sql]
 SQL> REVOKE create table, create session
@@ -818,7 +818,7 @@ SQL> REVOKE create table, create session
           \end{lstlisting}
         \subsubsection{Auswirkungen des Entzuges von Systemprivilegien}
           \begin{enumerate}
-            \item Dem Nutzer \identifier{hr} wird das Privileg \privileg{create any table} mit der Admin Option \"ubergeben.
+            \item Dem Nutzer \identifier{hr} wird das Privileg \privileg{create any table} mit der Admin Option übergeben.
             \item \identifier{hr} erstellt eine Tabelle in seinem eigenen Schema.
             \item Er gibt das \privileg{create any table}-Privileg an den Nutzer \identifier{sh} weiter.
             \item \identifier{sh} erstellt eine Tabelle in seinem eigenen Schema.
@@ -829,13 +829,13 @@ SQL> REVOKE create table, create session
             \item Die von \identifier{hr} erstellte Tabelle existiert weiter.
             \item \identifier{sh} besitzt weiterhin das Privileg \privileg{create any table} und seine Tabelle bleibt ebenfalls bestehen.
           \end{itemize}
-          F\"ur den DBA bedeutet dies, dass der Entzug des \privileg{create any table}-Privileges sich nicht kaskadierend auswirkt. Das hei\ss{}t, dass er allen Nutzern einzeln (hier \identifier{hr} und \identifier{sh}) das \privileg{create any table}-Privileg entziehen muss. Dies nur am Nutzer \identifier{hr} zu vollziehen gen\"ugt nicht.
+          Für den DBA bedeutet dies, dass der Entzug des \privileg{create any table}-Privileges sich nicht kaskadierend auswirkt. Das heißt, dass er allen Nutzern einzeln (hier \identifier{hr} und \identifier{sh}) das \privileg{create any table}-Privileg entziehen muss. Dies nur am Nutzer \identifier{hr} zu vollziehen genügt nicht.
       \subsection{Objektprivilegien}
         \begin{merke}
-          Objektprivilegien erm\"oglichen einem Nutzer den Zugriff auf Objekt in einem anderen Schema. F\"ur fast jede Art von Schemaobjekt sind eigene Objektprivilegien vorhanden.
+          Objektprivilegien ermöglichen einem Nutzer den Zugriff auf Objekt in einem anderen Schema. Für fast jede Art von Schemaobjekt sind eigene Objektprivilegien vorhanden.
         \end{merke}
         \subsubsection{Objektprivilegien vergeben}
-          Objektprivilegien werden auf die gleiche Art und Weise vergeben, wie Systemprivilegien. Der einzige Unterschied ist, dass man angeben muss, auf welches Objekt sich das Privileg beziehen soll. Muss beispielsweise dem Nutzer \identifier{hr} die M\"oglichkeit einger\"aumt werden, die Tabelle \identifier{sales} des Nutzers \identifier{sh} abzufragen, geschieht dies wie folgt:
+          Objektprivilegien werden auf die gleiche Art und Weise vergeben, wie Systemprivilegien. Der einzige Unterschied ist, dass man angeben muss, auf welches Objekt sich das Privileg beziehen soll. Muss beispielsweise dem Nutzer \identifier{hr} die Möglichkeit eingeräumt werden, die Tabelle \identifier{sales} des Nutzers \identifier{sh} abzufragen, geschieht dies wie folgt:
           \begin{lstlisting}[caption={Zuweisen eines Objekt
           Privilegs},label=admin235,language=oracle_sql] 
 SQL> GRANT select ON sh.sales
@@ -844,24 +844,24 @@ SQL> GRANT select ON sh.sales
           \begin{merke}
             Genau wie bei Systemprivilegien wirkt sich auch hier die Vergabe sofort nach dem \languageorasql{GRANT}-Statement aus.
           \end{merke}
-          Um einem Nutzer alle Objektprivilegien an einem Objekt zu \"ubergeben wird das Schl\"us\-selwort \languageorasql{ALL} verwendet.
+          Um einem Nutzer alle Objektprivilegien an einem Objekt zu übergeben wird das Schlüs\-selwort \languageorasql{ALL} verwendet.
           \begin{lstlisting}[caption={Zuweisen aller
           Objektprivilegien},label=admin236,language=oracle_sql]
 SQL> GRANT all ON sh.sales
   2  TO oracle;
           \end{lstlisting}
         \subsubsection{Wer kann Objektprivilegien vergeben?}
-          Jeder Nutzer hat automatisch alle Objektprivilegien f\"ur alle Objekte, die sich in seinem eigenen Schema befinden. Er kann somit die Objektprivilegien f\"ur alle eigenen Objekte an andere Nutzer weitergeben. Eine weitere M\"oglichkeit Objektprivilegien verteilen zu k\"onnen, ist mit dem Systemprivileg \privileg{grant any object privilege} gegeben. Besitzt ein Nutzer dieses Systemprivileg, kann er auf jedes Objekt eines beliebigen Schemas Objektprivilegien vergeben.
+          Jeder Nutzer hat automatisch alle Objektprivilegien für alle Objekte, die sich in seinem eigenen Schema befinden. Er kann somit die Objektprivilegien für alle eigenen Objekte an andere Nutzer weitergeben. Eine weitere Möglichkeit Objektprivilegien verteilen zu können, ist mit dem Systemprivileg \privileg{grant any object privilege} gegeben. Besitzt ein Nutzer dieses Systemprivileg, kann er auf jedes Objekt eines beliebigen Schemas Objektprivilegien vergeben.
 
           So wie bei den Systemprivilegien die Admin Option existiert, gibt es
-          f\"ur Objektprivilegien die \enquote{GRANT OPTION}. Hat ein Nutzer ein
-          Objektprivileg zusammen mit der Grant Option \"ubergeben bekommen,
+          für Objektprivilegien die \enquote{GRANT OPTION}. Hat ein Nutzer ein
+          Objektprivileg zusammen mit der Grant Option übergeben bekommen,
           kann er es an jeden anderen Nutzer weitergeben.
           \begin{lstlisting}[caption={Zuweisen von Objektprivilegien mit GRANT OPTION},label=admin237,language=oracle_sql]
 SQL> GRANT insert, update, delete, select ON sh.sales
   2  TO hr WITH GRANT OPTION;
           \end{lstlisting}
-        \subsubsection{Objektprivilegien anstelle des Objekteigent\"umers vergeben}
+        \subsubsection{Objektprivilegien anstelle des Objekteigentümers vergeben}
         \label{grantingobjectspriveonbehalfofowner}
           Der Benutzer \identifier{hr} besitzt das \privileg{grant any object privilege}. Er besitzt keine Objektprivilegien auf die Tabelle \identifier{sales} des Nutzers \identifier{sh}.
 
@@ -880,11 +880,11 @@ GRANTEE   OWNER   GRANTOR   PRIVILEGE     GRANTABLE
 --------- ------- --------- ------------- -----------
 OE        SH      SH        &SELECT&        YES
           \end{lstlisting}
-          Diese Situation entsteht, da sich Oracle wie folgt verh\"alt:
+          Diese Situation entsteht, da sich Oracle wie folgt verhält:
 
-          Der Nutzer, der als grantor eines Objekt Privilegs gespeichert wird, kann ein Nutzer mit dem \enquote{grant any object privilege}-Privileg sein oder der Eigent\"umer des betreffenden Objekts. Tritt ein Nutzer mit dem \enquote{grant any object privilege}-Privileg als grantor auf und hat dabei kein \enquote{select}-Privileg auf die entsprechende Tabelle, wird der Eigent\"umer als grantor gespeichert. Anderenfalls wird der tats\"achliche grantor gespeichert.
+          Der Nutzer, der als grantor eines Objekt Privilegs gespeichert wird, kann ein Nutzer mit dem \enquote{grant any object privilege}-Privileg sein oder der Eigentümer des betreffenden Objekts. Tritt ein Nutzer mit dem \enquote{grant any object privilege}-Privileg als grantor auf und hat dabei kein \enquote{select}-Privileg auf die entsprechende Tabelle, wird der Eigentümer als grantor gespeichert. Anderenfalls wird der tatsächliche grantor gespeichert.
 
-          Der Benutzer \identifier{oe} hat vom Nutzer \identifier{hr} das \privileg{select}-Privileg auf die Tabelle \identifier{sales} des Nutzers \identifier{sh} mit Grant Option \"ubergeben bekommen.
+          Der Benutzer \identifier{oe} hat vom Nutzer \identifier{hr} das \privileg{select}-Privileg auf die Tabelle \identifier{sales} des Nutzers \identifier{sh} mit Grant Option übergeben bekommen.
 
           \identifier{oe} setzt folgendes SQL-Statement ab:
           \begin{lstlisting}[caption={\identifier{oe} erteilt \identifier{bi} das SELECT-Privileg auf \identifier{sh.sales}},label=admin240,language=oracle_sql]
@@ -903,11 +903,11 @@ BI        SH      OE        &SELECT&        NO
           \end{lstlisting}
           Da der Nutzer \identifier{oe} das \privileg{select} Privileg auf die Tabelle \identifier{sales} besitzt, wird er als grantor eingetragen.
         \subsubsection{Privilegien auf Spalten vergeben}
-          Die beiden Objektprivilegien \privileg{insert} und \privileg{update} k\"onnen auch auf Spalten ebene vergeben werden. Dabei muss beachtet werden, dass alle Spalten, die ein NOT NULL-Constraint haben in die Privilegienvergabe mit einbezogen werden oder diese Spalten m\"ussen einen Standardwert aufweisen. Anderenfalls ist es dem Nutzer nicht m\"oglich eine Zeile in die Tabelle einzuf\"ugen. \beispiel{admin242} zeigt wie dem Nutzer \identifier{sh} das \privileg{insert}-Privileg auf die Spalten \identifier{department\_id} und \identifier{department\_name} der Tabelle \identifier{departments} des Nutzers \identifier{hr} \"ubergeben wird.
+          Die beiden Objektprivilegien \privileg{insert} und \privileg{update} können auch auf Spalten ebene vergeben werden. Dabei muss beachtet werden, dass alle Spalten, die ein NOT NULL-Constraint haben in die Privilegienvergabe mit einbezogen werden oder diese Spalten müssen einen Standardwert aufweisen. Anderenfalls ist es dem Nutzer nicht möglich eine Zeile in die Tabelle einzufügen. \beispiel{admin242} zeigt wie dem Nutzer \identifier{sh} das \privileg{insert}-Privileg auf die Spalten \identifier{department\_id} und \identifier{department\_name} der Tabelle \identifier{departments} des Nutzers \identifier{hr} übergeben wird.
           \begin{lstlisting}[caption={Zuweisen von Objektprivilegien auf Spaltenebene},label=admin242,language=oracle_sql]
 SQL> GRANT insert (department_id, department_name) ON hr.departments TO sh;
           \end{lstlisting}
-          Der Benutzer \identifier{sh} kann  diese Privilegien nun nutzen, um Datens\"atze in die Tabelle \identifier{departments} einzuf\"ugen. Da er aber nur auf zwei der vier Spalten das \privileg{insert}-Privileg erhalten hat, kann er auch nur diese beiden bef\"ullen.
+          Der Benutzer \identifier{sh} kann  diese Privilegien nun nutzen, um Datensätze in die Tabelle \identifier{departments} einzufügen. Da er aber nur auf zwei der vier Spalten das \privileg{insert}-Privileg erhalten hat, kann er auch nur diese beiden befüllen.
           \begin{lstlisting}[caption={Zuweisen von Objektprivilegien auf Spaltenebene},label=admin243,language=oracle_sql]
 SQL> INSERT INTO hr.departments (department_id, department_name)
   2  VALUES ('999', 'My own department');
@@ -920,14 +920,14 @@ SQL> INSERT INTO hr.departments (department_id, department_name, location_id)
 ERROR at linie 1:
 &\textbf{\textcolor{red}{ORA-01031: insufficient privileges}}&
           \end{lstlisting}
-          Der erste Einf\"ugevorgang ist erfolgreich, da \identifier{sh} die notwendigen Privilegien besitzt. Der zweite scheitert, da der Nutzer \identifier{sh} kein \privileg{insert}-Privileg auf die Spalte \identifier{location\_id} hat.
+          Der erste Einfügevorgang ist erfolgreich, da \identifier{sh} die notwendigen Privilegien besitzt. Der zweite scheitert, da der Nutzer \identifier{sh} kein \privileg{insert}-Privileg auf die Spalte \identifier{location\_id} hat.
           \begin{merke}
-            Da sich in einer gr\"o\ss{}eren Datenbank mit vielen Tabellen und Nutzern die Privilegienvergabe auf Spaltenebene extrem aufwendig gestalten kann, empfiehlt es sich stattdessen Views zum Einsatz zu bringen. Diese erm\"oglichen ebenfalls Nutzer auf bestimmte Spalten einer Tabelle einzuschr\"anken.
+            Da sich in einer größeren Datenbank mit vielen Tabellen und Nutzern die Privilegienvergabe auf Spaltenebene extrem aufwendig gestalten kann, empfiehlt es sich stattdessen Views zum Einsatz zu bringen. Diese ermöglichen ebenfalls Nutzer auf bestimmte Spalten einer Tabelle einzuschränken.
           \end{merke}
         \subsubsection{Objektprivilegien entziehen}
-          Objektprivilegien werden einem Nutzer auf die gleiche Art und Weise wie Systemprivilegien entzogen und auch die Auswirkungen diesbez\"uglich sind sofort zu sp\"uren.
+          Objektprivilegien werden einem Nutzer auf die gleiche Art und Weise wie Systemprivilegien entzogen und auch die Auswirkungen diesbezüglich sind sofort zu spüren.
           \begin{merke}
-            Ein Nutzer kann nur die Objektprivilegien entziehen, f\"ur die er als grantor eingetragen wurde.
+            Ein Nutzer kann nur die Objektprivilegien entziehen, für die er als grantor eingetragen wurde.
           \end{merke}
           \begin{lstlisting}[caption={Entziehen von Objektprivilegien},label=admin244,language=oracle_sql]
 -- Entzieht ein einzelnes Privileg
@@ -941,10 +941,10 @@ REVOKE ALL ON sh.sales FROM bi;
 Revoke succeeded.
           \end{lstlisting}
           \begin{merke}
-            Objektprivilegien die auf einzelne Spalten vergeben wurden, k\"onnen nicht spaltenweise entzogen werden. Das betreffende Privileg muss immer von der gesamten Tabelle entzogen und evtl. neu vergeben werden.
+            Objektprivilegien die auf einzelne Spalten vergeben wurden, können nicht spaltenweise entzogen werden. Das betreffende Privileg muss immer von der gesamten Tabelle entzogen und evtl. neu vergeben werden.
           \end{merke}
         \subsubsection{Kaskadierende Effekte beim Entzug von Objektprivilegien}
-          W\"ahrend bei den Systemprivilegien keine kaskadierenden Effekte beim
+          Während bei den Systemprivilegien keine kaskadierenden Effekte beim
           Entzug auftreten, ist dies bei Objektprivilegien durchaus der Fall.
 
           \beispiel{admin245} zeigt den soeben beschriebenen kaskadierenden
@@ -956,7 +956,7 @@ Revoke succeeded.
             Genauso wie die Admin Option bei Systemprivilegien, kann auch die
             Grant Option bei den Objektprivilegien nicht einzeln entzogen
             werden. Es muss erst das ganze Privileg entzogen und
-            anschlie\ss{}end ohne Grant Option neu zugewiesen werden.
+            anschließend ohne Grant Option neu zugewiesen werden.
           \end{merke}
           
 \clearpage
@@ -1002,7 +1002,7 @@ no rows selected
             \item \cite{BABCIHGB}
           \end{literaturinternet}
       \subsection{Rollen}
-        Rollen sind benannte Gruppierungen von Privilegien, die Nutzern oder anderen Rollen zugewiesen werden k\"onnen. Benutzerkonten und Rollen teilen sich den gleichen Namensraum, was bedeutet, dass der Name einer Rolle nicht gleichzeitig auch der Name eines Benutzerkontos sein kann.
+        Rollen sind benannte Gruppierungen von Privilegien, die Nutzern oder anderen Rollen zugewiesen werden können. Benutzerkonten und Rollen teilen sich den gleichen Namensraum, was bedeutet, dass der Name einer Rolle nicht gleichzeitig auch der Name eines Benutzerkontos sein kann.
         \begin{lstlisting}[caption={Rollen und Benutzerkonten teilen sich den gleichen Namensraum},label=admin246,language=oracle_sql]
 SQL> CREATE USER nameconflict
   2  IDENTIFIED BY password;
@@ -1015,22 +1015,22 @@ ERROR at line 1:
 &\textbf{\textcolor{red}{ORA-01921: role name 'NAMECONFLICT' conflicts with another user or role name}}&
         \end{lstlisting}
 %         Rollen dienen dazu, Vergabe und Kontrolle von System- und Objektprivilegien zu vereinfachen.
-        Sie sind keine Schemaobjekte, was bedeutet, dass Rollen nicht zu einem bestimmten Schema geh\"oren. Einmal erstellt, sind sie in der gesamten Datenbank verf\"ugbar.
+        Sie sind keine Schemaobjekte, was bedeutet, dass Rollen nicht zu einem bestimmten Schema gehören. Einmal erstellt, sind sie in der gesamten Datenbank verfügbar.
         \subsubsection{Vorteile des Rollenkonzepts}
           \begin{itemize}
             \item \textbf{Einfache Administration von Privilegien}: Anstatt die gleichen Privilegien mehreren Nutzern zu geben, werden diese zu einer Rolle zusammengefasst und dann den Nutzern erteilt.
-            \item \textbf{Dynamische Verwaltung von Privilegien}: Ben\"otigt eine Gruppe von Datenbankbenutzern andere Privilegien, m\"ussen lediglich die betreffenden Rollen ver\"an\-dert werden.
-            \item \textbf{Selektive Privilegien Verwaltung}: Rollen k\"onnen ein- und ausgeschaltet werden. Eine ausgeschaltete Rolle stellt keine Privilegien mehr zur Verf\"ugung. So k\"onnen Privilegien situationsabh\"angig erteilt und entzogen werden.
-            \item \textbf{Sicherheit}: Rollen k\"onnen mit Passw\"ortern versehen werden, um sie vor unbefugter Benutzung zu sichern.
+            \item \textbf{Dynamische Verwaltung von Privilegien}: Benötigt eine Gruppe von Datenbankbenutzern andere Privilegien, müssen lediglich die betreffenden Rollen verän\-dert werden.
+            \item \textbf{Selektive Privilegien Verwaltung}: Rollen können ein- und ausgeschaltet werden. Eine ausgeschaltete Rolle stellt keine Privilegien mehr zur Verfügung. So können Privilegien situationsabhängig erteilt und entzogen werden.
+            \item \textbf{Sicherheit}: Rollen können mit Passwörtern versehen werden, um sie vor unbefugter Benutzung zu sichern.
           \end{itemize}
-          Rollen werden oft f\"ur bestimmte Datenbankanwendungen erstellt, um
-          auf diese Weise den Nutzern der Anwendung alle ben\"otigten
+          Rollen werden oft für bestimmte Datenbankanwendungen erstellt, um
+          auf diese Weise den Nutzern der Anwendung alle benötigten
           Privilegien zuzuweisen.
 \clearpage
           \vspace{\baselineskip}
           \bild{Rollenkonzept}{rollenkonzept}{1.2}
         \subsubsection{Rollen erstellen}
-          Eine Rolle wird in SQL mit dem Statement \languageorasql{CREATE ROLE} erstellt, wof\"ur das gleichnamige Privileg \privileg{CREATE ROLE} ben\"otigt wird. Direkt nach der Erstellung besitzt eine Rolle keine Privilegien. Diese m\"ussen sp\"ater erst erteilt werden. Das folgende SQL-Statement erstellt die Rolle \privileg{r\_employee}.
+          Eine Rolle wird in SQL mit dem Statement \languageorasql{CREATE ROLE} erstellt, wofür das gleichnamige Privileg \privileg{CREATE ROLE} benötigt wird. Direkt nach der Erstellung besitzt eine Rolle keine Privilegien. Diese müssen später erst erteilt werden. Das folgende SQL-Statement erstellt die Rolle \privileg{r\_employee}.
           \begin{lstlisting}[caption={Erstellen einer Rolle},label=admin247,language=oracle_sql]
 SQL> CREATE ROLE r_employee;
           \end{lstlisting}
@@ -1053,7 +1053,7 @@ Revoke succeeded.
         \subsubsection{Rollen vergeben und entziehen}
           Jeder Nutzer, der das Systemprivileg \privileg{GRANT ANY ROLE}
           besitzt, kann anderen Nutzern oder Rollen, Rollen entziehen oder
-          zuweisen. F\"ur Rollen existiert ebenfalls die Admin Option. Das
+          zuweisen. Für Rollen existiert ebenfalls die Admin Option. Das
           Verhalten dieser Option ist bei Rollen und Systemprivilegien gleich.
           \begin{merke}
             Eine Rolle, die einer anderen Rolle zugewiesen wurde, wird als \enquote{indirekt zugewiesene Rolle} bezeichnet.
@@ -1067,14 +1067,14 @@ SQL> GRANT r_clerk TO hr, sh;
           \end{lstlisting}
         \subsubsection{Rollen und DDL}
           \label{rolesandddl}
-          Um Objekte erstellen oder ver\"andern zu k\"onnen, ben\"otigt ein Nutzer mindestens das entsprechende Systemprivileg, z. B. \privileg{create table}, \privileg{create view} oder \privileg{create procedure} und in manchen Situationen auch ein Objektprivileg. Wenn beispielsweise eine View erzeugt werden soll, muss der Ersteller folgende Privilegien besitzen:
+          Um Objekte erstellen oder verändern zu können, benötigt ein Nutzer mindestens das entsprechende Systemprivileg, z. B. \privileg{create table}, \privileg{create view} oder \privileg{create procedure} und in manchen Situationen auch ein Objektprivileg. Wenn beispielsweise eine View erzeugt werden soll, muss der Ersteller folgende Privilegien besitzen:
           \begin{itemize}
             \item \privileg{create view}
             \item \privileg{select} auf die Basistabelle
           \end{itemize}
-          Wird mittels einer Rolle ein Privileg zugewiesen, das zur Ausf\"uhrung einer DML-Operation ben\"otigt wird, so wird sich Oracle gegen die Ausf\"uhrung des DDL-Statements sperren. Auf das Beispiel bezogen bedeutet des konkret:
+          Wird mittels einer Rolle ein Privileg zugewiesen, das zur Ausführung einer DML-Operation benötigt wird, so wird sich Oracle gegen die Ausführung des DDL-Statements sperren. Auf das Beispiel bezogen bedeutet des konkret:
           \begin{itemize}
-            \item Wird einem Nutzer das \privileg{select}-Privileg per Rolle zugewiesen, kann er die View nicht erstellen. Die Operation scheitert, da das \privileg{select}-Privileg ein Privileg ist, dass die Ausf\"uhrung eines DML-Statements (im weitesten Sinne) erlaubt.
+            \item Wird einem Nutzer das \privileg{select}-Privileg per Rolle zugewiesen, kann er die View nicht erstellen. Die Operation scheitert, da das \privileg{select}-Privileg ein Privileg ist, dass die Ausführung eines DML-Statements (im weitesten Sinne) erlaubt.
             \item Wird einem Nutzer das \privileg{create view}-Privileg per Rolle zugewiesen, kann er die View erstellen.
           \end{itemize}
           Der Benutzer \identifier{hr} will die View \identifier{v\_married\_customers} erstellen. Diese basiert auf der Tabelle \identifier{customers} des Nutzers \identifier{sh}. Der DBA erstellt die Rolle \identifier{r\_viewcreator} und weist ihr das Privileg \privileg{select on sh.customers} zu. Das \privileg{create view} vergibt er direkt an \identifier{hr}. \identifier{hr} versucht nun mittels dieser Rolle die View zu erstellen.
@@ -1104,12 +1104,12 @@ ERROR at line 4:
 &\textbf{\textcolor{red}{ORA-01031: insufficient privileges}}&
 
           \end{lstlisting}
-          Da \identifier{hr} das DML-Privileg aus der Rolle \identifier{r\_viewcreator} erh\"alt, kann er die View nicht erstellen. Damit die View erfolgreich erstellt werden kann, muss ihm das DML-Privileg direkt zugewiesen werden.
+          Da \identifier{hr} das DML-Privileg aus der Rolle \identifier{r\_viewcreator} erhält, kann er die View nicht erstellen. Damit die View erfolgreich erstellt werden kann, muss ihm das DML-Privileg direkt zugewiesen werden.
           \begin{merke}
             Oracle kennt eine Liste von Rollen, die direkt bei der Datenbankerstellung kreiert werden.
           \end{merke}
         \subsubsection{Die Gruppe PUBLIC}
-          Die Gruppe \identifier{PUBLIC} ist vergleichbar mit der MS-Windows Nutzergruppe \identifier{jeder}. Privilegien und Rollen, die dieser Gruppe zugewiesen werden, sind f\"ur alle Nutzer der Datenbank zug\"anglich.
+          Die Gruppe \identifier{PUBLIC} ist vergleichbar mit der MS-Windows Nutzergruppe \identifier{jeder}. Privilegien und Rollen, die dieser Gruppe zugewiesen werden, sind für alle Nutzer der Datenbank zugänglich.
 \clearpage
     \section{Informationen}
       \subsection{Verzeichnis der relevanten Initialisierungsparameter}

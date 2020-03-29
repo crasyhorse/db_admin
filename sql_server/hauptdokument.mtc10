@@ -1,0 +1,32 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.1}Grunds\"atzliches zu Unterabfragen}{\reset@font\mtcSfont 10-2}{section.10.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.1.1}Was sind Unterabfragen?}{\reset@font\mtcSSfont 10-2}{subsection.10.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.1.2}Wann sind Unterabfragen notwendig?}{\reset@font\mtcSSfont 10-2}{subsection.10.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.1.3}Regeln f\"ur Unterabfragen}{\reset@font\mtcSSfont 10-4}{subsection.10.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.1.4}Arten von Unterabfragen}{\reset@font\mtcSSfont 10-4}{subsection.10.1.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.2}Skalare Unterabfragen (Scalar Subqueries)}{\reset@font\mtcSfont 10-5}{section.10.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.2.1}Wo k\"onnen skalare Unterabfragen stehen?}{\reset@font\mtcSSfont 10-5}{subsection.10.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Skalare Unterabfragen in der SELECT-Klausel}{\reset@font\mtcSSSfont 10-5}{section*.119}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Skalare Unterabfragen in der WHERE-Klausel}{\reset@font\mtcSSSfont 10-5}{section*.120}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Skalare Unterabfragen in der Having-Klausel}{\reset@font\mtcSSSfont 10-6}{section*.121}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.2.2}Fehlerquellen in skalaren Unterabfragen}{\reset@font\mtcSSfont 10-6}{subsection.10.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.3}Einspaltige Unterabfragen}{\reset@font\mtcSfont 10-7}{section.10.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.3.1}Einspaltige Unterabfragen in WHERE- und HAVING-Klausel}{\reset@font\mtcSSfont 10-7}{subsection.10.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.3.2}Existenzpr\"ufungen}{\reset@font\mtcSSfont 10-7}{subsection.10.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der EXISTS-Operator}{\reset@font\mtcSSSfont 10-7}{section*.122}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der NOT EXISTS-Operator}{\reset@font\mtcSSSfont 10-9}{section*.123}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.4}Inlineviews / Derived Tables}{\reset@font\mtcSfont 10-9}{section.10.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.5}Top N Analysen}{\reset@font\mtcSfont 10-10}{section.10.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.5.1}Die Top N Analyse in Oracle}{\reset@font\mtcSSfont 10-11}{subsection.10.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Pseudospalte Rownum}{\reset@font\mtcSSSfont 10-11}{section*.124}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Durchf\"uhrung der Top N Analyse}{\reset@font\mtcSSSfont 10-12}{section*.125}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.5.2}Die Top N Analyse in MS SQL Server}{\reset@font\mtcSSfont 10-13}{subsection.10.5.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.6}Pivot-Tabellen}{\reset@font\mtcSfont 10-14}{section.10.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.6.1}Der PIVOT-Operator (Oracle)}{\reset@font\mtcSSfont 10-14}{subsection.10.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Syntax des PIVOT-Operators}{\reset@font\mtcSSSfont 10-15}{section*.126}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Spaltenaliase in der FOR-Klausel}{\reset@font\mtcSSSfont 10-15}{section*.127}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zus\"atzliche Spalten zum Pivoting}{\reset@font\mtcSSSfont 10-16}{section*.128}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {10.6.2}Der PIVOT-Operator (MS SQL Server)}{\reset@font\mtcSSfont 10-17}{subsection.10.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Syntax des PIVOT-Operators}{\reset@font\mtcSSSfont 10-18}{section*.129}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zus\"atzliche Spalten zum Pivoting}{\reset@font\mtcSSSfont 10-19}{section*.130}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.7}\"Ubungen - Unterabfragen}{\reset@font\mtcSfont 10-21}{section.10.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {10.8}L\"osungen - Unterabfragen}{\reset@font\mtcSfont 10-25}{section.10.8}}

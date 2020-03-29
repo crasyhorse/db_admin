@@ -1,0 +1,22 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Einf\"uhrung}{\reset@font\mtcSfont 5-2}{section.5.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Grundlegende Operationen in SQL}{\reset@font\mtcSfont 5-4}{section.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.1}Mengenoperationen}{\reset@font\mtcSSfont 5-4}{subsection.5.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Vereinigung}{\reset@font\mtcSSSfont 5-4}{section*.86}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Schnittmenge}{\reset@font\mtcSSSfont 5-5}{section*.87}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Differenz}{\reset@font\mtcSSSfont 5-5}{section*.88}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.2}Die Projektion}{\reset@font\mtcSSfont 5-6}{subsection.5.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.3}Die Selektion}{\reset@font\mtcSSfont 5-6}{subsection.5.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.4}Kartesisches Produkt}{\reset@font\mtcSSfont 5-7}{subsection.5.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.5}Die Join-Operation im Allgemeinen}{\reset@font\mtcSSfont 5-7}{subsection.5.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.6}Inner-Joins}{\reset@font\mtcSSfont 5-8}{subsection.5.2.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Equi-Join}{\reset@font\mtcSSSfont 5-8}{section*.89}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Non-Equi-Join}{\reset@font\mtcSSSfont 5-8}{section*.90}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.7}Outer-Joins}{\reset@font\mtcSSfont 5-9}{subsection.5.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Auswahlabfragen mit SQL}{\reset@font\mtcSfont 5-9}{section.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.1}Schema einer Auswahlabfrage}{\reset@font\mtcSSfont 5-9}{subsection.5.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.2}Der * als Joker}{\reset@font\mtcSSfont 5-11}{subsection.5.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.3}Arithmetische Ausdr\"ucke}{\reset@font\mtcSSfont 5-12}{subsection.5.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.4}NULL Werte}{\reset@font\mtcSSfont 5-13}{subsection.5.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.5}Verkettung von Zeichenketten}{\reset@font\mtcSSfont 5-14}{subsection.5.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.6}Spaltenaliasnamen}{\reset@font\mtcSSfont 5-16}{subsection.5.3.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.4}Einige Konventionen zu SQL}{\reset@font\mtcSfont 5-17}{section.5.4}}

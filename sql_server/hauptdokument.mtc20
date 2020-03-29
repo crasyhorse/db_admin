@@ -1,0 +1,16 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {20.1}Partially contained databases - Teilweise eigenst\IeC {\"a}ndige Datenbanken}{\reset@font\mtcSfont 20-2}{section.20.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.1.1}Was genau bedeutet Kapselung?}{\reset@font\mtcSSfont 20-2}{subsection.20.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.1.2}Welche Probleme werden gel\IeC {\"o}st?}{\reset@font\mtcSSfont 20-3}{subsection.20.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.1.3}Einschr\IeC {\"a}nkungen f\IeC {\"u}r Partially contained databases}{\reset@font\mtcSSfont 20-3}{subsection.20.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {20.2}Partially contained databases erzeugen}{\reset@font\mtcSfont 20-3}{section.20.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.2.1}Konfigurieren der Instanz}{\reset@font\mtcSSfont 20-3}{subsection.20.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.2.2}Erstellen der Datenbank}{\reset@font\mtcSSfont 20-4}{subsection.20.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Eine neue Partially contained database erstellen}{\reset@font\mtcSSSfont 20-4}{section*.387}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Den Containmenttype einer Datenbank \IeC {\"a}ndern}{\reset@font\mtcSSSfont 20-5}{section*.388}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Identifizieren der Datenbankkapselung}{\reset@font\mtcSSSfont 20-6}{section*.389}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {20.2.3}Contained users verwalten}{\reset@font\mtcSSfont 20-6}{subsection.20.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Contained users erstellen}{\reset@font\mtcSSSfont 20-7}{section*.390}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Login an einer Partially contained database}{\reset@font\mtcSSSfont 20-8}{section*.391}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Sicherheitsrelevante Einstellungen}{\reset@font\mtcSSSfont 20-8}{section*.392}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Das Passwort eines eigenst\IeC {\"a}ndigen Benutzerkontos \IeC {\"a}ndern}{\reset@font\mtcSSSfont 20-9}{section*.393}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Benutzerkonten migrieren}{\reset@font\mtcSSSfont 20-9}{section*.394}}

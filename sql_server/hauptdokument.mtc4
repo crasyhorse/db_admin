@@ -1,0 +1,70 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Grundlagen}{\reset@font\mtcSfont 4-3}{section.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.1}Begriffsdefinitionen}{\reset@font\mtcSSfont 4-3}{subsection.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Identifikationsschl\"ussel (ID-Schl\"ussel)}{\reset@font\mtcSSSfont 4-3}{section*.43}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Prim\"arschl\"ussel}{\reset@font\mtcSSSfont 4-3}{section*.44}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Fremdschl\"ussel}{\reset@font\mtcSSSfont 4-4}{section*.45}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline NULL bzw. NOT NULL}{\reset@font\mtcSSSfont 4-4}{section*.46}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline UNIQUE}{\reset@font\mtcSSSfont 4-4}{section*.47}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.1.2}Kurzschreibweise der Tabellen}{\reset@font\mtcSSfont 4-4}{subsection.4.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Transformation von Objekttypen}{\reset@font\mtcSfont 4-5}{section.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T01 (Objekttyp)}{\reset@font\mtcSSSfont 4-5}{section*.48}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Transformation bin\"arer Beziehungstypen}{\reset@font\mtcSfont 4-5}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Der (1,1):(1,1) Beziehungstyp}{\reset@font\mtcSSfont 4-6}{subsection.4.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel (1,1):(1,1) Beziehungstyp}{\reset@font\mtcSSSfont 4-6}{section*.49}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T02 f\"ur sinnvolle (1,1):(1,1) Beziehungen}{\reset@font\mtcSSSfont 4-7}{section*.50}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Mitarbeiteradresse}{\reset@font\mtcSSSfont 4-7}{section*.51}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Der (1,1):(0,1) Beziehungstyp}{\reset@font\mtcSSfont 4-8}{subsection.4.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Fall 1:\#A unwesentlich kleiner als \#B}{\reset@font\mtcSSSfont 4-8}{section*.52}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T03 f\"ur den (1,1):(0,1) Beziehungstyp (selten realisierte Optionalit\"at)}{\reset@font\mtcSSSfont 4-9}{section*.53}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Mitarbeiterhandy}{\reset@font\mtcSSSfont 4-9}{section*.54}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Fall 2: \#A ist wesentlich kleiner als \#B}{\reset@font\mtcSSSfont 4-10}{section*.55}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T04 f\"ur den (1,1):(0,1) Beziehungstyp (oft realisierte Optionalit\"at)}{\reset@font\mtcSSSfont 4-10}{section*.56}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Projektleiter}{\reset@font\mtcSSSfont 4-10}{section*.57}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Der (0,1):(0,1) Beziehungstyp}{\reset@font\mtcSSfont 4-11}{subsection.4.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T05 f\"ur den (0,1):(0,1) Beziehungstyp}{\reset@font\mtcSSSfont 4-11}{section*.58}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Ehe ohne Scheidung}{\reset@font\mtcSSSfont 4-12}{section*.59}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.4}Der (1,1):(0,*) Beziehungstyp}{\reset@font\mtcSSfont 4-12}{subsection.4.3.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T06 f\"ur den (1,1):(0,*) Beziehungstyp}{\reset@font\mtcSSSfont 4-13}{section*.60}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Gehaltsgruppen}{\reset@font\mtcSSSfont 4-13}{section*.61}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.5}Der (0,1):(0,*) Beziehungstyp}{\reset@font\mtcSSfont 4-13}{subsection.4.3.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T07 f\"ur den (0,1):(0,*) Beziehungstyp}{\reset@font\mtcSSSfont 4-14}{section*.62}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Abteilungsmitarbeiter}{\reset@font\mtcSSSfont 4-14}{section*.63}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.6}Der (1,1):(1,*) Beziehungstyp}{\reset@font\mtcSSfont 4-15}{subsection.4.3.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel Kundenbestellung}{\reset@font\mtcSSSfont 4-16}{section*.64}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.7}Der (0,1):(1,*) Beziehungstyp}{\reset@font\mtcSSfont 4-16}{subsection.4.3.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Exklusivangebotsbestellung}{\reset@font\mtcSSSfont 4-17}{section*.65}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.8}Der (0,*):(0,*) Beziehungstyp}{\reset@font\mtcSSfont 4-17}{subsection.4.3.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T08 f\"ur den (0,*):(0,*) Beziehungstyp}{\reset@font\mtcSSSfont 4-18}{section*.66}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Projektmitarbeiter}{\reset@font\mtcSSSfont 4-19}{section*.67}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.9}Der (1,*):(0,*) Beziehungstyp}{\reset@font\mtcSSfont 4-19}{subsection.4.3.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - \"Arzte mit Operation(en)}{\reset@font\mtcSSSfont 4-20}{section*.68}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.10}Der (1,*):(1,*) Beziehungstyp}{\reset@font\mtcSSfont 4-20}{subsection.4.3.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - B\"uchersachgruppe}{\reset@font\mtcSSSfont 4-21}{section*.69}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.11}Transformation von Beziehungsattributen}{\reset@font\mtcSSfont 4-22}{subsection.4.3.11}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation von Beziehungsattributen bei einer m:n-Beziehung}{\reset@font\mtcSSSfont 4-22}{section*.70}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation von Beziehungsattributen bei einer 1:n-Beziehung}{\reset@font\mtcSSSfont 4-22}{section*.71}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformation von Beziehungsattributen bei einer 1:1-Beziehung}{\reset@font\mtcSSSfont 4-23}{section*.72}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Transformation des Begleitbeispiels Bundeswehr}{\reset@font\mtcSfont 4-24}{section.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Transformation rekursiver Beziehungstypen}{\reset@font\mtcSfont 4-25}{section.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.1}Der (1,1):(1,1) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-26}{subsection.4.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T09 f\"ur den (1,1):(1,1) Rekursiv-Beziehungstyp}{\reset@font\mtcSSSfont 4-27}{section*.73}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Kreis einer Turnergruppe}{\reset@font\mtcSSSfont 4-27}{section*.74}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.2}Der (0,1):(0,1) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-28}{subsection.4.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T10 f\"ur den (0,1):(0,1) Rekursiv-Beziehungstyp}{\reset@font\mtcSSSfont 4-30}{section*.75}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Ersatzbus}{\reset@font\mtcSSSfont 4-30}{section*.76}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.3}Der (1,1):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-31}{subsection.4.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T11 f\"ur den (1,1):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSSfont 4-32}{section*.77}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Fotos der Vereinsmitglieder}{\reset@font\mtcSSSfont 4-32}{section*.78}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.4}Der (0,1):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-32}{subsection.4.5.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T12 f\"ur den (0,1):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSSfont 4-33}{section*.79}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Unternehmenshierarchie}{\reset@font\mtcSSSfont 4-34}{section*.80}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.5}Der (0,*):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-35}{subsection.4.5.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T13 f\"ur den (0,*):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSSfont 4-36}{section*.81}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - komplexes Bauteil}{\reset@font\mtcSSSfont 4-36}{section*.82}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.6}Der (1,*):(0,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-38}{subsection.4.5.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Literaturverweis}{\reset@font\mtcSSSfont 4-39}{section*.83}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.5.7}Der (1,*):(1,*) Rekursiv-Beziehungstyp}{\reset@font\mtcSSfont 4-40}{subsection.4.5.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Beispiel - Pianisten}{\reset@font\mtcSSSfont 4-41}{section*.84}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Transformation von Kardinalit\"ats-Beschr\"ankungen}{\reset@font\mtcSfont 4-41}{section.4.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transformationsregel T14 Kardinalit\"ats-Beschr\"ankung}{\reset@font\mtcSSSfont 4-42}{section*.85}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Transformation der Spezialisierung / Generalisierung}{\reset@font\mtcSfont 4-42}{section.4.7}}

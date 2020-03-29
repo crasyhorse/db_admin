@@ -1,0 +1,35 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Der Begriff der Funktion}{\reset@font\mtcSfont 7-2}{section.7.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Zeichenkettenfunktionen}{\reset@font\mtcSfont 7-3}{section.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Gro\ss - oder Kleinschreibung - UPPER, LOWER, INITCAP}{\reset@font\mtcSSfont 7-3}{subsection.7.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Zeichenketten bearbeiten}{\reset@font\mtcSSfont 7-5}{subsection.7.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline SUBSTR, LENGTH und INSTR in Oracle}{\reset@font\mtcSSSfont 7-5}{section*.98}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline SUBSTRING, LEN und CHARINDEX in MS SQL Server}{\reset@font\mtcSSSfont 7-8}{section*.99}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Arithmetische Funktionen}{\reset@font\mtcSfont 7-10}{section.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.1}FROM oder nicht FROM, das ist hier die Frage}{\reset@font\mtcSSfont 7-10}{subsection.7.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.2}Arithmetische Funktionen anwenden}{\reset@font\mtcSSfont 7-11}{subsection.7.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Datumsfunktionen}{\reset@font\mtcSfont 7-14}{section.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.1}Datumswerte}{\reset@font\mtcSSfont 7-14}{subsection.7.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.2}Datumsarithmetik in Oracle}{\reset@font\mtcSSfont 7-15}{subsection.7.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Intervall-Literale (Oracle)}{\reset@font\mtcSSSfont 7-16}{section*.100}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.3}Datumsarithmetik in MS SQL Server}{\reset@font\mtcSSfont 7-18}{subsection.7.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Funktion DATEADD - Datumswerte addieren}{\reset@font\mtcSSSfont 7-18}{section*.101}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Funktion DATEDIFF - Eine Differenz bilden}{\reset@font\mtcSSSfont 7-19}{section*.102}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Funktionen DATEPART/DATENAME - Teile eines Datums extrahieren}{\reset@font\mtcSSSfont 7-19}{section*.103}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.5}Sonstige Funktionen}{\reset@font\mtcSfont 7-19}{section.7.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.6}Datentypen}{\reset@font\mtcSfont 7-21}{section.7.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.6.1}Numerische Datentypen}{\reset@font\mtcSSfont 7-21}{subsection.7.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aufbau}{\reset@font\mtcSSSfont 7-21}{section*.104}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Pr\"azision und Skalarit\"at}{\reset@font\mtcSSSfont 7-22}{section*.105}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.6.2}Zeichendatentypen}{\reset@font\mtcSSfont 7-22}{subsection.7.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Typen fester L\"ange}{\reset@font\mtcSSSfont 7-22}{section*.106}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Typen variabler L\"ange}{\reset@font\mtcSSSfont 7-23}{section*.107}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.6.3}Datums- und Zeittypen}{\reset@font\mtcSSfont 7-23}{subsection.7.6.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Oracle - DATE und TIMESTAMP}{\reset@font\mtcSSSfont 7-23}{section*.108}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline SQL Server - DATETIME2}{\reset@font\mtcSSSfont 7-24}{section*.109}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.7}Konvertierung von Datentypen}{\reset@font\mtcSfont 7-24}{section.7.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.7.1}Implizite Datentypkonvertierung}{\reset@font\mtcSSfont 7-24}{subsection.7.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.7.2}Explizite Datentypkonvertierung}{\reset@font\mtcSSfont 7-26}{subsection.7.7.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Explizite Datentypkonvertierung in Oracle}{\reset@font\mtcSSSfont 7-26}{section*.110}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Explizite Datentypkonvertierung in Microsoft SQL Server}{\reset@font\mtcSSSfont 7-28}{section*.111}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.8}\"Ubungen - Funktionen}{\reset@font\mtcSfont 7-31}{section.7.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.9}L\"osungen - Funktionen}{\reset@font\mtcSfont 7-34}{section.7.9}}

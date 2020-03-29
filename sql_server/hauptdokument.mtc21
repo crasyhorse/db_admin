@@ -1,0 +1,23 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {21.1}Bestandteile des SQL Server Auditings}{\reset@font\mtcSfont 21-2}{section.21.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.1.1}\IeC {\"U}berwachungen}{\reset@font\mtcSSfont 21-2}{subsection.21.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.1.2}Server\IeC {\"u}berwachungsspezifikationen}{\reset@font\mtcSSfont 21-2}{subsection.21.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.1.3}Datenbank\IeC {\"u}berwachugnsspezifikationen}{\reset@font\mtcSSfont 21-3}{subsection.21.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.1.4}\IeC {\"U}berwachungsaktionen und \IeC {\"U}berwachungsaktionsgruppen}{\reset@font\mtcSSfont 21-3}{subsection.21.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.1.5}\IeC {\"U}berwachungsziele}{\reset@font\mtcSSfont 21-3}{subsection.21.1.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {21.2}Erstellen und verwalten von \IeC {\"U}berwachungen}{\reset@font\mtcSfont 21-4}{section.21.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.1}Konfiguration und Benutzung von \IeC {\"U}berwachungszielen}{\reset@font\mtcSSfont 21-4}{subsection.21.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Ein Dateipfad als \IeC {\"U}berwachungsziel}{\reset@font\mtcSSSfont 21-4}{section*.395}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Datens\IeC {\"a}tze in das Anwendungsprotokoll schreiben}{\reset@font\mtcSSSfont 21-4}{section*.396}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Benutzung des Sicherheitsprotokolls vorbereiten}{\reset@font\mtcSSSfont 21-4}{section*.397}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.2}Erstellen von \IeC {\"U}berwachungen mit dem SSMS}{\reset@font\mtcSSfont 21-4}{subsection.21.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Erstellen der \IeC {\"U}berwachung}{\reset@font\mtcSSSfont 21-4}{section*.398}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Bedeutung der Optionen f\IeC {\"u}r das \IeC {\"U}berwachungsziel}{\reset@font\mtcSSSfont 21-5}{section*.399}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Bedeutung der Optionen f\IeC {\"u}r \IeC {\"U}berwachungsprotokollfehler}{\reset@font\mtcSSSfont 21-6}{section*.400}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.3}Erstellen von \IeC {\"U}berwachungen mit SQL}{\reset@font\mtcSSfont 21-7}{subsection.21.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.4}\IeC {\"U}berwachungsziel Datei}{\reset@font\mtcSSfont 21-7}{subsection.21.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline NTFS-Berechtigungen}{\reset@font\mtcSSSfont 21-7}{section*.401}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.5}\IeC {\"U}berwachungsziel Anwendungsprotokoll}{\reset@font\mtcSSfont 21-7}{subsection.21.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.2.6}\IeC {\"U}berwachungsziel Sicherheitskprotokoll}{\reset@font\mtcSSfont 21-7}{subsection.21.2.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {21.3}Auditing auf Serverebene}{\reset@font\mtcSfont 21-7}{section.21.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {21.3.1}Server\IeC {\"u}berwachungsspezifikationen}{\reset@font\mtcSSfont 21-7}{subsection.21.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {21.4}Auditing auf Datenbankebene}{\reset@font\mtcSfont 21-7}{section.21.4}}

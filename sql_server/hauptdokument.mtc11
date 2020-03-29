@@ -1,0 +1,19 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {11.1}Die DML-Anweisungen}{\reset@font\mtcSfont 11-2}{section.11.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.1.1}Datens\"atze einf\"ugen - Die INSERT-Anweisung}{\reset@font\mtcSSfont 11-2}{subsection.11.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die INSERT-Anweisung und NULL-Werte}{\reset@font\mtcSSSfont 11-3}{section*.131}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Standardwerte}{\reset@font\mtcSSSfont 11-4}{section*.132}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die INSERT-Anweisung und Unterabfragen}{\reset@font\mtcSSSfont 11-4}{section*.133}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.1.2}Datens\"atze \"andern - Die UPDATE-Anweisung}{\reset@font\mtcSSfont 11-5}{subsection.11.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline UPDATE mit Unterabfrage}{\reset@font\mtcSSSfont 11-7}{section*.134}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.1.3}Datens\"atze l\"oschen - Die DELETE-Anweisung}{\reset@font\mtcSSfont 11-8}{subsection.11.1.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline DELETE mit Unterabfrage}{\reset@font\mtcSSSfont 11-9}{section*.135}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {11.2}Das Transaktionskonzept - COMMIT und ROLLBACK}{\reset@font\mtcSfont 11-9}{section.11.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.2.1}Beginn und Ende einer Transaktion}{\reset@font\mtcSSfont 11-10}{subsection.11.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Wann beginnt eine Transaktion?}{\reset@font\mtcSSSfont 11-10}{section*.136}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Wann endet eine Transaktion?}{\reset@font\mtcSSSfont 11-11}{section*.137}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.2.2}Eine Transaktion erfolgreich abschlie\ss en}{\reset@font\mtcSSfont 11-11}{subsection.11.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Das COMMIT-Kommando}{\reset@font\mtcSSSfont 11-11}{section*.138}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline COMMIT in Microsoft SQL Server}{\reset@font\mtcSSSfont 11-13}{section*.139}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {11.2.3}Eine Transaktion r\"uckg\"angig machen}{\reset@font\mtcSSfont 11-14}{subsection.11.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Das ROLLBACK-Kommando}{\reset@font\mtcSSSfont 11-14}{section*.140}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline ROLLBACK in Microsoft SQL Server}{\reset@font\mtcSSSfont 11-15}{section*.141}}

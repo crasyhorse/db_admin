@@ -1,0 +1,15 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Selektieren von Zeilen: Die WHERE-Klausel}{\reset@font\mtcSfont 6-2}{section.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}Relationale Operatoren}{\reset@font\mtcSSfont 6-3}{subsection.6.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Numerische Werte vergleichen}{\reset@font\mtcSSSfont 6-3}{section*.91}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zeichenketten vergleichen}{\reset@font\mtcSSSfont 6-5}{section*.92}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zeichenketten vergleichen mit LIKE}{\reset@font\mtcSSSfont 6-6}{section*.93}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Vergleiche mit NULL-Werten}{\reset@font\mtcSSSfont 6-7}{section*.94}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.2}Logische Verkn\"upfung von Ausdr\"ucken}{\reset@font\mtcSSfont 6-8}{subsection.6.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Logische Verkn\"upfungen mit AND}{\reset@font\mtcSSSfont 6-8}{section*.95}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Logische Verkn\"upfungen mit OR}{\reset@font\mtcSSSfont 6-8}{section*.96}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aussagen mit NOT umkehren}{\reset@font\mtcSSSfont 6-9}{section*.97}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Festlegen einer Sortierung}{\reset@font\mtcSfont 6-10}{section.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}Die ORDER BY Klausel}{\reset@font\mtcSSfont 6-10}{subsection.6.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}Auf- und absteigendes Sortieren}{\reset@font\mtcSSfont 6-12}{subsection.6.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}\"Ubungen - Selektieren und Sortieren}{\reset@font\mtcSfont 6-13}{section.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}L\"osungen - Selektieren und sortieren}{\reset@font\mtcSfont 6-17}{section.6.4}}

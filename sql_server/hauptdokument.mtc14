@@ -1,0 +1,60 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {14.1}SQL Server und die Client-Server-Architektur}{\reset@font\mtcSfont 14-2}{section.14.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.1.1}Der Client}{\reset@font\mtcSSfont 14-2}{subsection.14.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Connection}{\reset@font\mtcSSSfont 14-2}{section*.153}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Session}{\reset@font\mtcSSSfont 14-3}{section*.154}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.1.2}Der Datenbankserver}{\reset@font\mtcSSfont 14-3}{subsection.14.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Server}{\reset@font\mtcSSSfont 14-3}{section*.155}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Instanz}{\reset@font\mtcSSSfont 14-3}{section*.156}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Datenbank}{\reset@font\mtcSSSfont 14-4}{section*.157}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {14.2}Speicherstrukuren der SQL Server Instanz}{\reset@font\mtcSfont 14-5}{section.14.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.2.1}Zugriffsprotokolle}{\reset@font\mtcSSfont 14-6}{subsection.14.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.2.2}Der Buffer Pool und seine Bestandteile}{\reset@font\mtcSSfont 14-6}{subsection.14.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Data Cache}{\reset@font\mtcSSSfont 14-7}{section*.158}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Plan Cache}{\reset@font\mtcSSSfont 14-8}{section*.159}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Log Cache}{\reset@font\mtcSSSfont 14-8}{section*.160}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.2.3}Die Prozessarchitektur des SQL Servers}{\reset@font\mtcSSfont 14-8}{subsection.14.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Data Access Methods}{\reset@font\mtcSSSfont 14-8}{section*.161}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Buffer Manager}{\reset@font\mtcSSSfont 14-9}{section*.162}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transaction Manager}{\reset@font\mtcSSSfont 14-9}{section*.163}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Lock Manager}{\reset@font\mtcSSSfont 14-9}{section*.164}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Log Manager}{\reset@font\mtcSSSfont 14-10}{section*.165}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Lazy Writer}{\reset@font\mtcSSSfont 14-10}{section*.166}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Checkpoints und der Checkpointer}{\reset@font\mtcSSSfont 14-11}{section*.167}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Scheduler}{\reset@font\mtcSSSfont 14-12}{section*.168}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline SQL Server Workerthreads}{\reset@font\mtcSSSfont 14-13}{section*.169}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Tasks}{\reset@font\mtcSSSfont 14-13}{section*.170}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {14.3}Query Processor (Relational Engine)}{\reset@font\mtcSfont 14-13}{section.14.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.3.1}Command Parser}{\reset@font\mtcSSfont 14-14}{subsection.14.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.3.2}Query Optimizer}{\reset@font\mtcSSfont 14-14}{subsection.14.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.3.3}Query Executor}{\reset@font\mtcSSfont 14-15}{subsection.14.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {14.4}Datendateien - Aufbau und Verwaltung}{\reset@font\mtcSfont 14-15}{section.14.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.4.1}Aufbau einer Datendatei}{\reset@font\mtcSSfont 14-15}{subsection.14.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Data Pages}{\reset@font\mtcSSSfont 14-16}{section*.171}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Tabellenzeilen}{\reset@font\mtcSSSfont 14-17}{section*.172}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Extents}{\reset@font\mtcSSSfont 14-18}{section*.173}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Mixed Extents}{\reset@font\mtcSSSfont 14-18}{section*.174}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Uniform Extents}{\reset@font\mtcSSSfont 14-18}{section*.175}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.4.2}Speicherverwaltung in den Datendateien}{\reset@font\mtcSSfont 14-19}{subsection.14.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Global Allocation Map (GAM)}{\reset@font\mtcSSSfont 14-19}{section*.176}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Shared Global Allocation Map (SGAM)}{\reset@font\mtcSSSfont 14-20}{section*.177}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Zusammenhang zwischen GAM und SGAM}{\reset@font\mtcSSSfont 14-20}{section*.178}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Extentallokation}{\reset@font\mtcSSSfont 14-20}{section*.179}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aufbau der PFS}{\reset@font\mtcSSSfont 14-21}{section*.180}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aufbau einer Datendatei}{\reset@font\mtcSSSfont 14-22}{section*.181}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {14.5}Das Transaktionsprotokoll}{\reset@font\mtcSfont 14-22}{section.14.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.5.1}Features des Transaktionsprotokolls}{\reset@font\mtcSSfont 14-23}{subsection.14.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.5.2}Aufbau des Transaktions Logs}{\reset@font\mtcSSfont 14-23}{subsection.14.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der Log file header}{\reset@font\mtcSSSfont 14-23}{section*.182}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Standardgr\IeC {\"o}\IeC {\ss }e des Logfiles}{\reset@font\mtcSSSfont 14-23}{section*.183}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Die Log Sequence Number (LSN)}{\reset@font\mtcSSSfont 14-24}{section*.184}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Transaktionsprotokolleintr\IeC {\"a}ge - Log Records}{\reset@font\mtcSSSfont 14-24}{section*.185}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Virtual Log Files (VLFs)}{\reset@font\mtcSSSfont 14-26}{section*.186}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.5.3}Virtual Log Files im Detail}{\reset@font\mtcSSfont 14-26}{subsection.14.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Der VLF header}{\reset@font\mtcSSSfont 14-26}{section*.187}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Gr\IeC {\"o}\IeC {\ss }e und Anzahl der VLFs}{\reset@font\mtcSSSfont 14-26}{section*.188}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Geschicktes Anlegen einer Logdatei}{\reset@font\mtcSSSfont 14-28}{section*.189}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Log Blocks}{\reset@font\mtcSSSfont 14-29}{section*.190}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Aktive und inaktive VLFs}{\reset@font\mtcSSSfont 14-29}{section*.191}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Log Rotation}{\reset@font\mtcSSSfont 14-30}{section*.192}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \nonumberline Abschneiden des Log-Protokolls (Log Truncation)}{\reset@font\mtcSSSfont 14-30}{section*.193}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {14.5.4}Write-Ahead-Logging}{\reset@font\mtcSSfont 14-32}{subsection.14.5.4}}
